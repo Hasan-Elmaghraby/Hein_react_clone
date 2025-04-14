@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "./styles.module.scss";
 
 export const Header: React.FC = () => {
   return (
-    <header>
-      <>hello iam header</>
+    <header className={styles.header}>
+      <h1>hello iam header</h1>
     </header>
   );
 };
