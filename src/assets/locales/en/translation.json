@@ -1,0 +1,19 @@
+{
+  "NotFound": "Page Not Found",
+  "noInfo": "No Information",
+  "pages": {
+    "home": "Home"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "customers": "Customers",
+    "gallery": "Gallery",
+    "contact": "Contact Us",
+    "lang": "Change Language to "
+  },
+  "footer": {
+    "home": "Home"
+  }
+}

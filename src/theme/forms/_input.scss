@@ -1,0 +1,55 @@
+// .input {
+//   height: $inputHeight;
+//   border: 1px solid $inputBorderColor !important;
+//   background-color: $inputBackgroundColor;
+//   border-radius: $fourthBorderRadius;
+//   outline: none;
+//   width: 100%;
+//   font-size: $inputFontSize;
+//   color: $headingMainColor;
+//   padding: 2rem 2.9rem;
+//   transition: 0.5s;
+//   display: flex;
+//   align-items: center;
+
+//   @include xxs {
+//     height: 48px;
+//     margin-bottom: 10px;
+//   }
+
+//   &:focus,
+//   &:hover {
+//     border: 1px solid $primaryColor !important;
+//     background-color: $inputBackgroundColor !important;
+//   }
+
+//   &::-webkit-outer-spin-button,
+//   &::-webkit-inner-spin-button {
+//     -webkit-appearance: none;
+//   }
+
+//   input {
+//     &::placeholder {
+//       font-size: 1.6rem;
+//       font-weight: 400;
+//       color: $inputPlaceholderColor !important;
+//       opacity: 1;
+//       transition: 0.5s;
+//     }
+//   }
+
+//   &::placeholder {
+//     font-size: 1.6rem;
+//     font-weight: 400;
+//     color: $inputPlaceholderColor !important;
+//     opacity: 1;
+//     transition: 0.5s;
+//   }
+
+//   &:focus {
+//     &::placeholder {
+//       opacity: 0;
+//     }
+//   }
+
+// }

@@ -1,0 +1,21 @@
+.ant-form-item {
+  margin: 0 !important;
+  // position: relative !important;
+}
+
+// .ant-form-item-explain {
+//   // transform: translate(-2rem, calc($inputHeight * -1 - 1.4rem));
+//   background-color: $whiteColor;
+//   width: fit-content !important;
+//   padding: 0.5rem;
+//   position: absolute !important;
+//   top: -1.5rem;
+//   inset-inline-start: 2rem;
+//   z-index: 10;
+// }
+
+.uploadFilesWrapper {
+  .ant-form-item-explain {
+    position: static !important;
+  }
+}

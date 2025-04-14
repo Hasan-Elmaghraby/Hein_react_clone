@@ -1,0 +1,34 @@
+.swiperNavigationButton {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primaryColor;
+  border: 1px solid $primaryColor;
+  color: $whiteColor;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 50%;
+  font-size: 1.4rem;
+
+  &.customerButton {
+    background-color: transparent;
+    color: $whiteColor;
+    border-color: $whiteColor;
+  }
+
+  &.swiper-button-disabled {
+    background-color: transparent;
+    color: $primaryColor;
+
+    &.customerButton {
+      border-color: $whiteColor;
+      color: $whiteColor;
+      background-color: transparent;
+      opacity: 0.5;
+    }
+  }
+}

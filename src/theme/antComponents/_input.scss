@@ -1,0 +1,73 @@
+.input {
+  height: $inputHeight;
+  border: 1px solid $inputBorderColor !important;
+  background-color: $inputBackgroundColor;
+  border-radius: $fourthBorderRadius;
+  outline: none;
+  width: 100%;
+  font-size: $inputFontSize;
+  color: $headingMainColor;
+  padding: 2rem 2.9rem;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $primaryColor !important;
+    background-color: $inputBackgroundColor !important;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &::placeholder,
+  input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $inputPlaceholderColor !important;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  &:focus::placeholder,
+  input:focus::placeholder {
+    opacity: 0;
+  }
+
+  &.withMarginBottom {
+    margin-bottom: 2rem;
+  }
+}
+
+.ant-radio-checked .ant-radio-inner {
+  border-color: $secondaryColor !important ;
+  background-color: $whiteColor !important;
+  background-image: url('@public/images/pages/checked.svg') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ant-radio-checked .ant-radio-inner:after {
+  background-color: transparent;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.ant-radio:hover .ant-radio-inner {
+  border-color: $secondaryColor;
+}
+
+.ant-radio-checked .ant-radio-inner:focus {
+  border-color: $secondaryColor;
+}
+
+.ant-radio-checked ~ span {
+  color: $secondaryColor !important;
+}
+.ant-radio ~ span {
+  color: $headingMainColor;
+  font-size: 1.4rem;
+}

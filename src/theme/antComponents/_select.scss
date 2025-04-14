@@ -1,0 +1,70 @@
+// .ant-select {
+//   width: 100%;
+//   height: 66px;
+
+//   .ant-select-selector {
+//     border-radius: $fourthBorderRadius !important;
+//     background-color: transparent !important;
+//     border-color: $inputBorderColor !important;
+//     padding: 0 !important;
+//   }
+
+//   // .anticon {
+//   //   content: '' !important;
+//   // }
+
+//   .anticon {
+//     margin-inline-end: 1.5rem;
+//   }
+
+//   .ant-select-selection-item,
+//   .ant-select-selection-placeholder {
+//     padding-inline-start: 2.9rem !important;
+//     color: $inputPlaceholderColor !important;
+//     font-size: 1.6rem;
+//     font-weight: 400;
+//   }
+
+//   &.smallPlaceholder {
+//     .ant-select-selection-placeholder {
+//       font-size: 1.3rem;
+//     }
+//   }
+// }
+
+// .ant-select-item-option-selected {
+//   color: #fff !important;
+//   background-color: $primaryColor !important;
+// }
+
+.searchSelect {
+  &.ant-select {
+    width: 100%;
+    min-width: 10rem;
+    height: 44px;
+
+    .ant-select-selector {
+      border-radius: $fourthBorderRadius !important;
+      background-color: transparent !important;
+      border-color: $inputBorderColor !important;
+      padding: 0 !important;
+    }
+
+    .ant-select-selection-item,
+    .ant-select-selection-placeholder {
+      padding-inline-start: 2.9rem !important;
+      color: $inputPlaceholderColor !important;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .ant-select-item-option-selected {
+    color: #fff !important;
+    background-color: $primaryColor !important;
+  }
+}

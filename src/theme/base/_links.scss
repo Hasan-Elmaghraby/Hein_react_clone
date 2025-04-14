@@ -1,0 +1,470 @@
+.link {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  text-decoration: none;
+  gap: 10px;
+  height: 4.4rem;
+  color: $headingMainColor;
+  font-weight: 400;
+  font-size: 1.6rem;
+  transition: 0.5s;
+
+  .icon__ {
+    flex-shrink: 0;
+    transition: 0.5s;
+  }
+
+  &:focus {
+    border: none;
+    // outline: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $secondaryColor;
+  }
+
+  &.defaultCursor {
+    cursor: default;
+  }
+
+  // ===================================================================
+  // Center
+  // ===================================================================
+
+  &.center {
+    margin: 0 auto;
+  }
+
+  &.centerMd {
+    @include md {
+      margin: 0 auto;
+    }
+  }
+
+  &.centerSm {
+    @include sm {
+      margin: 0 auto;
+    }
+  }
+
+  &.centerXs {
+    @include xs {
+      margin: 0 auto;
+    }
+  }
+
+  &.centerXxs {
+    @include xxs {
+      margin: 0 auto;
+    }
+  }
+
+  // ===================================================================
+  // Size
+  // ===================================================================
+
+  &.fullWidth {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  &.fullWidth_md {
+    @include md {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &.fullWidth_sm {
+    @include sm {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &.fullWidth_xs {
+    @include xs {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &.fullWidth_xxs {
+    @include xxs {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &.half_width {
+    width: 50%;
+  }
+
+  &.half_width_md {
+    @include md {
+      width: 50%;
+    }
+  }
+
+  &.half_width_sm {
+    @include sm {
+      width: 50%;
+    }
+  }
+
+  &.half_width_xs {
+    @include xs {
+      width: 50%;
+    }
+  }
+
+  &.half_width_xxs {
+    @include xxs {
+      width: 50%;
+    }
+  }
+
+  // ===================================================================
+  // Fixed Width
+  // ===================================================================
+
+  &.fixed_size__ {
+    min-width: 183px;
+    max-width: 183px;
+  }
+
+  // ===================================================================
+  // Margin
+  // ===================================================================
+  &.margin_start_auto__ {
+    margin-inline-start: auto;
+  }
+
+  &.margin_top {
+    margin-top: 7.2rem;
+  }
+
+  // ===================================================================
+  // Icon
+  // ===================================================================
+  &.scale_icon_on_hover {
+    &:hover {
+      .icon__ {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &.icon_dir {
+    .icon__,
+    svg {
+      @include dir {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // ===================================================================
+  // Colors
+  // ===================================================================
+
+  &.primaryColor {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+
+    &.outline {
+      color: $primaryColor;
+
+      &:hover {
+        background-color: rgba($primaryColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.9);
+    }
+  }
+
+  &.secondary__ {
+    background-color: $secondaryColor;
+    border-color: $secondaryColor;
+
+    &.outline {
+      color: $secondaryColor;
+
+      &:hover {
+        background-color: rgba($secondaryColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($secondaryColor, 0.9);
+    }
+  }
+
+  &.red__ {
+    background-color: $redColor;
+    border-color: $redColor;
+
+    &.outline {
+      color: $redColor;
+
+      &:hover {
+        background-color: rgba($redColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($redColor, 0.9);
+    }
+  }
+
+  &.green__ {
+    background-color: $greenColor;
+    border-color: $greenColor;
+
+    &.outline {
+      color: $greenColor;
+
+      &:hover {
+        background-color: rgba($greenColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($greenColor, 0.9);
+    }
+  }
+
+  &.grey__ {
+    background-color: $greyColor;
+    border-color: $greyColor;
+
+    &.outline {
+      color: $greyColor;
+
+      &:hover {
+        background-color: rgba($greyColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($greyColor, 0.9);
+    }
+  }
+
+  &.orange__ {
+    background-color: $orangeColor;
+    border-color: $orangeColor;
+
+    &.outline {
+      color: $orangeColor;
+
+      &:hover {
+        background-color: rgba($orangeColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($orangeColor, 0.9);
+    }
+  }
+
+  &.yellow__ {
+    background-color: $yellowColor;
+    border-color: $yellowColor;
+
+    &.outline {
+      color: $yellowColor;
+
+      &:hover {
+        background-color: rgba($yellowColor, 0.1) !important;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($yellowColor, 0.9);
+    }
+  }
+
+  // ===================================================================
+  // Outline
+  // ===================================================================
+  &.outline {
+    background-color: transparent !important;
+  }
+
+  // ===================================================================
+  // Border Radius
+  // ===================================================================
+  &.mainRounded {
+    border-radius: $mainBorderRadius;
+  }
+
+  &.secondary_rounded__ {
+    border-radius: $secondaryBorderRadius;
+  }
+
+  &.third_rounded__ {
+    border-radius: $thirdBorderRadius;
+  }
+
+  &.full_rounded__ {
+    border-radius: 50%;
+  }
+
+  // ===================================================================
+  // Other
+  // ===================================================================
+
+  &.headerAuthLinks {
+    border-radius: $thirdBorderRadius;
+    padding: 1.4rem 2.4rem;
+    font-weight: 700;
+
+    @include sm {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+
+  &.signInHeaderLink {
+    background-color: $whiteColor;
+    color: $primaryColor;
+
+    &:hover {
+      background-color: rgba($whiteColor, 0.9);
+    }
+  }
+
+  &.signUpHeaderLink {
+    background-color: rgba($whiteColor, 0.1);
+    color: $whiteColor;
+
+    &:hover {
+      background-color: rgba($whiteColor, 0.2);
+    }
+  }
+
+  &.headerCircleLink {
+    border-radius: 50%;
+    background-color: rgba($whiteColor, 0.1);
+    border: 1px solid transparent;
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: 1.8rem;
+    color: $whiteColor;
+    font-weight: 700;
+    position: relative;
+
+    &:not(.addProduct, .lang) {
+      &::after {
+        position: absolute;
+        content: '';
+        top: -0.5rem;
+        inset-inline-start: -0.5rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        background-color: $secondaryColor;
+        border: 3px solid $primaryColor;
+        opacity: 0;
+      }
+    }
+
+    &.hasNotification {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($whiteColor, 0.2);
+    }
+  }
+
+  &.profileHeaderLink {
+    color: $headingMainColor;
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+
+    .icon {
+      color: $primaryColor !important;
+      font-size: 2.2rem;
+    }
+
+    &.logout {
+      color: $redColor !important;
+
+      .icon {
+        color: $redColor !important;
+      }
+    }
+  }
+  &.heroLink {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: $whiteColor;
+    border-radius: $fourthBorderRadius;
+    font-size: 1.4rem;
+    padding: 1.6rem 4rem;
+    height: 5.4rem;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 260px;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.9);
+    }
+
+    @include sm {
+      height: 4.8rem;
+    }
+  }
+
+  &.modifyProductLink {
+    background-color: transparent;
+    border-color: $primaryColor;
+    color: $primaryColor;
+    border-radius: $fourthBorderRadius;
+    font-size: 1.4rem;
+    font-weight: 700;
+    height: 3.8rem;
+    width: 100%;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.1);
+    }
+  }
+
+  &.mainLink {
+    background-color: rgba($primaryColor, 0.12);
+    width: 26rem;
+    height: 4.4rem;
+    border-radius: $fourthBorderRadius;
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-inline: auto;
+    margin-top: 5rem;
+
+    @include sm {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.2);
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.defaultPage {
+  min-height: 50vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &.with_shape {
+    position: relative;
+    overflow: hidden;
+  }
+
+  @include sm {
+    padding-top: 43px;
+    padding-bottom: 43px;
+  }
+
+  @include xs {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}
+
+.defaultSection {
+  transition: 0.1s;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+
+  @include sm {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  @include xs {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.rowModify {
+  display: flex;
+
+  @include md {
+    justify-content: center;
+  }
+
+  &.withRowGap {
+    row-gap: 15px;
+
+    @include xs {
+      row-gap: 15px;
+    }
+  }
+
+  &.withMarginBottom {
+    margin-bottom: 30px;
+  }
+
+  &.largeRowGap {
+    row-gap: 90px !important;
+  }
+
+  &.reverseDirColumnSmallSize {
+    @include sm {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &.justifyBetween {
+    justify-content: space-between;
+  }
+
+  &.itemsCenter {
+    align-items: center;
+  }
+
+  &.itemsStart {
+    align-items: flex-start;
+  }
+
+  &.itemsEnd {
+    align-items: flex-end;
+  }
+
+  &.withBorderBottom {
+    border-bottom: 1px solid rgba(#fff, 0.1);
+    padding-bottom: 3rem;
+  }
+
+  &.withMarginTop {
+    margin-top: 5rem;
+
+    @include sm {
+      margin-top: 3rem;
+    }
+
+    @include xs {
+      margin-top: 2rem;
+    }
+  }
+}

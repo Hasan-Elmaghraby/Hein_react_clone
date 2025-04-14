@@ -1,0 +1,20 @@
+.checkbox {
+  .ant-checkbox-inner {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      background-color: $secondaryColor !important;
+      border-color: $secondaryColor !important;
+    }
+  }
+
+  &:hover {
+    .ant-checkbox-inner {
+      border-color: $secondaryColor !important;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.ant-tabs-nav-list {
+  .ant-tabs-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primaryColor;
+    background-color: rgba($primaryColor, 0.07);
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 1.2rem 2.5rem;
+    border-radius: $fourthBorderRadius;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-inline-end: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &.ant-tabs-tab-active {
+      background-color: $primaryColor;
+
+      .ant-tabs-tab-btn {
+        color: $whiteColor !important;
+      }
+    }
+  }
+
+  .ant-tabs-ink-bar-animated {
+    display: none;
+  }
+}

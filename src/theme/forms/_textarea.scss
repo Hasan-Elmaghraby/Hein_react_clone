@@ -1,0 +1,14 @@
+.textarea {
+  height: 81px;
+  resize: none !important;
+  width: 100%;
+  border-radius: 20px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

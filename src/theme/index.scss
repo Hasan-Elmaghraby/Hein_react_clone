@@ -1,0 +1,39 @@
+@import '../../node_modules/react-toastify/scss/main';
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/pagination';
+@import '../../node_modules/swiper/modules/navigation.scss';
+
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/functions';
+
+@import './antComponents/dropdown';
+@import './antComponents/checkbox';
+@import './antComponents/switch';
+@import './antComponents/spin';
+@import './antComponents/otp';
+@import './antComponents/pagination';
+@import './antComponents/collapse';
+@import './antComponents/rate';
+@import './antComponents/select';
+@import './antComponents/upload';
+@import './antComponents/row';
+@import './antComponents/image';
+@import './antComponents/input';
+@import './antComponents/formItem';
+@import './antComponents/modal';
+@import './antComponents/tabs';
+
+@import './base/base';
+@import './base/fonts';
+@import './base/buttons';
+@import './base/links';
+@import './base/defaultPage';
+@import './base/scroll_bar';
+
+@import './library/swiper';
+@import './library/swiperNavigateButtons';
+
+@import './forms/forms';
+@import './forms/input';
+@import './forms/textarea';

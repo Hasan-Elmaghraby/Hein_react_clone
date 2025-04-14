@@ -1,0 +1,50 @@
+.swiper-pagination {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0 0;
+  gap: 0.3rem;
+
+  @include sm {
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 18px;
+    height: 13px;
+    background-color: #aeaeae;
+    opacity: 1;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    transition: all 0.5s;
+
+    @include xs {
+      width: 12px;
+      height: 10px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 39px;
+    height: 13px;
+    position: relative;
+    background-color: $primaryColor;
+
+    @include xs {
+      width: 26px;
+      height: 10px;
+    }
+  }
+
+  @include sm {
+    margin: 1% 0;
+  }
+  @include xs {
+    margin: 0.5% 0;
+  }
+  @include xxs {
+    margin: 0.1% 0;
+  }
+}

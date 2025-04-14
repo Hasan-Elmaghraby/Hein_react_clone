@@ -1,0 +1,156 @@
+{
+  "productRateModal": {
+    "placeholder": "قم بكتابة رأيك بالمعلن",
+    "button": "إرسال التقييم"
+  },
+  "NotFound": "الصفحة غير موجودة",
+  "noInfo": "لا يوجد معلومات",
+  "pages": {
+    "home": "الرئيسية"
+  },
+  "home": {
+    "readMore": "تعرف علي المزيد",
+    "aboutTitle": "من نحن",
+    "aboutSubtitle": "نبذة بسيطة عن هين",
+    "categoryTitle": "الأقسام",
+    "categorySubtitle": "تصفح أقسام هين المتنوعة والمختلفة",
+    "lastAdvicesTitle": "أحدث الإعلانات",
+    "lastAdvicesSubtitle": "تعرف علي احدث الإعلانات للبيع والشراء",
+    "contactTitle": "اتصل بنا",
+    "contactSubtitle": "نحن فى أنتظار أستفساراتكم على مدار ال 24 ساعة"
+  },
+  "addProduct": {
+    "title": "إضافة إعلان جديد",
+    "titleForm": "الصور والفيديوهات",
+    "textForm": "يمكنك إضافة 5 صور وفيديو واحد كحد أقصى لإعلانك",
+    "productTitle": "عنوان ( اسم ) الإعلان",
+    "price": "السعر",
+    "mainCategory": "القسم الرئيسي",
+    "subCategory": "القسم الفرعي",
+    "subSubCategory": "القسم الفرعي الثاني",
+    "area": "المنطقة",
+    "city": "المدينة",
+    "adsDescription": "وصف الإعلان",
+    "showPhone": "تأكيد إظهار رقم الجوال في الإعلان",
+    "confirmPayment": "نعم , أتعهد بدفع",
+    "commission": "عمولة التطبيق",
+    "submit": " إضافة الإعلان"
+  },
+  "editProfile": {
+    "title": "تعديل بياناتي",
+    "uploadImage": "تغيير صورة الحساب",
+    "name": "الاسم ",
+    "mobile": "رقم الجوال",
+    "email": "البريد الالكتروني",
+    "about": "شرح نصي لوصف النشاط",
+    "save": "حفظ التعديلات"
+  },
+  "favourite": {
+    "Pagetitle": "المفضلة",
+    "titleNoData": "لا توجد إعلانات بالمفضلة",
+    "content": "لا يوجد مفضلات في هذه الصفحة"
+  },
+  "followers": {
+    "textCard": "عرض تفاصيل الملف الشخصي",
+    "pageTitle": "المتابعين",
+    "followers": "متابعونك",
+    "followings": "من تتابعهم",
+    "titleNoData": "لا يوجد لديك متابعون",
+    "content": "لم يقم أي شخص بمتابعتك حتى الآن"
+  },
+  "myAds": {
+    "title": "إعلاناتي",
+    "currentAds": " إعلاناتي الحالية",
+    "waitingAds": " إعلانات قيد الإنتظار"
+  },
+  "notifications": {
+    "title": "الاشعارات",
+    "emptyTitle": "لا توجد لديك إشعارات",
+    "content": "لا توجد لديك إشعارات بالوقت الحالي",
+    "error": "حدث خطأ ما",
+    "delete": "حذف الاشعار",
+    "deleteDesc": "هل تريد حذف هذا الاشعار؟",
+    "confirmPayment": "نعم",
+    "cancel": "لا"
+  },
+  "packages": {
+    "pageTitle": "الباقات",
+    "radioTitle": "قم بإختيار طريقة الدفع",
+    "radioWallet": "الدفع بالمحفظة",
+    "radioOnline": "الدفع أونلاين",
+    "noSubscribe": "أنت غير مشترك حاليا",
+    "optionTitle": "يمكنك الاختيار من بين الباقات التالية والإشتراك",
+    "btnSubscribe": "إشتراك الآن",
+    "time": "لمدة",
+    "titleSubscribe": "أنت الآن مشترك في",
+    "endSubscriptionDate": "ينتهي إشتراكك في",
+    "durationDate": "مدة الإشتراك",
+    "numberAds": "عدد الإعلانات",
+    "price": "سعر الباقة",
+    "subscribeSuccess": "تم الاشتراك بنجاح",
+    "subscribeFailed": "حدث خطأ ما"
+  },
+
+  "header": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "sections": "الأقسام",
+    "lastAdvices": "أحدث الإعلانات",
+    "contact": "اتصل بنا",
+    "searchPlaceholder": "قم بالبحث الآن ....",
+    "signIn": "تسجيل الدخول",
+    "signUp": "انشاء حساب",
+    "profile": "الملف الشخصي",
+    "myAdvertisements": "إعلاناتي",
+    "favorites": "المفضلة",
+    "followers": "المتابعون",
+    "packages": "الباقات",
+    "wallet": "المحفظة",
+    "siteCommission": "عمولة الموقع",
+    "logout": "تسجيل الخروج",
+    "lang": "تغيير اللغة إلي ",
+    "notifications": "الاشعارات",
+    "chat": "الدردشة",
+    "addProduct": "اضافة منتج"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signInTitle": "تسجيل الدخول",
+    "signInSubtitle": "قم بإدخال بيانات حسابك لتسجيل الدخول",
+    "signUp": "إنشاء حساب جديد",
+    "signUpTitle": "إنشاء حساب جديد",
+    "signUpSubtitle": "قم بإدخال بياناتك لإنشاء حساب جديد",
+    "forgetPassword": "هل نسيت كلمة المرور ؟",
+    "mobile": "أدخل رقم الجوال",
+    "mobileInvalid": "رقم الجوال غير صحيح",
+    "required": "هذه الخانة مطلوبه",
+    "password": "أدخل كلمة المرور",
+    "confirmPassword": "تاكيد كلمة المرور",
+    "email": "أدخل البريد الالكتروني",
+    "name": "أدخل الاسم",
+    "create": "إنشاء",
+    "alreadyHaveAccount": "لديك حساب على هين ؟",
+    "forgetPasswordTitle": "هل نسيت كلمة المرور ؟",
+    "forgetPasswordSubtitle": "قم بإدخال رقم الجوال الخاص بحسابك لإرسال كود التحقق",
+    "forgetPasswordSubmit": "ارسال كود التحقق",
+    "twoFactorAuthTitle": "كود التحقق",
+    "twoFactorAuthSubtitle": "قم بكتابة كود التحقق الذي تم إرساله إليك عبر رقم الجوال",
+    "virify": "تحقق",
+    "send": "إرسال",
+    "newPasswordTitle": "اعادة تعيين كلمة المرور",
+    "newPasswordSubtitle": "يمكنك الآن تعيين كلمة مرور جديدة خاصة بحسابك",
+    "savePassword": "حفظ كلمة المرور",
+    "newPassword": "أدخل كلمة المرور الجديدة",
+    "newPasswordConfirm": "تأكيد كلمة المرور الجديدة",
+    "message": "نص الرسالة",
+    "titleChangePassword": "تغيير كلمة المرور",
+    "subtitleChangePassword": "يمكنك تغيير كلمة المرور الخاصة بحسابك",
+    "oldPassword": "أدخل كلمة المرور الحالية",
+    "confirm": "تأكيد"
+  },
+  "footer": {
+    "quickLinks": "روابط سريعة",
+    "followUs": "تابعنا علي",
+    "copyright": "جميع الحقوق محفوظة هين 2024"
+  }
+}

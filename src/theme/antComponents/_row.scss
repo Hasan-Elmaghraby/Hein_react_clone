@@ -1,0 +1,5 @@
+.ant-row {
+  @include sm {
+    max-width: 100%;
+  }
+}
