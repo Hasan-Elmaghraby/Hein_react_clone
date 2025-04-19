@@ -1,4 +1,7 @@
+@use "../abstracts/variables" as *;
+
 // media
+
 @mixin xxs {
   @media only screen and (max-width: 500px) {
     @content;
@@ -87,7 +90,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color,$opacity);
+  background-color: rgba($color, $opacity);
 }
 
 @mixin breakpoints($point) {
@@ -96,7 +99,7 @@
       @content;
     }
   } @else if $point == small {
-    @media screen and (max-width: 767px)  {
+    @media screen and (max-width: 767px) {
       @content;
     }
   } @else if $point == medium {

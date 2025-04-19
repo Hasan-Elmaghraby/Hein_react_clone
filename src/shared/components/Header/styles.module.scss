@@ -1,6 +1,43 @@
-@import "@/theme/shared.scss";
-
+@forward "@/theme/shared.scss";
 .header {
   background: url("../../../../public/images/header/headerBackground.png")
-    center center / 100% no-repeat;
+    center center/ 100% no-repeat;
+  aspect-ratio: 1367/158;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.logo {
+  flex-shrink: 0;
+  margin-inline-end: 10rem;
+  img {
+    max-width: 50px;
+    height: auto;
+  }
+}
+
+nav {
+  margin-inline-end: 13rem;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+
+  li {
+    a {
+      text-decoration: none;
+      color: $whiteColor;
+      font-size: 1.6rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }

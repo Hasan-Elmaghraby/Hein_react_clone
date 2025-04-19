@@ -1,5 +1,7 @@
+@use "../abstracts/variables" as *;
+
 .ant-dropdown-menu {
-  border-radius: $mainBorderRadius !important;
+  border-radius: $mainBorderRadius;
   padding: 0 !important;
   overflow: hidden !important;
   box-shadow: 0 0 30px rgba(#fff, 0.1) !important;

@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .ant-collapse {
   border-radius: $thirdBorderRadius;
   border: 0;

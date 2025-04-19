@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as *;
 .notificationSwitch {
   background: $greyColor !important;
   &.ant-switch-checked {

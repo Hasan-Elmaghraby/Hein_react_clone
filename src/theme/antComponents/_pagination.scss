@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 .ant-pagination {
   margin-top: 3rem;
   display: flex;
@@ -22,9 +24,9 @@
     color: #fff !important;
     transform: rotate(180deg);
 
-    @include dir {
-      transform: uset;
-    }
+    // @include dir {
+    //   transform: unset;
+    // }
   }
 
   .ant-pagination-options {

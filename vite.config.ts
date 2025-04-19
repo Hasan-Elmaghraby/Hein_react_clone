@@ -11,4 +11,14 @@ export default defineConfig({
       "@public": path.resolve(__dirname, "./public"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+               @use "@/theme/abstracts/variables" as *;
+                @use "@/theme/abstracts/mixins" as *;
+`,
+      },
+    },
+  },
 });

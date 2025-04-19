@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as *;
 .ant-otp {
   display: flex !important;
   align-items: center !important;
@@ -20,7 +21,7 @@
     font-weight: 700;
     transition: all 0.5s;
 
-    &:not([value='']) {
+    &:not([value=""]) {
       background-color: $secondaryColor !important;
       color: $whiteColor !important;
     }
