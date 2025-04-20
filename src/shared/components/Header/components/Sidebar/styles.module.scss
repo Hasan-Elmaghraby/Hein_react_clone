@@ -1,0 +1,55 @@
+@forward "@/theme/shared.scss";
+
+.sidebar {
+  width: 100%;
+}
+
+.sidebarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobileLogo {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  row-gap: 1rem;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.authBtns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@include sm {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    inset-inline-start: -100%;
+    padding-top: 20rem;
+    height: 100vh;
+    width: 40%;
+    background-color: $primaryColor;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 2rem;
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      inset-inline-start: 0;
+    }
+  }
+}

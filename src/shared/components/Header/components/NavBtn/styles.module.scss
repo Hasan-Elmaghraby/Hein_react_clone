@@ -1,0 +1,32 @@
+@forward "@/theme/shared.scss";
+
+.navBtn {
+  display: none;
+}
+
+@include sm {
+  .navBtn {
+    display: block;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 3.2rem;
+      height: 0.4rem;
+      background-color: $whiteColor;
+      margin: 0.5rem 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &.active {
+      span {
+        background-color: rgba($whiteColor, 0.8);
+      }
+
+      span:nth-child(2) {
+        background-color: rgba($whiteColor, 0.8);
+        transform: translateX(50%);
+      }
+    }
+  }
+}

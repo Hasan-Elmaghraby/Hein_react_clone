@@ -1,0 +1,33 @@
+@forward "@/theme/shared.scss";
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.6rem;
+  gap: 1rem;
+  height: 4.4rem;
+  width: 12.9rem;
+  border-radius: $secondaryBorderRadius;
+  border: none;
+  cursor: pointer;
+  transition: $mainTransition;
+
+  &.logIn {
+    color: $primaryColor;
+    background-color: $whiteColor;
+
+    &:hover {
+      background-color: rgba($whiteColor, 0.9);
+    }
+  }
+
+  &.register {
+    color: $whiteColor;
+    background-color: rgba($whiteColor, 0.07);
+
+    &:hover {
+      background-color: rgba($whiteColor, 0.2);
+    }
+  }
+}
