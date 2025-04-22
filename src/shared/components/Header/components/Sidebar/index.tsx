@@ -1,13 +1,20 @@
-import logo from "@public/images/logo.png";
 import styles from "./styles.module.scss";
-import { Nav } from "../Nav";
-import { Search } from "../Search";
-import { AuthBtn } from "../AuthBtn";
+import { Nav } from "./components/Nav";
+import { Search } from "./components/Search";
+import { AuthBtn } from "./components/AuthBtn";
+import { CloseBtn } from "./components/CloseBtn";
+import { LangChange } from "./components/LangChange";
 
 interface SidebarProps {
   isNavOpen: boolean;
+  logo: string;
+  onClick: () => void;
 }
-export const Sidebar: React.FC<SidebarProps> = ({ isNavOpen }) => {
+export const Sidebar: React.FC<SidebarProps> = ({
+  isNavOpen,
+  logo,
+  onClick,
+}) => {
   return (
     <div className={`${styles.sidebar} ${isNavOpen && styles.active}`}>
       <figure className={styles.mobileLogo}>
@@ -21,7 +28,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isNavOpen }) => {
           <AuthBtn type="login" />
           <AuthBtn type="register" />
         </div>
+        <LangChange />
       </div>
+      <CloseBtn onClick={onClick} />
     </div>
   );
 };

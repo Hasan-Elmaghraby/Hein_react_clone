@@ -26,6 +26,10 @@
       span:nth-child(2) {
         background-color: rgba($whiteColor, 0.8);
         transform: translateX(50%);
+
+        @include dir {
+          transform: translateX(-50%);
+        }
       }
     }
   }

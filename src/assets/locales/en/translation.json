@@ -1,19 +1,155 @@
 {
-  "NotFound": "Page Not Found",
-  "noInfo": "No Information",
+  "productRateModal": {
+    "placeholder": "Write your opinion about the advertiser",
+    "button": "Submit Rating"
+  },
+  "NotFound": "Page not found",
+  "noInfo": "No information available",
   "pages": {
     "home": "Home"
+  },
+  "home": {
+    "readMore": "Read more",
+    "aboutTitle": "About Us",
+    "aboutSubtitle": "A brief overview about Hein",
+    "categoryTitle": "Categories",
+    "categorySubtitle": "Browse Hein's various and diverse categories",
+    "lastAdvicesTitle": "Latest Ads",
+    "lastAdvicesSubtitle": "Check out the latest ads for sale and purchase",
+    "contactTitle": "Contact Us",
+    "contactSubtitle": "We are waiting for your inquiries 24/7"
+  },
+  "addProduct": {
+    "title": "Add New Ad",
+    "titleForm": "Images and Videos",
+    "textForm": "You can add up to 5 images and 1 video for your ad",
+    "productTitle": "Ad Title (Name)",
+    "price": "Price",
+    "mainCategory": "Main Category",
+    "subCategory": "Subcategory",
+    "subSubCategory": "Second Subcategory",
+    "area": "Area",
+    "city": "City",
+    "adsDescription": "Ad Description",
+    "showPhone": "Confirm to show phone number in the ad",
+    "confirmPayment": "Yes, I commit to paying the",
+    "commission": "App Commission",
+    "submit": "Add Ad"
+  },
+  "editProfile": {
+    "title": "Edit My Information",
+    "uploadImage": "Change Profile Picture",
+    "name": "Name",
+    "mobile": "Mobile Number",
+    "email": "Email Address",
+    "about": "Text Description of the Activity",
+    "save": "Save Changes"
+  },
+  "favourite": {
+    "Pagetitle": "Favorites",
+    "titleNoData": "No ads in favorites",
+    "content": "No favorites on this page"
+  },
+  "followers": {
+    "textCard": "View Profile Details",
+    "pageTitle": "Followers",
+    "followers": "Your Followers",
+    "followings": "You Follow",
+    "titleNoData": "You have no followers",
+    "content": "No one has followed you yet"
+  },
+  "myAds": {
+    "title": "My Ads",
+    "currentAds": "Current Ads",
+    "waitingAds": "Pending Ads"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "emptyTitle": "You have no notifications",
+    "content": "You currently have no notifications",
+    "error": "Something went wrong",
+    "delete": "Delete notification",
+    "deleteDesc": "Do you want to delete this notification?",
+    "confirmPayment": "Yes",
+    "cancel": "No"
+  },
+  "packages": {
+    "pageTitle": "Packages",
+    "radioTitle": "Choose a payment method",
+    "radioWallet": "Pay with Wallet",
+    "radioOnline": "Pay Online",
+    "noSubscribe": "You are not currently subscribed",
+    "optionTitle": "You can choose from the following packages and subscribe",
+    "btnSubscribe": "Subscribe Now",
+    "time": "For a duration of",
+    "titleSubscribe": "You are now subscribed to",
+    "endSubscriptionDate": "Your subscription ends on",
+    "durationDate": "Subscription Duration",
+    "numberAds": "Number of Ads",
+    "price": "Package Price",
+    "subscribeSuccess": "Subscribed successfully",
+    "subscribeFailed": "Something went wrong"
   },
   "header": {
     "home": "Home",
     "about": "About Us",
-    "services": "Services",
-    "customers": "Customers",
-    "gallery": "Gallery",
+    "sections": "Sections",
+    "lastAds": "Latest Ads",
     "contact": "Contact Us",
-    "lang": "Change Language to "
+    "searchPlaceholder": "Search now ....",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "profile": "Profile",
+    "myAdvertisements": "My Ads",
+    "favorites": "Favorites",
+    "followers": "Followers",
+    "packages": "Packages",
+    "wallet": "Wallet",
+    "siteCommission": "Site Commission",
+    "logout": "Logout",
+    "lang": "Change language to",
+    "notifications": "Notifications",
+    "chat": "Chat",
+    "addProduct": "Add Product"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInTitle": "Sign In",
+    "signInSubtitle": "Enter your account details to sign in",
+    "signUp": "Create New Account",
+    "signUpTitle": "Create New Account",
+    "signUpSubtitle": "Enter your details to create a new account",
+    "forgetPassword": "Forgot Password?",
+    "mobile": "Enter mobile number",
+    "mobileInvalid": "Invalid mobile number",
+    "required": "This field is required",
+    "password": "Enter password",
+    "confirmPassword": "Confirm password",
+    "email": "Enter email address",
+    "name": "Enter name",
+    "create": "Create",
+    "alreadyHaveAccount": "Already have an account on Hein?",
+    "forgetPasswordTitle": "Forgot Password?",
+    "forgetPasswordSubtitle": "Enter your mobile number to receive the verification code",
+    "forgetPasswordSubmit": "Send Verification Code",
+    "twoFactorAuthTitle": "Verification Code",
+    "twoFactorAuthSubtitle": "Enter the verification code sent to your mobile number",
+    "virify": "Verify",
+    "send": "Send",
+    "newPasswordTitle": "Reset Password",
+    "newPasswordSubtitle": "You can now set a new password for your account",
+    "savePassword": "Save Password",
+    "newPassword": "Enter new password",
+    "newPasswordConfirm": "Confirm new password",
+    "message": "Message text",
+    "titleChangePassword": "Change Password",
+    "subtitleChangePassword": "You can change your account password",
+    "oldPassword": "Enter current password",
+    "confirm": "Confirm"
   },
   "footer": {
-    "home": "Home"
+    "quickLinks": "Quick Links",
+    "followUs": "Follow us on",
+    "copyright": "All rights reserved © Hein 2024"
   }
 }

@@ -2,7 +2,7 @@
 .header {
   background: url("../../../../public/images/header/headerBackground.png")
     center center/ 100% no-repeat;
-  aspect-ratio: 1367/158;
+  aspect-ratio: 8.65;
   padding-top: 2.5rem;
 }
 
@@ -12,42 +12,18 @@
   justify-content: space-between;
 }
 
-.logo {
-  flex-shrink: 0;
-  margin-inline-end: 10rem;
-  img {
-    max-width: 50px;
-    height: auto;
-  }
-}
-
 @include sm {
+  .header {
+    padding-top: 1.5rem;
+  }
   .headerWrapper {
-    justify-content: space-around;
+    padding-inline: 2rem;
   }
 }
 
-.overlay {
-  display: none;
-
-  @include sm {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 11;
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
-
-    &.active {
-      opacity: 0.7;
-      visibility: visible;
-    }
+@include xs {
+  .header {
+    background: $primaryColor;
+    padding-bottom: 1.5rem;
   }
 }

@@ -1,0 +1,15 @@
+.logo {
+  flex-shrink: 0;
+  margin-inline-end: 10rem;
+
+  img {
+    max-width: 50px;
+    height: auto;
+  }
+}
+
+@include md {
+  .logo {
+    margin-inline-end: 3rem;
+  }
+}

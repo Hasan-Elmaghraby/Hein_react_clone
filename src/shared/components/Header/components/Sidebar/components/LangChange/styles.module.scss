@@ -1,0 +1,27 @@
+@forward "@/theme/shared.scss";
+
+.langChange {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.langIcon {
+  font-size: 2rem;
+  color: $whiteColor;
+}
+
+.langText {
+  display: block;
+  font-size: 1.4rem;
+  color: $whiteColor;
+  text-align: center;
+}
+
+@include sm {
+  .langChange {
+    position: absolute;
+    top: 2rem;
+    inset-inline-start: 2rem;
+  }
+}

@@ -1,10 +1,10 @@
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpApi from "i18next-http-backend";
+import { initReactI18next } from "react-i18next";
 
-import translationAr from '@/assets/locales/ar/translation.json';
-import translationEn from '@/assets/locales/en/translation.json';
+import translationAr from "@/assets/locales/ar/translation.json";
+import translationEn from "@/assets/locales/en/translation.json";
 
 const resources = {
   en: {
@@ -16,8 +16,8 @@ const resources = {
 };
 
 export const supportedLngs = {
-  en: 'English',
-  ar: 'العربية',
+  en: "English",
+  ar: "العربية",
 };
 
 i18n
@@ -26,7 +26,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    fallbackLng: "en",
     supportedLngs: Object.keys(supportedLngs),
 
     interpolation: {
