@@ -1,9 +1,10 @@
-import React from "react";
 import styles from "./styles.module.scss";
 import { useTranslation } from "react-i18next";
+import { Dropdown } from "./Dropdown";
 
 export const Nav = () => {
   const { t } = useTranslation();
+
   return (
     <nav className={styles.nav}>
       <ul>
@@ -14,7 +15,7 @@ export const Nav = () => {
           <a href="#">{t("header.about")}</a>
         </li>
         <li className={styles.listItem}>
-          <a href="#">{t("header.sections")}</a>
+          <Dropdown />
         </li>
         <li className={styles.listItem}>
           <a href="#">{t("header.lastAds")} </a>

@@ -60,6 +60,12 @@ ul {
     .listItem {
       width: 100%;
 
+      &.active {
+        &::after {
+          display: none;
+        }
+      }
+
       a {
         display: block;
         font-size: 1.8rem;
