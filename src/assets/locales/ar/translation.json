@@ -149,6 +149,14 @@
     "confirm": "تأكيد"
   },
   "footer": {
+    "about": "من نحن",
+    "commission": "عمولة الموقع",
+    "sections": "الاقسام",
+    "lastAds": "اخر الاعلانات",
+    "privacyPolicy": "سياسة الخصوصية",
+    "useTreaty": "معاهدة الاستخدام",
+    "login": "تسجيل الدخول",
+    "contactWithUs": "تواصل معنا",
     "quickLinks": "روابط سريعة",
     "followUs": "تابعنا علي",
     "copyright": "جميع الحقوق محفوظة هين 2024"

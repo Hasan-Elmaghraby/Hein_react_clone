@@ -1,0 +1,10 @@
+@forward "@/theme/shared.scss";
+
+.logo {
+  flex-shrink: 0;
+
+  img {
+    max-width: 115px;
+    height: auto;
+  }
+}

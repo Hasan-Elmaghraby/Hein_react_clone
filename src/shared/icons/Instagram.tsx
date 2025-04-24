@@ -1,6 +1,6 @@
-import { SVGProps } from 'react';
+import { SVGProps } from "react";
 
-export const InstgramIcon = (Props: SVGProps<SVGSVGElement>) => {
+export const InstagramIcon = (Props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

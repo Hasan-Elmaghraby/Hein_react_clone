@@ -8,7 +8,7 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ logo }) => {
   return (
     <a href="/" className={styles.logo}>
-      <img src={logo} alt="logo" />
+      <img loading="lazy" src={logo} alt="logo" />
     </a>
   );
 };

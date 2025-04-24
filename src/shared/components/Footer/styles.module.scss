@@ -1,0 +1,21 @@
+@forward "@/theme/shared.scss";
+
+.footer {
+  background-color: $primaryColor;
+  color: $whiteColor;
+  padding: 2rem 0;
+}
+
+.footerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
