@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Sidebar } from "./components/Sidebar";
 import { NavBtn } from "./components/NavBtn";
 import { Logo } from "./components/Logo";
@@ -6,19 +5,15 @@ import { Overlay } from "./components/Overlay";
 import styles from "./styles.module.scss";
 import { Container } from "../Container";
 import logo from "@public/images/logo.png";
+import { useHeader } from "./components/useHeader";
 
 export const Header: React.FC = () => {
-  const [isNavOpen, setNavIsOpen] = useState(false);
-  const handleNavToggle = () => setNavIsOpen(!isNavOpen);
-
-  const handleNavClose = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") {
-      setNavIsOpen(false);
-    }
-  };
-
+  const { isNavOpen, handleNavToggle, handleNavClose, isHeaderFixed } =
+    useHeader();
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${isHeaderFixed && styles.headerFixed}`}
+    >
       <Container>
         <div className={styles.headerWrapper}>
           <Logo logo={logo} />

@@ -10,6 +10,7 @@ export const Dropdown = () => {
   const handleToggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
   return (
     <div className={`${styles.dropdown} ${styles.headerListItem}`}>
       <div className={styles.dropdownBtn} onClick={handleToggleDropdown}>
