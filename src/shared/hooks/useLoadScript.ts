@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const useLoadScript = (src) => {
+const useLoadScript = (src: string) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = src;
     script.async = true;
     script.defer = true;

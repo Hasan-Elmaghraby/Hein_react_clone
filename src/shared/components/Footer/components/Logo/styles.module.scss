@@ -2,9 +2,12 @@
 
 .logo {
   flex-shrink: 0;
+  width: 20%;
 
   img {
+    display: block;
     max-width: 115px;
     height: auto;
+    margin-inline: auto;
   }
 }

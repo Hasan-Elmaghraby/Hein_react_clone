@@ -5,14 +5,14 @@ import { Overlay } from "./components/Overlay";
 import styles from "./styles.module.scss";
 import { Container } from "../Container";
 import logo from "@public/images/logo.png";
-import { useHeader } from "./components/useHeader";
+import { useHeader } from "./hooks/useHeader";
 
 export const Header: React.FC = () => {
   const { isNavOpen, handleNavToggle, handleNavClose, isHeaderFixed } =
     useHeader();
   return (
     <header
-      className={`${styles.header} ${isHeaderFixed && styles.headerFixed}`}
+      className={`${styles.header} ${isHeaderFixed ? styles.headerFixed : ""}`}
     >
       <Container>
         <div className={styles.headerWrapper}>

@@ -1,0 +1,27 @@
+@forward "@/theme/shared.scss";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.6rem;
+  gap: 1rem;
+  height: 4.4rem;
+  width: max(100%, 12.9rem);
+  border-radius: $secondaryBorderRadius;
+  border: none;
+  cursor: pointer;
+  transition: $mainTransition;
+  background-color: $primaryColor;
+  color: $whiteColor;
+
+  &:hover {
+    background-color: rgba($primaryColor, 0.9);
+  }
+
+  &.hero {
+    width: 100%;
+    max-width: 26rem;
+  }
+}

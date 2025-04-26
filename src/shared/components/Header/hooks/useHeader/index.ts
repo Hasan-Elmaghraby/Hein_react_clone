@@ -11,7 +11,7 @@ export const useHeader = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      if (currentScrollY > lastScrollY && currentScrollY > 300) {
         setHeaderFixed(false);
       } else {
         setHeaderFixed(true);

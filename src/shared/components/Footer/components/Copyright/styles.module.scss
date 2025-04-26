@@ -1,0 +1,15 @@
+@forward "@/theme/shared.scss";
+
+.copyright {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.2rem;
+  color: $whiteColor;
+
+  span {
+    font-size: 1.8rem;
+    color: $whiteColor;
+  }
+}

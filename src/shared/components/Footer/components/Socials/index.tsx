@@ -1,31 +1,46 @@
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
 import { FacebookIcon } from "@/shared/icons/Facebook";
 import { InstagramIcon } from "@/shared/icons/Instagram";
 import { WhatsappIcon } from "@/shared/icons/Whatsapp";
 import { SnapIcon } from "@/shared/icons/Snap";
 export const Socials = () => {
   return (
-    <ul className={styles.stylesocials}>
-      <li>
-        <Link to={""}>
+    <ul className={styles.socials}>
+      <li className={styles.listItem}>
+        <a
+          href="https://www.snapchat.com/add/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SnapIcon />
-        </Link>
+        </a>
       </li>
-      <li>
-        <Link to={""}>
+      <li className={styles.listItem}>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FacebookIcon />
-        </Link>
+        </a>
       </li>
-      <li>
-        <li>
-          <Link to={""}>
-            <WhatsappIcon />
-          </Link>
-        </li>
-        <Link to={""}>
+      <li className={styles.listItem}>
+        <a
+          href="https://wa.me/050454120"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <WhatsappIcon />
+        </a>
+      </li>
+      <li className={styles.listItem}>
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <InstagramIcon />
-        </Link>
+        </a>
       </li>
     </ul>
   );

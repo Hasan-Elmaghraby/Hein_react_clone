@@ -1,6 +1,6 @@
 @forward "@/theme/shared.scss";
 
-ul {
+.headerList {
   display: flex;
   align-items: center;
   gap: 2.4rem;
@@ -38,7 +38,7 @@ ul {
 }
 
 @include md {
-  ul {
+  .headerList {
     .listItem {
       a {
         font-size: 1.4rem;
@@ -52,7 +52,7 @@ ul {
     width: 100%;
   }
 
-  ul {
+  .headerList {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;

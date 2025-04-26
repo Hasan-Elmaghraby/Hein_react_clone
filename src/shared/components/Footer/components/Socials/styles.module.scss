@@ -1,4 +1,45 @@
 @forward "@/theme/shared.scss";
 
 .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -3rem;
+    inset-inline-start: 0;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 3px;
+    background-color: rgba($whiteColor, 0.18);
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  background-color: rgba($whiteColor, 0.06);
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid rgba($whiteColor, 0.06);
+
+  &:hover {
+    border: 1px solid rgba($whiteColor, 0.3);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: $whiteColor;
+  }
 }

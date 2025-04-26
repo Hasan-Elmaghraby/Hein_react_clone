@@ -6,7 +6,7 @@ export const NavLinks = () => {
   const { t } = useTranslation();
   return (
     <nav className={styles.nav}>
-      <h3 className={styles.title}>{t("footer.quickLinks")}</h3>
+  
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <Link to="/about">{t("footer.about")}</Link>

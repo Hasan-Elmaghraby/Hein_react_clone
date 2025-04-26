@@ -7,7 +7,7 @@ export const Nav = () => {
 
   return (
     <nav className={styles.nav}>
-      <ul>
+      <ul className={styles.headerList}>
         <li className={`${styles.listItem} ${styles.active}`}>
           <a href="#">{t("header.home")}</a>
         </li>

@@ -1,21 +1,48 @@
 @forward "@/theme/shared.scss";
 
 .footer {
-  background-color: $primaryColor;
-  color: $whiteColor;
-  padding: 2rem 0;
+  background: url("../../../../public/images/footer/footerBackground.png")
+    center center/ 100% no-repeat;
+  aspect-ratio: 1367/408;
+  display: flex;
+  align-items: end;
+  padding-bottom: 4rem;
 }
 
 .footerWrapper {
+  // padding-block: 18rem 6rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
-.copyright {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 1.2rem;
+.column {
+  width: 40%;
+
+  @include xs {
+    width: 100%;
+  }
+}
+
+.title {
+  color: $whiteColor;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 2.6rem;
+}
+
+@include sm {
+  .footer {
+    background: $primaryColor;
+    padding-bottom: 2rem;
+  }
+}
+
+@include xs {
+  .footerWrapper {
+    flex-direction: column;
+    gap: 4rem;
+    padding-block: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
