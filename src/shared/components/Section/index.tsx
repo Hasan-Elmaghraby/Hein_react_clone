@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
-interface children {
+interface SectionProps {
   children: React.ReactNode;
-  className?: string;
+  className?: string; 
 }
 
-export const Section: React.FC<children> = ({ children, ...props }) => {
+export const Section: React.FC<SectionProps> = ({ children, className }) => {
   return (
-    <section className={styles.section} {...props}>
+    <section className={`${styles.section} ${className ?? ""}`}>
       {children}
     </section>
   );

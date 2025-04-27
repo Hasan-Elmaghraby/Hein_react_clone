@@ -1,11 +1,11 @@
 export interface Categories {
   id: number;
-  sort: number | null;
-  parent_id: number | null;
-  name: string;
-  content: null;
+  sort?: number;
+  parent_id?: number;
+  name?: string;
+  content: string;
   image: string;
-  sub_categories: SubCategory[];
+  sub_categories?: SubCategory[];
 }
 
 export interface SubCategory {
