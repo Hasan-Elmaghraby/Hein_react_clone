@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
     useHeader();
   return (
     <header
-      className={`${styles.header} ${isHeaderFixed ? styles.headerFixed : ""}`}
+      className={`${styles.header} ${!isHeaderFixed ? styles.headerFixed : ""}`}
     >
       <Container>
         <div className={styles.headerWrapper}>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { supportedLngs } from "@/shared/services/i18n/config";
 import { LangIcon } from "@/shared/icons/Lang";
@@ -15,11 +15,14 @@ export const LangChange: React.FC = () => {
 
     i18n.changeLanguage(nextLang);
 
-    const dir = nextLang === "ar" ? "rtl" : "ltr";
-    document.documentElement.setAttribute("dir", dir);
-    document.documentElement.setAttribute("lang", lang);
     setLang(nextLang);
   };
+
+  useEffect(() => {
+    const dir = lang === "ar" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", dir);
+    document.documentElement.setAttribute("lang", lang);
+  }, [lang]);
 
   return (
     <div className={styles.langChange}>

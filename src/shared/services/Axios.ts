@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import axios from "axios";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-import { BASE_URL } from './api/config';
+import { BASE_URL } from "./api/config";
 
-import { useAuth } from '@/modules/Auth/context/AuthProvider';
+// import { useAuth } from '@/modules/Auth/context/AuthProvider';
 
 const Axios = axios.create({
   baseURL: BASE_URL,
@@ -12,23 +12,23 @@ const Axios = axios.create({
 
 const AxiosConfig = () => {
   const { i18n } = useTranslation();
-  const { user } = useAuth();
-  console.log(user);
+  // const { user } = useAuth();
+  // console.log(user);
 
   useEffect(() => {
     const requestInterceptor = Axios.interceptors.request.use((config) => {
-      if (user) {
-        config.headers['Authorization'] = `Bearer ${user.access_token}`;
-      }
-      config.headers['lang'] = i18n.language;
-      config.headers['Accept-Language'] = i18n.language;
+      // if (user) {
+      //   config.headers["Authorization"] = `Bearer ${user.access_token}`;
+      // }
+      config.headers["lang"] = i18n.language;
+      config.headers["Accept-Language"] = i18n.language;
       return config;
     });
 
     return () => {
       Axios.interceptors.request.eject(requestInterceptor);
     };
-  }, [i18n.language, user]);
+  }, [i18n.language]);
 
   return null;
 };

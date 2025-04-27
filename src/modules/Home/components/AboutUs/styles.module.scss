@@ -1,0 +1,61 @@
+@forward "@/theme/shared.scss";
+
+.aboutUs {
+  position: relative;
+
+  &::before {
+    content: url("@public/images/about/aboutRight.png");
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    width: 240px;
+    height: 400px;
+    z-index: -1;
+
+    @include dir {
+      transform: scaleX(-1);
+    }
+  }
+
+  &::after {
+    content: url("@public/images/about/aboutLeft.png");
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    width: 334px;
+    height: 267px;
+    z-index: -1;
+
+    @include dir {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+@include xs {
+  .aboutUs {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.image {
+  margin-bottom: 2rem;
+  img {
+    display: block;
+    margin-inline: auto;
+    max-width: 18rem;
+    height: auto;
+  }
+}
+
+.description {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: $paragraphMainColor;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 400;
+}

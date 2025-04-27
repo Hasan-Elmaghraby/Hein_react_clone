@@ -10,7 +10,7 @@ export interface Home {
 export interface About {
   title: string;
   subtitle: string;
-  image: string;
+  image?: string;
   content: string;
 }
 
@@ -66,9 +66,9 @@ export interface User {
 
 export interface Slider {
   id: number;
-  sort: number;
+  sort?: number;
   title: string;
   content: string;
   image: string;
-  link: string;
+  link?: string;
 }

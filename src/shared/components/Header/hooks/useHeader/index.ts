@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const useHeader = () => {
   const [isNavOpen, setNavIsOpen] = useState(false);
-  const [isHeaderFixed, setHeaderFixed] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isHeaderFixed, setHeaderFixed] = useState(true);
+  const lastScrollY = useRef(0);
 
   const handleNavToggle = () => setNavIsOpen(!isNavOpen);
 
@@ -11,23 +11,29 @@ export const useHeader = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 300) {
-        setHeaderFixed(false);
-      } else {
+      if (currentScrollY < 300) {
         setHeaderFixed(true);
+      } else {
+        if (currentScrollY > lastScrollY.current) {
+          setHeaderFixed(false);
+        } else {
+          setHeaderFixed(true);
+        }
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
+
   const handleNavClose = (e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
       setNavIsOpen(false);
     }
   };
+
   return { isNavOpen, handleNavToggle, handleNavClose, isHeaderFixed };
 };
