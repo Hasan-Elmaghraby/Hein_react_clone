@@ -22,6 +22,8 @@ export const Sections: React.FC<CategoriesProps> = ({ sections }) => {
           {sections.map((section) => (
             <SectionCard
               key={section.id}
+              name={section.name}
+              id={section.id}
               content={section?.name || ""}
               image={section.image}
             />

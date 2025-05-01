@@ -1,4 +1,4 @@
-import { Container } from "../Container";
+import { Container } from "../../../Container";
 import { NavLinks } from "./components/NavLinks";
 import { Socials } from "./components/Socials";
 import { Logo } from "./components/Logo";

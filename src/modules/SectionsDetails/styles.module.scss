@@ -1,0 +1,35 @@
+@forward "@/theme/shared.scss";
+
+.sectionBtns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-block: 2rem;
+}
+
+.sectionBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 4.4rem;
+  border-radius: $secondaryBorderRadius;
+  border: none;
+  cursor: pointer;
+  transition: $mainTransition;
+  padding: 0 2rem;
+  font-weight: 800;
+  font-size: 1.4rem;
+  background-color: rgba($primaryColor, 0.07);
+  color: $primaryColor;
+
+  &.active {
+    background-color: $primaryColor;
+    color: $whiteColor;
+  }
+
+  &:hover {
+    background-color: rgba($primaryColor, 0.2);
+  }
+}

@@ -1,1 +1,34 @@
-@forward '@/theme/shared.scss';
+@forward "@/theme/shared.scss";
+
+.sectionCard {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: $whiteColor;
+  border-radius: $mainBorderRadius;
+  box-shadow: 0 3px 30px rgba(#5c5c5c, 0.16);
+  min-height: 13.4rem;
+  gap: 1rem;
+  transition: $mainTransition;
+
+  &:hover {
+    box-shadow: 0 3px 30px rgba(#5c5c5c, 0.26);
+    transform: translateY(-3px);
+    color: $headingMainColor;
+  }
+
+  .content {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+.image {
+  img {
+    display: block;
+    max-width: 5rem;
+    max-height: auto;
+  }
+}
