@@ -12,8 +12,6 @@ const SectionsDetails = () => {
   const numericId = Number(id);
   const { data } = useGetSectionDetails(numericId);
 
-  console.log(data);
-
   const location = useLocation();
   const sectionName = location.state?.sectionName ?? "Unknown Section";
 

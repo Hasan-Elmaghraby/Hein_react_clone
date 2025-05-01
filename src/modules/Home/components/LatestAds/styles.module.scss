@@ -1,0 +1,15 @@
+@forward "@/theme/shared.scss";
+
+.latestAds {
+  padding-block: 5rem 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  gap: 1.5rem;
+
+  @include xxs {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
+}
