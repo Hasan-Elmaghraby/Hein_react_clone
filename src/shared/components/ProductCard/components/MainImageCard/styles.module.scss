@@ -1,0 +1,42 @@
+@forward "@/theme/shared.scss";
+
+.mainImageLink {
+  text-decoration: none;
+  position: relative;
+
+  .image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: $secondaryBorderRadius;
+    img {
+      display: block;
+      width: 16.2rem !important;
+      height: 16.2rem !important;
+      object-fit: cover;
+      transition: $mainTransition;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .categoryName {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6.4rem;
+    padding: 0.5rem;
+    min-height: 3.1rem;
+    border-radius: $mainBorderRadius;
+    top: 1rem;
+    inset-inline-start: 1rem;
+    background-color: $whiteColor;
+    color: $headingMainColor;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
