@@ -1,0 +1,15 @@
+@forward "@/theme/shared.scss";
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $headingMainColor;
+  margin-bottom: 0.4rem;
+}
+
+.description {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $paragraphMainColor;
+  margin-bottom: 2rem;
+}

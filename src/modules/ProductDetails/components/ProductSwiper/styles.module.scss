@@ -1,0 +1,14 @@
+@forward "@/theme/shared.scss";
+
+.productImages {
+  border-radius: $secondaryBorderRadius;
+  overflow: hidden;
+
+  .image {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

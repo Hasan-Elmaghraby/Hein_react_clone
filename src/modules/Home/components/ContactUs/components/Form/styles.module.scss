@@ -1,0 +1,60 @@
+@forward "@/theme/shared.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.image {
+  img {
+    display: block;
+    width: min(100%, 444px);
+    height: auto;
+  }
+}
+
+.input {
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    padding-inline-start: 2rem;
+    border: 1px solid $greyColor;
+    border-radius: $fourthBorderRadius;
+    outline: none;
+    font-size: 1.6rem;
+    height: $inputHeight;
+    transition: $mainTransition;
+    color: $paragraphMainColor;
+    caret-color: $primaryColor;
+
+    @include dir {
+    }
+
+    &::placeholder {
+      color: $paragraphSecondaryColor;
+    }
+
+    &:focus {
+      border-color: $primaryColor;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  input[type="tel"] {
+    direction: rtl;
+    @include dir {
+      direction: ltr;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 10rem;
+    border-radius: $secondaryBorderRadius;
+  }
+}

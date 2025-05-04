@@ -1,0 +1,18 @@
+@forward "@/theme/shared.scss";
+
+.contactUsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.formWrapper {
+  width: min(100%, 342px);
+}
+
+@include xs {
+  .contactUsWrapper {
+    flex-direction: column;
+  }
+}

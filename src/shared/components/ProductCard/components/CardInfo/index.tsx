@@ -25,7 +25,7 @@ export const CardInfo: React.FC<Props> = ({
 
   return (
     <div className={styles.info}>
-      <Link className={styles.titleLink} to="/profile">
+      <Link className={styles.titleLink} to="/productDetails">
         <h3 className={styles.title}>{title}</h3>
       </Link>
 

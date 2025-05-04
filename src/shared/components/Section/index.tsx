@@ -1,15 +1,21 @@
 import React from "react";
 import styles from "./styles.module.scss";
+import { Container } from "../Container";
 
 interface SectionProps {
   children: React.ReactNode;
-  className?: string; 
+  className?: string;
+  noContainer?: boolean;
 }
 
-export const Section: React.FC<SectionProps> = ({ children, className }) => {
+export const Section: React.FC<SectionProps> = ({
+  children,
+  className,
+  noContainer,
+}) => {
   return (
     <section className={`${styles.section} ${className ?? ""}`}>
-      {children}
+      {!noContainer ? <Container>{children}</Container> : children}
     </section>
   );
 };

@@ -4,6 +4,7 @@ import { MainImageCard } from "./components/MainImageCard";
 import { CardInfo } from "./components/CardInfo";
 
 interface Props {
+  id: number | string;
   mainImage: string;
   userImage: string;
   categoryName: string;
@@ -15,6 +16,7 @@ interface Props {
 }
 
 export const ProductCard: React.FC<Props> = ({
+  id,
   mainImage,
   title,
   userName,
@@ -27,6 +29,7 @@ export const ProductCard: React.FC<Props> = ({
   return (
     <div className={styles.productCard}>
       <MainImageCard
+        id={id}
         mainImage={mainImage}
         categoryName={categoryName}
         title={title}
