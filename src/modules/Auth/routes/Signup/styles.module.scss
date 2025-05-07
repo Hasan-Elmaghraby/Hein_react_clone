@@ -1,0 +1,54 @@
+@forward "@/theme/shared.scss";
+
+.signupWrapper {
+  max-width: 345px;
+  margin-inline: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.inputWrapper {
+  position: relative;
+  height: $inputHeight;
+
+  input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid $borderColor;
+    padding-inline: 2rem;
+    border-radius: $fourthBorderRadius;
+    font-size: 1.6rem;
+    caret-color: $primaryColor;
+    transition: $mainTransition;
+
+    &[type="tel"] {
+      direction: rtl;
+      @include dir {
+        direction: ltr;
+      }
+    }
+
+    &:focus {
+      border-color: $primaryColor;
+    }
+  }
+}
+
+.text {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.signin {
+  text-align: center;
+  text-decoration: none;
+  color: $secondaryColor;
+  font-weight: 800;
+  font-size: 1.4rem;
+}

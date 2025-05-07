@@ -8,13 +8,14 @@ interface AuthProps {
 export const AuthBtn: React.FC<AuthProps> = ({ type }) => {
   const { t } = useTranslation();
   return (
-    <button
+    <a
+      href={type === "login" ? "/signin" : "/signup"}
       className={`${styles.btn} ${type === "login" && styles.logIn} ${
         type === "register" && styles.register
       }`}
     >
       {type === "login" && t("header.signIn")}
       {type === "register" && t("header.signUp")}
-    </button>
+    </a>
   );
 };

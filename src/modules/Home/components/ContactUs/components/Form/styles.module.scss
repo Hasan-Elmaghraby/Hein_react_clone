@@ -21,9 +21,6 @@
     color: $paragraphMainColor;
     caret-color: $primaryColor;
 
-    @include dir {
-    }
-
     &::placeholder {
       color: $paragraphSecondaryColor;
     }
