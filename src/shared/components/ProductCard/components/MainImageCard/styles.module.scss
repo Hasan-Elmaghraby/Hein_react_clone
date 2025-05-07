@@ -7,7 +7,8 @@
   .image {
     width: 100%;
     overflow: hidden;
-    border-radius: $secondaryBorderRadius;
+    border-radius: $mainBorderRadius;
+
     img {
       display: block;
       width: 16.2rem !important;

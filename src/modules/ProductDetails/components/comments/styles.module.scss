@@ -1,0 +1,25 @@
+@forward "@/theme/shared.scss";
+
+.cardsWrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1rem), 1fr));
+  gap: 2rem;
+}
+
+.comments {
+  padding-block: 4rem 3rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $headingMainColor;
+}
+
+@include xs {
+  .cardsWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 1rem), 1fr));
+  }
+}

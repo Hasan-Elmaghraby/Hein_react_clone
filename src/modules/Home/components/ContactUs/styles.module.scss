@@ -4,11 +4,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  column-gap: 10rem;
+  row-gap: 2rem;
 }
 
 .formWrapper {
   width: min(100%, 342px);
+}
+
+.image {
+  img {
+    display: block;
+    width: min(100%, 444px);
+    height: auto;
+  }
 }
 
 @include xs {

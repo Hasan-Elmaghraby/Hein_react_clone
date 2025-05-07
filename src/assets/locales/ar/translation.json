@@ -167,5 +167,13 @@
     "followUs": "تابعنا علي",
     "copyright": "جميع الحقوق محفوظة هين 2024"
   },
-  "currency": "ريال سعودي"
+  "currency": "ريال سعودي",
+  "productDetails": {
+    "announcerDetails": "بيانات المعلن",
+    "comments": "التعليقات",
+    "addCommentPlaceholder": "اكتب تعليقك هنا",
+    "similarAds": "اعلانات مشابهة",
+    "mail": "مراسلة",
+    "call": "اتصال"
+  }
 }

@@ -11,10 +11,6 @@
   overflow: hidden;
 }
 
-.productInfo {
-  width: 50%;
-}
-
 @include xs {
   .productDetailsInfo {
     flex-direction: column;

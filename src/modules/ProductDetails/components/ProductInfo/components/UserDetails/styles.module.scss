@@ -1,0 +1,59 @@
+@forward "@/theme/shared.scss";
+
+.userDetails {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.userMail,
+.userPhone {
+  padding: 1rem;
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: $mainBorderRadius;
+}
+
+.userMail {
+  background-color: rgba($primaryColor, 0.13);
+
+  svg {
+    color: $primaryColor;
+    font-size: 1.6rem;
+  }
+
+  .text {
+    color: $primaryColor;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+.userPhone {
+  background-color: rgba($greenColor, 0.09);
+
+  svg {
+    color: $greenColor;
+    font-size: 3rem;
+  }
+
+  .text {
+    color: $greenColor;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+@include xs {
+  .userDetails {
+    flex-direction: column;
+  }
+  .userMail,
+  .userPhone {
+    min-height: 5rem;
+  }
+}

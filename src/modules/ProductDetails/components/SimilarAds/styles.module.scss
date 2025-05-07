@@ -1,0 +1,24 @@
+@forward "@/theme/shared.scss";
+
+.similarAdsWrapper {
+  padding-block: 3rem 2rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $headingMainColor;
+}
+
+.similarAds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.5rem), 1fr));
+  gap: 1.5rem;
+}
+
+@include xs {
+  .similarAds {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 1.5rem), 1fr));
+  }
+}

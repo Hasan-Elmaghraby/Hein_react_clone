@@ -21,6 +21,7 @@ export const ProductSwiper: React.FC<ProductSwiperProps> = ({
       // autoplay={{ delay: 3000 }}
       spaceBetween={20}
       slidesPerView={1}
+      className="product-swiper"
     >
       {images.map(({ id, image }) => (
         <SwiperSlide key={id}>

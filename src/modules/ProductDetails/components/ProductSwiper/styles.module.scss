@@ -3,8 +3,14 @@
 .productImages {
   border-radius: $secondaryBorderRadius;
   overflow: hidden;
+  width: 100%;
 
   .image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: $secondaryBorderRadius;
+    margin-inline: auto;
     img {
       display: block;
       width: 100%;

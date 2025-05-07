@@ -1,0 +1,39 @@
+@forward "@/theme/shared.scss";
+
+.productInfoWrapper {
+  width: 50%;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $headingMainColor;
+}
+
+.location {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $paragraphMainColor;
+}
+
+.price {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $primaryColor;
+}
+
+.description {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $paragraphSecondaryColor;
+}
+
+@include sm {
+  .productInfoWrapper {
+    width: 100%;
+  }
+}
