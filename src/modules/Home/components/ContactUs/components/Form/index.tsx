@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { MainButton } from "@/shared/components/Button";
+import { Button } from "@/shared/components/MainButton";
 
 interface Props {
   userName: string;
@@ -63,7 +63,7 @@ export const Form: React.FC<Props> = ({
         />
       </div>
 
-      <MainButton text="ارسال" />
+      <Button type="primary" text="ارسال" />
     </form>
   );
 };

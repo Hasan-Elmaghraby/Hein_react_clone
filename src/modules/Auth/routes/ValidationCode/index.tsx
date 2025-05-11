@@ -4,7 +4,7 @@ import { HeadForm } from "../../components/HeadForm";
 import { useTranslation } from "react-i18next";
 import codeImage from "@public/images/auth/otp.png";
 import { OtpInput } from "./components/OtpInput";
-import { Button } from "@/shared/components/Button";
+import { Button } from "@/shared/components/MainButton";
 import useActivateCode from "../../api/useActivateCode";
 import Cookies from "js-cookie";
 import styles from "./styles.module.scss";

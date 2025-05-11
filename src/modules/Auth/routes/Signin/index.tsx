@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { Section } from "@/shared/components/Section";
 import { HeadForm } from "../../components/HeadForm";
-import { Button } from "@/shared/components/Button";
+import { Button } from "@/shared/components/MainButton";
 import { EyeIcon } from "@/shared/icons/Eye";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "../useForm";

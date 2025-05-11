@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/shared/components/Button";
+import { Button } from "@/shared/components/MainButton";
 import styles from "./styles.module.scss";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
