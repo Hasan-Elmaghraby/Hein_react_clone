@@ -1,0 +1,19 @@
+@forward "@/theme/shared.scss";
+
+.authWrapper {
+  margin-inline: auto;
+  max-width: 345px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.codeImage {
+  margin-bottom: 3rem;
+  img {
+    display: block;
+    max-width: 135px;
+    height: auto;
+  }
+}

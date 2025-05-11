@@ -1,0 +1,26 @@
+@forward "@/theme/shared.scss";
+
+.otpInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  direction: ltr;
+  margin-bottom: 3rem;
+
+  input {
+    outline: none;
+    @include circle(4rem);
+    border: 1px solid $greyColor;
+    color: $whiteColor;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    caret-color: $primaryColor;
+  }
+
+  .filled {
+    background-color: $orangeColor;
+    border-color: $orangeColor;
+  }
+}
