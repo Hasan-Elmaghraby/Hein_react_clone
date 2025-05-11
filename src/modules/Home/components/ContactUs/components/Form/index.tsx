@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { MainButton } from "@/shared/components/MainButton";
+import { MainButton } from "@/shared/components/Button";
 
 interface Props {
   userName: string;

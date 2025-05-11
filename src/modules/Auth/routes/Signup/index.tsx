@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { Section } from "@/shared/components/Section";
 import { HeadForm } from "../../components/HeadForm";
-import { MainButton } from "@/shared/components/MainButton";
+import { Button } from "@/shared/components/Button";
 import { EyeIcon } from "@/shared/icons/Eye";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "../useForm";
@@ -123,7 +123,7 @@ const Signup: React.FC = () => {
               {showConfirmPassword ? <LockIcon /> : <EyeIcon />}
             </div>
           </div>
-          <MainButton text="إنشاء" />
+          <Button type="primary" text="إنشاء" />
 
           <p className={styles.text}>لديك حساب علي هين؟</p>
           <Link className={styles.signin} to={"/signin"}>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { Section } from "@/shared/components/Section";
 import { HeadForm } from "../../components/HeadForm";
-import { MainButton } from "@/shared/components/MainButton";
+import { Button } from "@/shared/components/Button";
 import { EyeIcon } from "@/shared/icons/Eye";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "../useForm";
@@ -84,7 +84,7 @@ const Signin: React.FC = () => {
             </div>
           </div>
 
-          <MainButton text="الدخول" />
+          <Button type="primary" text="الدخول" />
 
           <p className={styles.text}>لا يوجد لديك حساب علي هين ؟</p>
           <Link className={styles.signin} to={"/signup"}>

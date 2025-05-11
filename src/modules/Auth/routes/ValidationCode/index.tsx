@@ -4,7 +4,7 @@ import { HeadForm } from "../../components/HeadForm";
 import { useTranslation } from "react-i18next";
 import codeImage from "@public/images/auth/otp.png";
 import { OtpInput } from "./components/OtpInput";
-import { MainButton } from "@/shared/components/MainButton";
+import { Button } from "@/shared/components/Button";
 import useActivateCode from "../../api/useActivateCode";
 import Cookies from "js-cookie";
 import styles from "./styles.module.scss";
@@ -48,7 +48,7 @@ const ValidationCode = () => {
 
         <form onSubmit={handleSubmitOtp}>
           <OtpInput length={5} onComplete={(code) => setOtpCode(code)} />
-          <MainButton text={t("auth.virify")} />
+          <Button type="primary" text={t("auth.virify")} />
         </form>
       </div>
     </Section>

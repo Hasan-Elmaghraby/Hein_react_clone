@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { MainButton } from "@/shared/components/MainButton";
+import { Button } from "@/shared/components/Button";
 import styles from "./styles.module.scss";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -29,7 +29,7 @@ export const HeroSwiper: React.FC<HeroSwiperProps> = ({ sliders }) => {
             <div className={styles.content}>
               <h1 className={styles.title}>{title}</h1>
               <p className={styles.description}>{content}</p>
-              <MainButton hero text={t("hero.button")} />
+              <Button type="hero" text={t("hero.button")} />
             </div>
             <div className={styles.image}>
               <figure>
