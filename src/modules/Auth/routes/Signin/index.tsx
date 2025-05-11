@@ -5,40 +5,34 @@ import { HeadForm } from "../../components/HeadForm";
 import { Button } from "@/shared/components/MainButton";
 import { EyeIcon } from "@/shared/icons/Eye";
 import { Link, useNavigate } from "react-router-dom";
-import { useForm } from "../useForm";
+import { useSignin } from "./hooks/useSignin";
 import { LockIcon } from "@/shared/icons/Lock";
-import useSignUp from "../../api/useSignUp";
+import useSigninApi from "./api/useSigninApi";
 
 const Signin: React.FC = () => {
-  const { mutateAsync } = useSignUp();
+  const { mutateAsync } = useSigninApi();
   const navigate = useNavigate();
 
   const {
     showPassword,
     togglePasswordVisibility,
-    userName,
     phone,
-    email,
     password,
     handleInputChange,
     setForm,
-  } = useForm();
+  } = useSignin();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setForm({
-      userName: "",
       phone: "",
-      email: "",
+
       password: "",
-      confirmPassword: "",
     });
     try {
       const response = await mutateAsync({
-        name: userName,
         mobile: phone,
-        email,
         password,
       });
       navigate("/validation");

@@ -2,12 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/shared/components/MainButton";
+import { Slider } from "@/shared/model/home";
 import styles from "./styles.module.scss";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Slider } from "@/shared/model/home";
 
 interface HeroSwiperProps {
   sliders: Slider[];

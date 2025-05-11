@@ -5,9 +5,9 @@ import { HeadForm } from "../../components/HeadForm";
 import { Button } from "@/shared/components/MainButton";
 import { EyeIcon } from "@/shared/icons/Eye";
 import { Link, useNavigate } from "react-router-dom";
-import { useForm } from "../useForm";
+import { useSignup } from "./hooks/useSignup";
 import { LockIcon } from "@/shared/icons/Lock";
-import useSignUp from "../../api/useSignUp";
+import useSignUp from "./api/useSignUp";
 
 const Signup: React.FC = () => {
   const { mutateAsync } = useSignUp();
@@ -25,7 +25,7 @@ const Signup: React.FC = () => {
     confirmPassword,
     handleInputChange,
     setForm,
-  } = useForm();
+  } = useSignup();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

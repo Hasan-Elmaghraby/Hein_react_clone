@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useForm = () => {
+export const useSignin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -13,14 +13,12 @@ export const useForm = () => {
   };
 
   const [form, setForm] = useState({
-    userName: "",
     phone: "",
-    email: "",
+
     password: "",
-    confirmPassword: "",
   });
 
-  const { userName, phone, email, password, confirmPassword } = form;
+  const { phone, password } = form;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
@@ -34,11 +32,11 @@ export const useForm = () => {
     showConfirmPassword,
     togglePasswordVisibility,
     toggleConfirmPasswordVisibility,
-    userName,
+
     phone,
-    email,
+
     password,
-    confirmPassword,
+
     form,
     setForm,
     handleInputChange,
