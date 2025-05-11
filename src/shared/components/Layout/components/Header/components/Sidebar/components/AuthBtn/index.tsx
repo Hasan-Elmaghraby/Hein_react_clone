@@ -9,7 +9,7 @@ export const AuthBtn: React.FC<AuthProps> = ({ type }) => {
   const { t } = useTranslation();
   return (
     <a
-      href={type === "login" ? "/signin" : "/signup"}
+      href={type === "login" ? "/auth/signin" : "/auth/signup"}
       className={`${styles.btn} ${type === "login" && styles.logIn} ${
         type === "register" && styles.register
       }`}

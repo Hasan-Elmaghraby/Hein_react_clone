@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSignin } from "./hooks/useSignin";
 import { LockIcon } from "@/shared/icons/Lock";
 import useSigninApi from "./api/useSigninApi";
+import { toast } from "react-toastify";
 
 const Signin: React.FC = () => {
   const { mutateAsync } = useSigninApi();
@@ -27,7 +28,6 @@ const Signin: React.FC = () => {
 
     setForm({
       phone: "",
-
       password: "",
     });
     try {
@@ -35,11 +35,17 @@ const Signin: React.FC = () => {
         mobile: phone,
         password,
       });
-      navigate("/validation");
-      localStorage.setItem("phone", phone);
-      return response;
-    } catch (error) {
-      console.log(error);
+
+      if (response.status === true) {
+        toast.success(response.message);
+
+        navigate("/");
+      }
+      if (response.status === false) {
+        toast.error(response.message);
+      }
+    } catch {
+      toast.error("حدث خطأ ما");
     }
   };
 

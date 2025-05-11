@@ -14,7 +14,6 @@ export const useSignin = () => {
 
   const [form, setForm] = useState({
     phone: "",
-
     password: "",
   });
 
@@ -32,11 +31,8 @@ export const useSignin = () => {
     showConfirmPassword,
     togglePasswordVisibility,
     toggleConfirmPasswordVisibility,
-
     phone,
-
     password,
-
     form,
     setForm,
     handleInputChange,

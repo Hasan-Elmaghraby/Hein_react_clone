@@ -7,6 +7,8 @@ import { EyeIcon } from "@/shared/icons/Eye";
 import { Link, useNavigate } from "react-router-dom";
 import { useSignup } from "./hooks/useSignup";
 import { LockIcon } from "@/shared/icons/Lock";
+import { toast } from "react-toastify";
+import Cookies from "js-cookie";
 import useSignUp from "./api/useSignUp";
 
 const Signup: React.FC = () => {
@@ -44,9 +46,24 @@ const Signup: React.FC = () => {
         email,
         password,
       });
-      navigate("/validation");
-      localStorage.setItem("phone", phone);
-      return response;
+      Cookies.set("mobile", phone, {
+        expires: 40,
+        secure: true,
+        sameSite: "strict",
+      });
+      Cookies.set("code", response.data.code, {
+        expires: 40,
+        secure: true,
+        sameSite: "strict",
+      });
+
+      if (response.status) {
+        toast.success(response.message);
+        navigate("/auth/validation");
+      } else {
+        toast.error(response.message);
+      }
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
