@@ -65,7 +65,7 @@ const ForgetPSW = () => {
               type="tel"
               name="phone"
               id="phone"
-              placeholder=" ادخل رقم الجوال "
+              placeholder=" ادخل رقم الجوال"
               required
             />
           </div>

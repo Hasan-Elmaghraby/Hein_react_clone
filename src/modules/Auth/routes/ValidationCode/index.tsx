@@ -10,6 +10,7 @@ import Cookies from "js-cookie";
 import styles from "./styles.module.scss";
 import { toast } from "react-toastify";
 import { useLocation, useNavigate } from "react-router-dom";
+import useResetCode from "./api/useResetCode";
 
 const ValidationCode = () => {
   const location = useLocation();
@@ -21,24 +22,43 @@ const ValidationCode = () => {
   const [otpCode, setOtpCode] = useState(Cookies.get("code") as string);
 
   const { mutateAsync } = useActivateCode();
+  const { mutateAsync: mutateAsyncReset } = useResetCode();
 
   const handleSubmitOtp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const response = await mutateAsync({
-        mobile: Cookies.get("mobile") as string,
-        code: otpCode,
-      });
+      const mobile = Cookies.get("mobile") as string;
 
-      Cookies.set("access_token", response.access_token, {
-        expires: 40,
-        secure: true,
-        sameSite: "strict",
-      });
+      if (action === "reset") {
+        const response = await mutateAsyncReset({
+          mobile,
+          code: otpCode,
+        });
+        console.log(response);
 
-      if (response.status) {
-        toast.success(response.message);
+        if (response.status) {
+          toast.success(response.message);
+
+          Cookies.set("code_id", response.data.code_id, {
+            expires: 40,
+            secure: true,
+            sameSite: "strict",
+          });
+
+          navigate("/auth/change-password");
+        } else {
+          toast.error(response.message);
+        }
+
+        return;
+      }
+
+      if (action === "signup") {
+        const response = await mutateAsync({
+          mobile,
+          code: otpCode,
+        });
 
         Cookies.set("access_token", response.access_token, {
           expires: 40,
@@ -46,15 +66,19 @@ const ValidationCode = () => {
           sameSite: "strict",
         });
 
-        if (action === "signup") {
+        if (response.status) {
+          toast.success(response.message);
+
+          Cookies.set("access_token", response.access_token, {
+            expires: 40,
+            secure: true,
+            sameSite: "strict",
+          });
+
           navigate("/");
-        } else if (action === "reset") {
-          navigate("/change-password");
         } else {
-          navigate("/");
+          toast.error(response.message);
         }
-      } else {
-        toast.error(response.message);
       }
     } catch (error) {
       const message =
