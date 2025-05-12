@@ -84,6 +84,9 @@ const Signin: React.FC = () => {
             </div>
           </div>
 
+          <Link className={styles.forgetPswLink} to={"/auth/forgetPassword"}>
+            هل نسيت كلمة المرور
+          </Link>
           <Button type="primary" text="الدخول" />
 
           <p className={styles.text}>لا يوجد لديك حساب علي هين ؟</p>

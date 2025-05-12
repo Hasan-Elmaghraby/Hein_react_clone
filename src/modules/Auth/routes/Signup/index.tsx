@@ -59,7 +59,7 @@ const Signup: React.FC = () => {
 
       if (response.status) {
         toast.success(response.message);
-        navigate("/auth/validation");
+        navigate("/auth/validation?action=signup");
       } else {
         toast.error(response.message);
       }

@@ -1,19 +1,27 @@
 @forward "@/theme/shared.scss";
 
-.auth {
-  max-width: 345px;
+.authWrapper {
   margin-inline: auto;
+  max-width: 345px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
+.pswImage {
+  margin-bottom: 3em;
+  img {
+    display: block;
+    max-width: 342px;
+    height: auto;
+  }
 }
 
 .inputWrapper {
   position: relative;
   height: $inputHeight;
+  margin-bottom: 1.5rem;
 
   input {
     width: 100%;
@@ -55,26 +63,4 @@
     cursor: pointer;
     transition: $mainTransition;
   }
-}
-
-.text {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-.forgetPswLink {
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: $paragraphMainColor;
-}
-
-.signin {
-  text-align: center;
-  text-decoration: none;
-  color: $secondaryColor;
-  font-weight: 800;
-  font-size: 1.4rem;
 }
