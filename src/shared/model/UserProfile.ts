@@ -21,12 +21,12 @@ export interface DataInfo {
   email: string;
   image: string;
   rate: string;
-  chat_room_id: null;
-  info: InfoInfo;
+  chat_room_id: null | number;
+  info: null;
   access_token: null;
 }
 
-export interface InfoInfo {
+export interface Info {
   about: string;
 }
 

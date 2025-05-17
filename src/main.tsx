@@ -7,13 +7,16 @@ import App from "./App.tsx";
 import "@/shared/services/i18n/config.ts";
 import "react-toastify/dist/ReactToastify.css";
 import "./theme/index.scss";
+import { UserProvider } from "./shared/context/UserContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <UserProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </UserProvider>
     </QueryClientProvider>
   </StrictMode>
 );

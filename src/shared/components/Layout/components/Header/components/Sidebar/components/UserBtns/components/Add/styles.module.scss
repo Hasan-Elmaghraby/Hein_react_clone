@@ -1,0 +1,35 @@
+@forward "@/theme/shared.scss";
+
+.addAd {
+  @include circle(3.5rem);
+  background-color: rgba($whiteColor, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $mainTransition;
+
+  .addIcon {
+    @include circle(1.5rem);
+    background-color: $whiteColor;
+    color: $primaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $mainTransition;
+
+    svg {
+      transition: $mainTransition;
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($whiteColor, 0.9);
+
+    .addIcon {
+      background-color: $primaryColor;
+      color: $whiteColor;
+    }
+  }
+}

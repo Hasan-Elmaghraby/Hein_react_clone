@@ -4,16 +4,19 @@ import { Search } from "./components/Search";
 import { AuthBtn } from "./components/AuthBtn";
 import { CloseBtn } from "./components/CloseBtn";
 import { LangChange } from "./components/LangChange";
+import { UserBtns } from "./components/UserBtns";
 
 interface SidebarProps {
   isNavOpen: boolean;
   logo: string;
+  userActive: boolean | undefined;
   onClick: () => void;
 }
 export const Sidebar: React.FC<SidebarProps> = ({
   isNavOpen,
   logo,
   onClick,
+  userActive,
 }) => {
   return (
     <div className={`${styles.sidebar} ${isNavOpen && styles.active}`}>
@@ -24,10 +27,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <Nav />
       <div className={styles.btns}>
         <Search />
-        <div className={styles.authBtns}>
-          <AuthBtn type="login" />
-          <AuthBtn type="register" />
-        </div>
+
+        {userActive ? (
+          <UserBtns />
+        ) : (
+          <div className={styles.authBtns}>
+            <AuthBtn type="login" />
+            <AuthBtn type="register" />
+          </div>
+        )}
+
         <LangChange />
       </div>
       <CloseBtn onClick={onClick} />

@@ -9,6 +9,7 @@ import { useSignin } from "./hooks/useSignin";
 import { LockIcon } from "@/shared/icons/Lock";
 import useSigninApi from "./api/useSigninApi";
 import { toast } from "react-toastify";
+import Cookies from "js-cookie";
 
 const Signin: React.FC = () => {
   const { mutateAsync } = useSigninApi();
@@ -35,6 +36,9 @@ const Signin: React.FC = () => {
         mobile: phone,
         password,
       });
+
+      Cookies.set("access_token", response.data.access_token);
+      console.log(response);
 
       if (response.status === true) {
         toast.success(response.message);

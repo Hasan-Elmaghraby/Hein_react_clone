@@ -7,6 +7,7 @@ import { ContactUs } from "./components/ContactUs";
 
 const Home: React.FC = () => {
   const { data } = useGetHomeData();
+
   const { about, sliders, categories, latest } = data || {};
 
   return (

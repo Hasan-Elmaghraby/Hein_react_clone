@@ -51,11 +51,12 @@ const Signup: React.FC = () => {
         secure: true,
         sameSite: "strict",
       });
-      Cookies.set("code", response.data.code, {
+      Cookies.set("code", response.data?.code, {
         expires: 40,
         secure: true,
         sameSite: "strict",
       });
+      console.log(response);
 
       if (response.status) {
         toast.success(response.message);

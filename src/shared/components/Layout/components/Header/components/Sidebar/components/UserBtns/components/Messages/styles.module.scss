@@ -1,0 +1,36 @@
+@forward "@/theme/shared.scss";
+
+.messages {
+  @include circle(3.5rem);
+  background-color: rgba($whiteColor, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $mainTransition;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0.1rem;
+    inset-inline-start: 0.1rem;
+    @include circle(0.7rem);
+    background-color: $orangeColor;
+    border: 0.2rem solid $primaryColor;
+  }
+
+  svg {
+    transition: $mainTransition;
+    color: $whiteColor;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    background-color: rgba($whiteColor, 0.9);
+
+    svg {
+      color: $primaryColor;
+    }
+  }
+}

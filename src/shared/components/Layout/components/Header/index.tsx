@@ -7,7 +7,11 @@ import { Container } from "../../../Container";
 import logo from "@public/images/logo.png";
 import { useHeader } from "./hooks/useHeader";
 
-export const Header: React.FC = () => {
+interface Props {
+  userActive: boolean | undefined;
+}
+
+export const Header: React.FC<Props> = ({ userActive }) => {
   const { isNavOpen, handleNavToggle, handleNavClose, isHeaderFixed } =
     useHeader();
   return (
@@ -18,6 +22,7 @@ export const Header: React.FC = () => {
         <div className={styles.headerWrapper}>
           <Logo logo={logo} />
           <Sidebar
+            userActive={userActive}
             isNavOpen={isNavOpen}
             logo={logo}
             onClick={handleNavToggle}
