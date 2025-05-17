@@ -7,6 +7,7 @@ const Auth = lazy(() => import("./modules/Auth"));
 const Home = lazy(() => import("./modules/Home"));
 const SectionsDetails = lazy(() => import("./modules/SectionsDetails"));
 const ProductDetails = lazy(() => import("./modules/ProductDetails"));
+
 function App() {
   return (
     <Suspense fallback={<h1 />}>

@@ -5,11 +5,13 @@ import { AuthBtn } from "./components/AuthBtn";
 import { CloseBtn } from "./components/CloseBtn";
 import { LangChange } from "./components/LangChange";
 import { UserBtns } from "./components/UserBtns";
+import { DataInfo } from "@/shared/model/UserProfile";
 
 interface SidebarProps {
   isNavOpen: boolean;
   logo: string;
   userActive: boolean | undefined;
+  user: DataInfo | null;
   onClick: () => void;
 }
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -17,6 +19,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   logo,
   onClick,
   userActive,
+  user,
 }) => {
   return (
     <div className={`${styles.sidebar} ${isNavOpen && styles.active}`}>
@@ -29,7 +32,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <Search />
 
         {userActive ? (
-          <UserBtns />
+          <UserBtns user={user} />
         ) : (
           <div className={styles.authBtns}>
             <AuthBtn type="login" />

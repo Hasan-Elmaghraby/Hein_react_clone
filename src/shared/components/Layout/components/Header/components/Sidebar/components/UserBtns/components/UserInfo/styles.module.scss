@@ -1,0 +1,140 @@
+@forward "@/theme/shared.scss";
+
+.userInfo {
+  position: relative;
+
+  &:hover {
+    .userInfoBtn {
+      padding: 0.2rem;
+      border: 1px solid rgba($whiteColor, 0.012);
+
+      svg {
+        bottom: -1rem;
+        inset-inline-end: 50%;
+        transform: translateX(-50%);
+        color: rgba($whiteColor, 0.07);
+        font-size: 1.8rem;
+      }
+    }
+
+    .userDropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.userInfoBtn {
+  @include circle(3.5rem);
+  background-color: rgba($whiteColor, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $mainTransition;
+  position: relative;
+
+  svg {
+    position: absolute;
+    bottom: 2rem;
+    inset-inline-end: 50%;
+    transform: translateX(-50%);
+    color: transparent;
+    font-size: 1.8rem;
+    transition: $mainTransition;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.userDropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: $mainTransition;
+  position: absolute;
+  top: calc(100% + 1rem);
+  inset-inline-end: 0;
+  width: 20rem;
+  background-color: $whiteColor;
+  box-shadow: 0 3px 30px rgba($blackColor, 0.16);
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.userDropdownList {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  position: relative;
+
+  .iconList {
+    position: absolute;
+    content: "";
+    top: -1.4rem;
+    inset-inline-end: 0.1rem;
+
+    svg {
+      color: $primaryColor;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.listItem {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: $mainTransition;
+  padding: 1rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: $blackColor;
+    font-size: 1.4rem;
+    transition: inherit;
+
+    svg {
+      color: $primaryColor;
+      transition: inherit;
+    }
+  }
+
+  &:hover {
+    background-color: $primaryColor;
+
+    a {
+      color: $whiteColor;
+
+      svg {
+        color: $whiteColor;
+      }
+    }
+  }
+
+  &.logout {
+    a {
+      color: $redColor;
+      svg {
+        color: $redColor;
+      }
+    }
+
+    &:hover {
+      background-color: $redColor;
+
+      a {
+        color: $whiteColor;
+        svg {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import { SVGProps } from "react";
 
 export const DropDownButtonArrowIcon = (Props: SVGProps<SVGSVGElement>) => {
   return (
@@ -19,3 +19,17 @@ export const DropDownButtonArrowIcon = (Props: SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="15"
+  viewBox="0 0 20 15"
+>
+  <path
+    id="Polygon_7"
+    data-name="Polygon 7"
+    d="M9.168,1.248a1,1,0,0,1,1.664,0l8.131,12.2A1,1,0,0,1,18.131,15H1.869a1,1,0,0,1-.832-1.555Z"
+    transform="translate(20 15) rotate(180)"
+    fill="#1271cd"
+  />
+</svg>;

@@ -9,9 +9,10 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { user } = useUser();
+  console.log(user);
   return (
     <>
-      <Header userActive={user?.active} />
+      <Header userActive={user?.active} user={user} />
       {children}
       <Footer />
     </>
