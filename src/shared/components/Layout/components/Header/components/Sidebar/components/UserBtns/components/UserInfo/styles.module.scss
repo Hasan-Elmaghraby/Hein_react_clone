@@ -91,7 +91,8 @@
   transition: $mainTransition;
   padding: 1rem;
 
-  a {
+  a,
+  .buttonLogout {
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -119,7 +120,7 @@
   }
 
   &.logout {
-    a {
+    .buttonLogout {
       color: $redColor;
       svg {
         color: $redColor;
@@ -129,7 +130,7 @@
     &:hover {
       background-color: $redColor;
 
-      a {
+      .buttonLogout {
         color: $whiteColor;
         svg {
           color: $whiteColor;

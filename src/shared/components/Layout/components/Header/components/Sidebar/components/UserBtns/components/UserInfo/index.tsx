@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 import { DropDownButtonArrowIcon } from "@/shared/icons/DropDownButtonArrow";
 import { Link } from "react-router-dom";
@@ -16,11 +16,21 @@ import { Button } from "@/shared/components/MainButton";
 interface Props {
   userImage: string | undefined;
   userName: string | undefined;
+  logout: () => void;
+  onCloseModal: () => void;
+  onClickModal: () => void;
+  isModalOpen: boolean;
 }
 
-export const UserInfo: React.FC<Props> = ({ userImage, userName }) => {
+export const UserInfo: React.FC<Props> = ({
+  userImage,
+  userName,
+  logout,
+  onCloseModal,
+  onClickModal,
+  isModalOpen,
+}) => {
   const { t } = useTranslation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className={styles.userInfo}>
@@ -72,23 +82,23 @@ export const UserInfo: React.FC<Props> = ({ userImage, userName }) => {
           </li>
           <li
             className={`${styles.listItem} ${styles.logout}`}
-            onClick={() => setIsModalOpen(true)}
+            onClick={onClickModal}
           >
-            <Link to="/myAds">
+            <div className={styles.buttonLogout}>
               <LogOutIcon />
               {t("header.logout")}
-            </Link>
+            </div>
           </li>
         </ul>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal isOpen={isModalOpen} onClose={onCloseModal}>
         <div className={styles.logOutModalIcon}>
           <LogOutIcon />
         </div>
 
         <h2 className={styles.modalTitle}> {t("header.logout")}</h2>
         <p className={styles.modalText}>{t("logoutMessage")}</p>
-        <Button type="logout" text={t("header.logout")} />
+        <Button type="logout" text={t("header.logout")} onClick={logout} />
       </Modal>
     </div>
   );

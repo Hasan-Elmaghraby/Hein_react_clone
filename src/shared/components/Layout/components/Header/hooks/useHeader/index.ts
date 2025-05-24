@@ -1,9 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 
 export const useHeader = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isNavOpen, setNavIsOpen] = useState(false);
   const [isHeaderFixed, setHeaderFixed] = useState(true);
   const lastScrollY = useRef(0);
+
+  const handleClickModal = () => setIsModalOpen(!isModalOpen);
+
+  const handleCloseModal = () => setIsModalOpen(false);
 
   const handleNavToggle = () => setNavIsOpen(!isNavOpen);
 
@@ -35,5 +40,14 @@ export const useHeader = () => {
     }
   };
 
-  return { isNavOpen, handleNavToggle, handleNavClose, isHeaderFixed };
+  return {
+    isNavOpen,
+    handleNavToggle,
+    handleNavClose,
+    isHeaderFixed,
+    isModalOpen,
+    setIsModalOpen,
+    handleClickModal,
+    handleCloseModal,
+  };
 };

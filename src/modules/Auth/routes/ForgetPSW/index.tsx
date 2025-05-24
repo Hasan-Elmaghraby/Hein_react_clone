@@ -38,7 +38,6 @@ const ForgetPSW = () => {
       } else {
         toast.error(response.message);
       }
-      console.log(response);
     } catch (err) {
       const message = err instanceof Error ? err.message : "An Error occurred";
       toast.error(message);

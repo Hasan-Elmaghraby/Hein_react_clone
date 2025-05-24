@@ -13,6 +13,10 @@ interface SidebarProps {
   userActive: boolean | undefined;
   user: DataInfo | null;
   onClick: () => void;
+  logout: () => void;
+  onClickModal: () => void;
+  onCloseModal: () => void;
+  isModalOpen: boolean
 }
 export const Sidebar: React.FC<SidebarProps> = ({
   isNavOpen,
@@ -20,6 +24,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onClick,
   userActive,
   user,
+  logout,
+  onClickModal,
+  onCloseModal,
+  isModalOpen,
 }) => {
   return (
     <div className={`${styles.sidebar} ${isNavOpen && styles.active}`}>
@@ -32,7 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <Search />
 
         {userActive ? (
-          <UserBtns user={user} />
+          <UserBtns user={user} logout={logout} onClickModal={onClickModal} onCloseModal={onCloseModal} isModalOpen={isModalOpen} />
         ) : (
           <div className={styles.authBtns}>
             <AuthBtn type="login" />

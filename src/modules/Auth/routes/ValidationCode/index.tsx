@@ -35,7 +35,6 @@ const ValidationCode = () => {
           mobile,
           code: otpCode,
         });
-        console.log(response);
 
         if (response.status) {
           toast.success(response.message);

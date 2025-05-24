@@ -56,7 +56,7 @@ const Signup: React.FC = () => {
         secure: true,
         sameSite: "strict",
       });
-      console.log(response);
+    
 
       if (response.status) {
         toast.success(response.message);
@@ -64,7 +64,7 @@ const Signup: React.FC = () => {
       } else {
         toast.error(response.message);
       }
-      console.log(response);
+    
     } catch (error) {
       console.log(error);
     }

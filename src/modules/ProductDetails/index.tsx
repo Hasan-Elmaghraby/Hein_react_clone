@@ -8,18 +8,23 @@ import styles from "./styles.module.scss";
 import { ProductInfo } from "./components/ProductInfo";
 import { Comments } from "./components/comments";
 import { SimilarAds } from "./components/SimilarAds";
+import Loader from "@/shared/components/Loader";
 
 const ProductDetails: React.FC = () => {
   const { id } = useParams();
   const numericId = Number(id);
 
-  const { data } = useGetProductDetails(numericId);
+  const { data, isLoading, isError } = useGetProductDetails(numericId);
   const { item, related } = data || {};
 
   const { comments } = item || {};
 
-  console.log(comments);
-  console.log(item);
+  if (isLoading) {
+    return <Loader />;
+  }
+  if (isError) {
+    return <p>Error</p>;
+  }
 
   return (
     <Section>

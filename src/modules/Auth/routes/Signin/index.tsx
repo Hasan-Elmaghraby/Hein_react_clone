@@ -10,9 +10,11 @@ import { LockIcon } from "@/shared/icons/Lock";
 import useSigninApi from "./api/useSigninApi";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
+import { useUser } from "@/shared/context/UserContext";
 
 const Signin: React.FC = () => {
   const { mutateAsync } = useSigninApi();
+  const { setUser } = useUser();
   const navigate = useNavigate();
 
   const {
@@ -31,6 +33,7 @@ const Signin: React.FC = () => {
       phone: "",
       password: "",
     });
+
     try {
       const response = await mutateAsync({
         mobile: phone,
@@ -38,13 +41,13 @@ const Signin: React.FC = () => {
       });
 
       Cookies.set("access_token", response.data.access_token);
-      console.log(response);
 
       if (response.status === true) {
         toast.success(response.message);
-
+        setUser(response.data);
         navigate("/");
       }
+
       if (response.status === false) {
         toast.error(response.message);
       }

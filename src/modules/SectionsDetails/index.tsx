@@ -6,11 +6,12 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 import { SubCategory } from "@/shared/model/Categories";
 import { Categories } from "@/shared/model/Categories";
+import Loader from "@/shared/components/Loader";
 
 const SectionsDetails = () => {
   const { id: id } = useParams();
   const numericId = Number(id);
-  const { data } = useGetSectionDetails(numericId);
+  const { data, isLoading, isError } = useGetSectionDetails(numericId);
 
   const location = useLocation();
   const sectionName = location.state?.sectionName ?? "Unknown Section";
@@ -20,6 +21,13 @@ const SectionsDetails = () => {
   const handleClickSubCategories = (targetItem: Categories) => {
     setSubCategories(targetItem?.sub_categories || []);
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+  if (isError) {
+    return <p>Error</p>;
+  }
 
   return (
     <Section>

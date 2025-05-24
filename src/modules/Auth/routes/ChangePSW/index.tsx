@@ -39,14 +39,12 @@ const ChangePSW = () => {
         password,
       });
 
-      console.log(Cookies.get("code_id"));
       if (response.status) {
         toast.success(response.message);
         navigate("/");
       } else {
         toast.error(response.message);
       }
-      console.log(response);
     } catch (error) {
       console.log(error);
     }

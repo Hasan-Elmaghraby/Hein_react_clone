@@ -1,7 +1,7 @@
 .modalOverlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba($primaryColor, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   background-color: white;
   padding: 3rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba($blackColor, 0.2);
   position: relative;
   min-width: 40rem;
   min-height: 20rem;
