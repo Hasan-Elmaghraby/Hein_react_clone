@@ -24,4 +24,13 @@
     width: 100%;
     max-width: 26rem;
   }
+
+  &.logout {
+    background-color: $redColor;
+    color: $whiteColor;
+
+    &:hover {
+      background-color: rgba($redColor, 0.9);
+    }
+  }
 }

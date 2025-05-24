@@ -11,7 +11,7 @@ export const Button: React.FC<Props> = ({ text, type }) => {
     <button
       className={`${styles.btn} ${type === "hero" && styles.hero} ${
         type === "primary" && styles.btn
-      }`}
+      } ${type === "logout" && styles.logout}`}
     >
       {text}
     </button>

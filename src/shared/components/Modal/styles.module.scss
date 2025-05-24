@@ -1,0 +1,44 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-width: 40rem;
+  min-height: 20rem;
+}
+
+.closeButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  top: 3rem;
+  inset-inline-end: 3rem;
+
+  span {
+    color: gray;
+  }
+
+  svg {
+    color: gray;
+    transition: $mainTransition;
+    cursor: pointer;
+
+    &:hover {
+      color: $redColor;
+    }
+  }
+}

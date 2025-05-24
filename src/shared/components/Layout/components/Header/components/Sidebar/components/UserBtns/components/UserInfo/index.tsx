@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { DropDownButtonArrowIcon } from "@/shared/icons/DropDownButtonArrow";
 import { Link } from "react-router-dom";
@@ -10,6 +10,8 @@ import { FollowersIcon } from "@/shared/icons/Followers";
 import { PackagesIcon } from "@/shared/icons/Packages";
 import { CommissionIcon } from "@/shared/icons/Commission";
 import { LogOutIcon } from "@/shared/icons/Logout";
+import { Modal } from "@/shared/components/Modal";
+import { Button } from "@/shared/components/MainButton";
 
 interface Props {
   userImage: string | undefined;
@@ -18,6 +20,8 @@ interface Props {
 
 export const UserInfo: React.FC<Props> = ({ userImage, userName }) => {
   const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className={styles.userInfo}>
       <div className={styles.userInfoBtn}>
@@ -66,7 +70,10 @@ export const UserInfo: React.FC<Props> = ({ userImage, userName }) => {
               {t("header.siteCommission")}
             </Link>
           </li>
-          <li className={`${styles.listItem} ${styles.logout}`}>
+          <li
+            className={`${styles.listItem} ${styles.logout}`}
+            onClick={() => setIsModalOpen(true)}
+          >
             <Link to="/myAds">
               <LogOutIcon />
               {t("header.logout")}
@@ -74,6 +81,15 @@ export const UserInfo: React.FC<Props> = ({ userImage, userName }) => {
           </li>
         </ul>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <div className={styles.logOutModalIcon}>
+          <LogOutIcon />
+        </div>
+
+        <h2 className={styles.modalTitle}> {t("header.logout")}</h2>
+        <p className={styles.modalText}>{t("logoutMessage")}</p>
+        <Button type="logout" text={t("header.logout")} />
+      </Modal>
     </div>
   );
 };
