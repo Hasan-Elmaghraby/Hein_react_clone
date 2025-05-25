@@ -5,7 +5,8 @@ import { ITEMS } from "@/shared/services/api/config";
 
 export const useGetProductDetails = (id: number | string) => {
   return useQuery({
-    queryKey: ["items"],
+    queryKey: ["items", String(id)],
+
     queryFn: async () => {
       const { data } = await Axios.get(`${ITEMS}/${id}`);
       return data.data as SingleProduct;

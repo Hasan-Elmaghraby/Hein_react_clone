@@ -1,0 +1,12 @@
+@forward "@/theme/shared.scss";
+
+.title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: $headingMainColor;
+  margin-bottom: 1.8rem;
+
+  &.center {
+    text-align: center;
+  }
+}

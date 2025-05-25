@@ -2,27 +2,25 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Axios } from "@/shared/services/Axios";
 import { ITEM } from "@/shared/services/api/config";
 import { Comment } from "@/shared/model/SingleProduct";
+import Cookies from "js-cookie";
 
-const usePostComment = (ProductId: string | number) => {
+const usePostComment = (id: string | number) => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (commentData) => {
-      const token = "2434|cC4aLpsS9gW18k1LLB89QKEixN73ZnviGdqrGW1Zdef9b7b6";
+    mutationFn: async (commentData: { comment: string }) => {
+      const token = Cookies.get("access_token");
 
-      const { data } = await Axios.post(
-        `${ITEM}/${ProductId}/comment`,
-        commentData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const { data } = await Axios.post(`${ITEM}/${id}/comment`, commentData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
       return data as Comment;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["product", ProductId] });
+      queryClient.invalidateQueries({ queryKey: ["items", String(id)] });
     },
   });
 };
