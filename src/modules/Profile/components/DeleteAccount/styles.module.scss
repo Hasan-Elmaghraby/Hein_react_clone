@@ -1,0 +1,36 @@
+@forward "@/theme/shared.scss";
+
+.deleteAccount {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  min-height: 7rem;
+  border-radius: $mainBorderRadius;
+  background-color: $whiteColor;
+  box-shadow: 0 3px 30px rgba(#5c5c5c, 0.16);
+  transition: $mainTransition;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 3px 30px rgba(#5c5c5c, 0.2);
+  }
+}
+
+.trashIconWrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  svg {
+    flex-shrink: 0;
+    font-size: 2rem;
+    color: $redColor;
+  }
+
+  .text {
+    color: $redColor;
+    font-size: 1.6rem;
+  }
+}

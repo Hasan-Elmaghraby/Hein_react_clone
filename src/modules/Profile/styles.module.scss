@@ -1,0 +1,10 @@
+@forward "@/theme/shared.scss";
+
+.accountHead {
+  display: flex;
+  gap: 2rem;
+
+  @include xs {
+    flex-direction: column;
+  }
+}

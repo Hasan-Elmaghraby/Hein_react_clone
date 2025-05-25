@@ -1,0 +1,40 @@
+@forward "@/theme/shared.scss";
+
+.changePSWLink {
+  text-decoration: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  min-height: 7rem;
+  border-radius: $mainBorderRadius;
+  background-color: $whiteColor;
+  box-shadow: 0 3px 30px rgba(#5c5c5c, 0.16);
+  transition: $mainTransition;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 3px 30px rgba(#5c5c5c, 0.2);
+  }
+}
+
+.lockIconWrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  svg {
+    font-size: 2rem;
+    color: $paragraphSecondaryColor;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  }
+}
+
+.arrowIcon {
+  font-size: 1.6rem;
+  color: $paragraphSecondaryColor;
+}

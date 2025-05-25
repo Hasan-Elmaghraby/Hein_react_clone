@@ -1,6 +1,7 @@
 @forward "@/theme/shared.scss";
 
 .profileInfoWrapper {
+  flex: 1;
   display: flex;
   gap: 1.5rem;
   align-items: center;

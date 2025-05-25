@@ -3,6 +3,9 @@ import { Section } from "@/shared/components/Section";
 import { useTranslation } from "react-i18next";
 import { ProfileInfo } from "./components/ProfileInfo";
 import { useUser } from "@/shared/context/UserContext";
+import { ChangePSWLink } from "./components/ChangePSWLink";
+import styles from "./styles.module.scss";
+import { DeleteAccount } from "./components/DeleteAccount";
 
 const Profile = () => {
   const { t } = useTranslation();
@@ -11,11 +14,15 @@ const Profile = () => {
   return (
     <Section>
       <PageTitle title={t("account.title")} />
-      <ProfileInfo
-        userName={user?.name || ""}
-        userImage={user?.image || ""}
-        rateNumber={user?.rate || ""}
-      />
+      <div className={styles.accountHead}>
+        <ProfileInfo
+          userName={user?.name || ""}
+          userImage={user?.image || ""}
+          rateNumber={user?.rate || ""}
+        />
+        <ChangePSWLink />
+        <DeleteAccount />
+      </div>
     </Section>
   );
 };
