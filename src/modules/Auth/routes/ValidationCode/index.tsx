@@ -11,8 +11,11 @@ import styles from "./styles.module.scss";
 import { toast } from "react-toastify";
 import { useLocation, useNavigate } from "react-router-dom";
 import useResetCode from "./api/useResetCode";
+import { useUser } from "@/shared/context/UserContext";
 
 const ValidationCode = () => {
+  const { setUser } = useUser();
+
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const action = params.get("action");
@@ -73,7 +76,7 @@ const ValidationCode = () => {
             secure: true,
             sameSite: "strict",
           });
-
+          setUser(response.data);
           navigate("/");
         } else {
           toast.error(response.message);

@@ -34,3 +34,22 @@
     font-size: 1.6rem;
   }
 }
+
+.deleteModalIcon {
+  color: $redColor;
+  font-size: 2.5rem;
+}
+
+.modalTitle {
+  font-size: 1.4rem;
+  color: $headingMainColor;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+}
+
+.modalText {
+  font-size: 1.4rem;
+  color: $paragraphSecondaryColor;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}

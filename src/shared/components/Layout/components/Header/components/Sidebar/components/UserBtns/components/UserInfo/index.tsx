@@ -98,7 +98,7 @@ export const UserInfo: React.FC<Props> = ({
 
         <h2 className={styles.modalTitle}> {t("header.logout")}</h2>
         <p className={styles.modalText}>{t("logoutMessage")}</p>
-        <Button type="logout" text={t("header.logout")} onClick={logout} />
+        <Button type="danger" text={t("header.logout")} onClick={logout} />
       </Modal>
     </div>
   );

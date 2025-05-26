@@ -13,7 +13,7 @@ export const Button: React.FC<Props> = ({ text, type, onClick }) => {
     <button
       className={`${styles.btn} ${type === "hero" && styles.hero} ${
         type === "primary" && styles.btn
-      } ${type === "logout" && styles.logout}`}
+      } ${type === "danger" && styles.danger}`}
       onClick={onClick}
     >
       {text}

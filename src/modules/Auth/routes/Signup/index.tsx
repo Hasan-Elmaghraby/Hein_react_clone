@@ -46,6 +46,8 @@ const Signup: React.FC = () => {
         email,
         password,
       });
+
+      console.log(response.data?.code);
       Cookies.set("mobile", phone, {
         expires: 40,
         secure: true,
@@ -56,7 +58,6 @@ const Signup: React.FC = () => {
         secure: true,
         sameSite: "strict",
       });
-    
 
       if (response.status) {
         toast.success(response.message);
@@ -64,7 +65,6 @@ const Signup: React.FC = () => {
       } else {
         toast.error(response.message);
       }
-    
     } catch (error) {
       console.log(error);
     }
