@@ -4,7 +4,7 @@
   display: flex;
   gap: 2rem;
 
-  @include xs {
+  @include xxs {
     flex-direction: column;
   }
 }

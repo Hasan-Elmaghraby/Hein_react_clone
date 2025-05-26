@@ -6,6 +6,7 @@ import { useUser } from "@/shared/context/UserContext";
 import { ChangePSWLink } from "./components/ChangePSWLink";
 import styles from "./styles.module.scss";
 import { DeleteAccount } from "./components/DeleteAccount";
+import { FormProfileInfo } from "./components/FormProfileInfo";
 
 const Profile = () => {
   const { t } = useTranslation();
@@ -23,6 +24,7 @@ const Profile = () => {
         <ChangePSWLink />
         <DeleteAccount />
       </div>
+      <FormProfileInfo />
     </Section>
   );
 };

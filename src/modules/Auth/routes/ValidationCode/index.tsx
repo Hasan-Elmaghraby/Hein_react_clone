@@ -56,7 +56,7 @@ const ValidationCode = () => {
         return;
       }
 
-      if (action === "signup") {
+      if (action === "signup" || action === "editProfile") {
         const response = await mutateAsync({
           mobile,
           code: otpCode,
@@ -67,6 +67,8 @@ const ValidationCode = () => {
           secure: true,
           sameSite: "strict",
         });
+
+        console.log(response);
 
         if (response.status) {
           toast.success(response.message);

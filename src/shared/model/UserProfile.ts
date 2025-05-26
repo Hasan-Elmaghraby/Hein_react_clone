@@ -22,7 +22,9 @@ export interface DataInfo {
   image: string;
   rate: string;
   chat_room_id: null | number;
-  info: null;
+  info: {
+    about: string;
+  } | null;
   access_token: null;
 }
 
