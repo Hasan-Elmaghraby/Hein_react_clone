@@ -1,0 +1,8 @@
+@forward "@/theme/shared.scss";
+
+.modalTitle {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: $headingMainColor;
+}
