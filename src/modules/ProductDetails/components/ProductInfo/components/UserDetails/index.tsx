@@ -12,6 +12,7 @@ interface Props {
   userImage: string;
   userMail: string;
   userPhone: string;
+  userId: number;
 }
 
 export const UserDetails: React.FC<Props> = ({
@@ -20,6 +21,7 @@ export const UserDetails: React.FC<Props> = ({
   rateNumber,
   userMail,
   userPhone,
+  userId,
 }) => {
   const { t } = useTranslation();
   return (
@@ -28,6 +30,7 @@ export const UserDetails: React.FC<Props> = ({
         userImage={userImage}
         userName={userName}
         rateNumber={rateNumber}
+        userId={userId}
       />
       <a className={styles.userMail} href={`mailto: ${userMail}`}>
         <Email />

@@ -47,6 +47,7 @@ const ProductDetails: React.FC = () => {
             rateNumber={item?.user.myrate || ""}
             userMail={item?.user.email || ""}
             userPhone={item?.user.mobile || ""}
+            userId={item?.user.id || 0}
           />
         </div>
 

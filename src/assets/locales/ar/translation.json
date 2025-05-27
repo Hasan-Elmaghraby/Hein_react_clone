@@ -174,7 +174,9 @@
     "addCommentPlaceholder": "اكتب تعليقك هنا",
     "similarAds": "اعلانات مشابهة",
     "mail": "مراسلة",
-    "call": "اتصال"
+    "call": "اتصال",
+    "announcerRates": "تقيمات المعلن",
+    "announcerFullRate": "التقييم الكلي للمعلن "
   },
   "logoutMessage": "هل انت متأكد من تسجيل الخروج من حسابك؟",
   "account": {

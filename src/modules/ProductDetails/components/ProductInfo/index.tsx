@@ -13,6 +13,7 @@ interface Props {
   rateNumber: string;
   userMail: string;
   userPhone: string;
+  userId: number;
 }
 
 export const ProductInfo: React.FC<Props> = ({
@@ -26,6 +27,7 @@ export const ProductInfo: React.FC<Props> = ({
   rateNumber,
   userMail,
   userPhone,
+  userId,
 }) => {
   return (
     <div className={styles.productInfoWrapper}>
@@ -44,6 +46,7 @@ export const ProductInfo: React.FC<Props> = ({
         rateNumber={rateNumber}
         userMail={userMail}
         userPhone={userPhone}
+        userId={userId}
       />
     </div>
   );
