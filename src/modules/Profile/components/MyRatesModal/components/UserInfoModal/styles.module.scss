@@ -1,0 +1,82 @@
+@forward "@/theme/shared.scss";
+
+.userInfoWrapper {
+  padding-block: 1.1rem;
+  border-bottom: 1px solid $greyColor;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.userWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.userImage {
+  flex-shrink: 0;
+  @include circle(5rem);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.rateWrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rate {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: row-reverse;
+
+  .svg {
+    svg {
+      color: gray;
+      transition: fill 0.3s ease;
+    }
+
+    &.active {
+      svg {
+        color: $orangeColor;
+      }
+    }
+  }
+}
+
+.userNameWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $paragraphSecondaryColor;
+}
+
+.time {
+  font-size: 1rem;
+  color: $paragraphSecondaryColor;
+}
+
+.description {
+  margin-top: 0.7rem;
+  font-size: 1.2rem;
+
+  color: $paragraphMainColor;
+}
