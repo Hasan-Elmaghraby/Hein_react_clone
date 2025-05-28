@@ -176,7 +176,10 @@
     "mail": "مراسلة",
     "call": "اتصال",
     "announcerRates": "تقيمات المعلن",
-    "announcerFullRate": "التقييم الكلي للمعلن "
+    "announcerFullRate": "التقييم الكلي للمعلن ",
+    "announcerMessage": "يمكنك تقييم هذا المعلن بناء على تجربتك معه",
+    "commentPlaceholder": "قم بكتابة رأيك في المعلن",
+    "submit": "إرسال التقييم"
   },
   "logoutMessage": "هل انت متأكد من تسجيل الخروج من حسابك؟",
   "account": {

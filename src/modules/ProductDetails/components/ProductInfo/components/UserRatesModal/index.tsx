@@ -31,8 +31,6 @@ export const UserRatesModal: React.FC<Props> = ({
   const { t } = useTranslation();
   const { data } = useGetUserRates(userId);
   const { rates, user } = data || {};
-  console.log(userId);
-  console.log(data);
 
   return (
     <Modal isOpen={isOpen} onClose={handleCloseModal}>

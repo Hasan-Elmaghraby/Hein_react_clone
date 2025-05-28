@@ -4,7 +4,7 @@ import { USER } from "@/shared/services/api/config";
 
 export const useGetUserRates = (id: number | string) => {
   return useQuery({
-    queryKey: ["user"],
+    queryKey: ["user", String(id)],
 
     queryFn: async () => {
       const { data } = await Axios.get(`${USER}/${id}/rates`);

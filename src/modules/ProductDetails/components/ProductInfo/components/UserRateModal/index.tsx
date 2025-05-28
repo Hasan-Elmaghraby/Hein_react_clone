@@ -26,9 +26,10 @@ export const UserRateModal: React.FC<Props> = ({
         {t("productDetails.announcerRates")}
       </h3>
       <MyProfileInfo
-        rateNumber={user?.rate}
+        userId={user?.id}
         userName={user?.name}
         userImage={user?.image}
+        handleCloseModal={handleCloseModal}
       />
     </Modal>
   );
