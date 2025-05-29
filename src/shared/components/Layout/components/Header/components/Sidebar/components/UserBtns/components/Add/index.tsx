@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { AddIcon } from "@/shared/icons/Add";
 
 export const Add = () => {
   return (
-    <div className={styles.addAd}>
+    <Link to="/add-ad" className={styles.addAd}>
       <div className={styles.addIcon}>
         <AddIcon />
       </div>
-    </div>
+    </Link>
   );
 };

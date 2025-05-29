@@ -25,23 +25,7 @@
     "contactTitle": "اتصل بنا",
     "contactSubtitle": "نحن فى أنتظار أستفساراتكم على مدار ال 24 ساعة"
   },
-  "addProduct": {
-    "title": "إضافة إعلان جديد",
-    "titleForm": "الصور والفيديوهات",
-    "textForm": "يمكنك إضافة 5 صور وفيديو واحد كحد أقصى لإعلانك",
-    "productTitle": "عنوان ( اسم ) الإعلان",
-    "price": "السعر",
-    "mainCategory": "القسم الرئيسي",
-    "subCategory": "القسم الفرعي",
-    "subSubCategory": "القسم الفرعي الثاني",
-    "area": "المنطقة",
-    "city": "المدينة",
-    "adsDescription": "وصف الإعلان",
-    "showPhone": "تأكيد إظهار رقم الجوال في الإعلان",
-    "confirmPayment": "نعم , أتعهد بدفع",
-    "commission": "عمولة التطبيق",
-    "submit": " إضافة الإعلان"
-  },
+
   "editProfile": {
     "title": "تعديل بياناتي",
     "uploadImage": "تغيير صورة الحساب",
@@ -192,5 +176,21 @@
     "profileInfo": "بيانات حسابي",
     "myRates": "تقيماتي",
     "myFullRate": "تقيمي الكلي"
+  },
+  "addAds": {
+    "title": "إضافة إعلان جديد",
+    "photosAndVideos": "الصور و الفيديوهات",
+    "textVideo": "يمكنك اضافة اقل من 5 صور و 1 فيديو كحد أقصي لاعلانك",
+    "addressName": "عنوان ( اسم ) الإعلان",
+    "price": "السعر",
+    "mainCategory": "القسم الرئيسي",
+    "subCategory": "القسم الفرعي",
+    "area": "المنطقة",
+    "city": "المدينة",
+    "adsDetails": "التفاصيل النصية للإعلان",
+    "showPhone": "تأكيد إظهار رقم الجوال في الإعلان",
+    "confirmPayment": "نعم , اتعهد بدفع",
+    "commission": "عمولة التطبيق",
+    "submit": "إضافة الإعلان"
   }
 }

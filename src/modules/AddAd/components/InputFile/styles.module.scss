@@ -1,0 +1,95 @@
+@forward "@/theme/shared.scss";
+
+.inputFileWrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+
+  @include xxs {
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+  }
+}
+
+.customFileInput {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $paragraphSecondaryColor;
+  width: 73px;
+  height: 70px;
+  border: 1px solid $paragraphSecondaryColor;
+  border-radius: $secondaryBorderRadius;
+  cursor: pointer;
+
+  &.disabled {
+    border-color: red;
+    input[type="file"] {
+      cursor: not-allowed;
+    }
+
+    cursor: not-allowed;
+  }
+
+  &.full {
+    border-color: green;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.uploadIcon {
+  font-size: 2.4rem;
+}
+
+.customInputFileWrapper {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.descriptionWrapper {
+  max-width: 16rem;
+}
+
+.previewContainer {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.previewItem {
+  position: relative;
+
+  img,
+  video {
+    height: 4.6rem;
+    width: 4.6rem;
+    object-fit: cover;
+    border-radius: $mainBorderRadius;
+  }
+}
+
+.deleteButton {
+  position: absolute;
+  bottom: -1.5rem;
+  inset-inline-end: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: $redColor;
+}

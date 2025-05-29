@@ -57,25 +57,25 @@ export const UserInfo: React.FC<Props> = ({
             </Link>
           </li>
           <li className={styles.listItem}>
-            <Link to="/myAds">
+            <Link to="/favorites">
               <FavoritesIcon />
               {t("header.favorites")}
             </Link>
           </li>
           <li className={styles.listItem}>
-            <Link to="/myAds">
+            <Link to="/followers">
               <FollowersIcon />
               {t("header.followers")}
             </Link>
           </li>
           <li className={styles.listItem}>
-            <Link to="/myAds">
+            <Link to="/packages">
               <PackagesIcon />
               {t("header.packages")}
             </Link>
           </li>
           <li className={styles.listItem}>
-            <Link to="/myAds">
+            <Link to="/site-commission">
               <CommissionIcon />
               {t("header.siteCommission")}
             </Link>

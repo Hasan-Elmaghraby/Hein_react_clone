@@ -1,6 +1,7 @@
 @forward "@/theme/shared.scss";
 
 .addAd {
+  text-decoration: none;
   @include circle(3.5rem);
   background-color: rgba($whiteColor, 0.07);
   display: flex;
