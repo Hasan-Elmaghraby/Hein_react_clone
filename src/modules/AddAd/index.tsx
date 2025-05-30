@@ -5,22 +5,29 @@ import { useTranslation } from "react-i18next";
 import { InputFile } from "./components/InputFile";
 import { useState } from "react";
 import { Input } from "./components/Input";
+import { Select } from "./components/Select";
 
 const AddAd = () => {
   const { t } = useTranslation();
-  const [selected, setSelected] = useState("");
+
   const [form, setForm] = useState({
     title: "",
     price: "",
+    category_id: "",
+    area_id: "",
+    content: "",
   });
 
-  const { title, price } = form;
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const { title, price, category_id, area_id, content } = form;
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
     });
   };
+
   return (
     <Section>
       <SectionTitle right title={t("addAds.title")} />
@@ -44,51 +51,52 @@ const AddAd = () => {
             placeholder={t("addAds.price")}
             required
           />
-          <Input
-            value={title}
+          <Select
+            options={[
+              { value: "1", label: "اثاث" },
+              { value: "s", label: "dsfds" },
+              { value: "5", label: "dsfds" },
+            ]}
+            name="category_id"
+            value={category_id}
             onChange={handleChange}
-            name="title"
-            type="text"
-            placeholder={t("addAds.addressName")}
-            required
+            placeholder={t("addAds.mainCategory")}
           />
-          <Input
-            value={title}
+
+          <Select
+            options={[
+              { value: "1", label: "اثاث" },
+              { value: "s", label: "dsfds" },
+              { value: "5", label: "dsfds" },
+            ]}
+            name="category_id"
+            value={category_id}
             onChange={handleChange}
-            name="title"
-            type="text"
-            placeholder={t("addAds.addressName")}
-            required
+            placeholder={t("addAds.subCategory")}
           />
-          <Input
-            value={title}
+          <Select
+            options={[
+              { value: "1", label: "الرياض" },
+              { value: "s", label: "dsfds" },
+              { value: "5", label: "dsfds" },
+            ]}
+            name="area_id"
+            value={area_id}
             onChange={handleChange}
-            name="title"
-            type="text"
-            placeholder={t("addAds.addressName")}
-            required
+            placeholder={t("addAds.area")}
           />
-          <div className={styles.inputWrapper}>
-            <select
-              className={styles.input}
-              value={selected}
-              onChange={(e) => setSelected(e.target.value)}
-            >
-              <option value="" disabled hidden>
-                {t("select.placeholder")}
-              </option>
-              <option value="option1">{t("select.option1")}</option>
-              <option value="option2">{t("select.option2")}</option>
-              <option value="option3">{t("select.option3")}</option>
-            </select>
-            <label
-              className={`${styles.label} ${
-                selected ? styles.labelFloating : ""
-              }`}
-            >
-              {t("select.label")}
-            </label>
-          </div>
+          <Select
+            options={[
+              { value: "1", label: "الدرعية" },
+              { value: "s", label: "dsfds" },
+              { value: "5", label: "dsfds" },
+            ]}
+            name="area_id"
+            value={area_id}
+            onChange={handleChange}
+            placeholder={t("addAds.city")}
+          />
+
           <textarea name="" id=""></textarea>
         </div>
       </form>
