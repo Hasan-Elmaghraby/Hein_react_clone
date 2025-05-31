@@ -10,6 +10,7 @@ const ProductDetails = lazy(() => import("./modules/ProductDetails"));
 const PrivatePage = lazy(() => import("./modules/PrivatePage"));
 const Profile = lazy(() => import("./modules/Profile"));
 const AddAd = lazy(() => import("./modules/AddAd"));
+const MyAds = lazy(() => import("./modules/MyAds"));
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sections/:id" element={<SectionsDetails />} />
           <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/my-ads" element={<MyAds />} />
           <Route element={<PrivatePage />}>
             <Route path="/profile" element={<Profile />} />
             <Route path="/add-ad" element={<AddAd />} />

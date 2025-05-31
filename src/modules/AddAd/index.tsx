@@ -13,6 +13,7 @@ import { Button } from "@/shared/components/MainButton";
 import { useGetCategories } from "./api/useGetCategories";
 import { useGetAreas } from "./api/useGetAreas";
 import { Areas } from "@/shared/model/Areas";
+import { usePostAd } from "./api/usePostAd";
 
 interface Category {
   id: number;
@@ -44,6 +45,7 @@ const AddAd = () => {
   const { t } = useTranslation();
   const { data } = useGetCategories();
   const { data: areas } = useGetAreas();
+  const { mutateAsync, data: dataPosted } = usePostAd();
 
   const [mainCategory, setMainCategory] = useState<Category[]>([]);
   const [categories, setCategories] = useState<SelectOption[]>([]);
@@ -52,6 +54,10 @@ const AddAd = () => {
   const [areasData, setAreasData] = useState<Areas[]>([]);
   const [areasOptions, setAreasOptions] = useState<SelectOption[]>([]);
   const [cityOptions, setCityOptions] = useState<SelectOption[]>([]);
+
+  const [isValid, setIsValid] = useState<boolean>(false);
+  const [checkedPhone, setCheckedPhone] = useState<boolean>(false);
+  const [checkedCommission, setCheckedCommission] = useState<boolean>(false);
 
   const [form, setForm] = useState<FormState>({
     title: "",
@@ -145,11 +151,6 @@ const AddAd = () => {
     }
   }, [areasData, area_id]);
 
-  const [isValid, setIsValid] = useState<boolean>(false);
-
-  const [checkedPhone, setCheckedPhone] = useState<boolean>(false);
-  const [checkedCommission, setCheckedCommission] = useState<boolean>(false);
-
   const handleChange = (
     event: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -169,7 +170,19 @@ const AddAd = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(form);
+    try {
+      mutateAsync({
+        title: form.title,
+        price: form.price,
+        category_id: form.category_id,
+        area_id: form.area_id,
+        content: form.content,
+        images: [],
+      });
+      console.log(dataPosted);
+    } catch {
+      console.error("dslf");
+    }
   };
 
   return (

@@ -8,6 +8,7 @@ interface MediaFile {
   url: string;
   type: "image" | "video";
 }
+
 export const InputFile = () => {
   const { t } = useTranslation();
   const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
