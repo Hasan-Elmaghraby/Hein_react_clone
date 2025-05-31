@@ -8,6 +8,8 @@ interface Props {
   placeholder?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
+  pattern?: string;
+  rest?: React.InputHTMLAttributes<HTMLInputElement>;
 }
 
 export const Input: React.FC<Props> = ({
@@ -17,6 +19,8 @@ export const Input: React.FC<Props> = ({
   value,
   placeholder,
   required,
+  pattern,
+  ...rest
 }) => {
   return (
     <div className={styles.inputWrapper}>
@@ -27,6 +31,8 @@ export const Input: React.FC<Props> = ({
         name={name}
         onChange={onChange}
         required={required}
+        pattern={pattern}
+        {...rest}
       />
       <label className={styles.label}> {placeholder}</label>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 interface CheckboxProps {
-  label: string;
+  label: React.ReactNode;
   checked: boolean;
   onChange: () => void;
   onClick?: () => void;

@@ -42,4 +42,10 @@
       color: $primaryColor;
     }
   }
+
+  &.disabled {
+    background-color: rgba($primaryColor, 0.1);
+    color: $primaryColor;
+    cursor: not-allowed;
+  }
 }
