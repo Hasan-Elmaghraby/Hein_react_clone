@@ -1,20 +1,30 @@
 @forward "@/theme/shared.scss";
 
-.inputWrapper {
-  width: 100%;
-  height: 5.4rem;
+.textareaWrapper {
   position: relative;
+  grid-column: 1 / 3;
+  grid-row: 3;
 
-  input {
+  &.active {
+    textarea {
+      + .label {
+        top: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  textarea {
     width: 100%;
-    height: 100%;
-    padding: 1rem 2rem;
-    border-radius: $fourthBorderRadius;
+    height: 12rem;
+    padding: 2rem;
+    border-radius: $secondaryBorderRadius;
     border: 1px solid $borderColor;
     outline: none;
     font-size: 1.4rem;
     caret-color: $primaryColor;
     transition: $mainTransition;
+    resize: none;
 
     &::placeholder {
       color: $paragraphSecondaryColor;
@@ -28,23 +38,14 @@
         font-size: 1.2rem;
       }
     }
-
-    &.active {
-      + .label {
-        top: 1rem;
-        font-size: 1.2rem;
-      }
-    }
   }
 
   .label {
     position: absolute;
-    top: 50%;
+    top: 2.5rem;
     inset-inline-start: 2rem;
-    transform: translateY(-50%);
     font-size: 1.4rem;
     color: $paragraphSecondaryColor;
     transition: $mainTransition;
-    pointer-events: none;
   }
 }

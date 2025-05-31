@@ -6,9 +6,13 @@ import { InputFile } from "./components/InputFile";
 import { useState } from "react";
 import { Input } from "./components/Input";
 import { Select } from "./components/Select";
+import { Textarea } from "./components/Textarea";
+import { Checkbox } from "./components/Checkbox";
 
 const AddAd = () => {
   const { t } = useTranslation();
+
+  const [checked, setChecked] = useState(false);
 
   const [form, setForm] = useState({
     title: "",
@@ -20,7 +24,9 @@ const AddAd = () => {
 
   const { title, price, category_id, area_id, content } = form;
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     setForm({
       ...form,
@@ -97,7 +103,19 @@ const AddAd = () => {
             placeholder={t("addAds.city")}
           />
 
-          <textarea name="" id=""></textarea>
+          <Textarea
+            name="content"
+            value={content}
+            onChange={handleChange}
+            placeholder={t("addAds.adsDetails")}
+          />
+          <div>
+            <Checkbox
+              label="Accept terms"
+              checked={checked}
+              onChange={() => setChecked((prev) => !prev)}
+            />
+          </div>
         </div>
       </form>
     </Section>
