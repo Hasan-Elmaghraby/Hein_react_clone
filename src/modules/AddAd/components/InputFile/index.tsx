@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./styles.module.scss";
 import { UploadFilesSecondIcon } from "@/shared/icons/UploadFilesSecond";
 import { TrashIcon } from "@/shared/icons/Trash";
@@ -7,11 +6,18 @@ import { useTranslation } from "react-i18next";
 interface MediaFile {
   url: string;
   type: "image" | "video";
+  file?: File;
+}
+interface InputFileProps {
+  mediaFiles: MediaFile[];
+  setMediaFiles: React.Dispatch<React.SetStateAction<MediaFile[]>>;
 }
 
-export const InputFile = () => {
+export const InputFile: React.FC<InputFileProps> = ({
+  mediaFiles,
+  setMediaFiles,
+}) => {
   const { t } = useTranslation();
-  const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
@@ -31,6 +37,7 @@ export const InputFile = () => {
         newMedia.push({
           url: URL.createObjectURL(file),
           type: "image",
+          file,
         });
         imageCount++;
       }
@@ -39,6 +46,7 @@ export const InputFile = () => {
         newMedia.push({
           url: URL.createObjectURL(file),
           type: "video",
+          file,
         });
         videoCount++;
       }

@@ -49,3 +49,14 @@
     font-size: 12px;
   }
 }
+
+@include xs {
+  .inputsWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1rem), 1fr));
+  }
+
+  .confirmWrapper {
+    grid-row: 5;
+    grid-column: 1/3;
+  }
+}

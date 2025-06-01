@@ -49,3 +49,9 @@
     transition: $mainTransition;
   }
 }
+
+@include xs {
+  .textareaWrapper {
+    grid-row: 4;
+  }
+}
