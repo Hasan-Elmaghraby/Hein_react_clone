@@ -1,0 +1,15 @@
+@forward "@/theme/shared.scss";
+
+.btnsWrapper {
+  max-width: 40%;
+  display: flex;
+  gap: 2rem;
+
+  @include xs {
+    max-width: 60%;
+  }
+
+  @include xxs {
+    max-width: 100%;
+  }
+}

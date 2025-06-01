@@ -24,10 +24,9 @@ export const usePostAd = () => {
       body.append("area_id", String(formData.area_id));
       body.append("content", formData.content);
 
-      // Append image files
       formData.images.forEach((media) => {
         if (media.file) {
-          body.append("images[]", media.file); // use `images[]` if your backend expects an array
+          body.append("images[]", media.file);
         }
       });
 

@@ -73,7 +73,7 @@ const ValidationCode = () => {
         if (response.status) {
           toast.success(response.message);
 
-          Cookies.set("access_token", response.access_token, {
+          Cookies.set("access_token", response.data.access_token, {
             expires: 40,
             secure: true,
             sameSite: "strict",
