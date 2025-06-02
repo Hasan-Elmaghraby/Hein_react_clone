@@ -82,3 +82,38 @@
     width: 100%;
   }
 }
+
+.footerOptions {
+  margin-top: 1.5rem;
+}
+
+.waiting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: $secondaryColor;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+
+  button:nth-child(1) {
+    flex: 3;
+  }
+  button:nth-child(2) {
+    flex: 1;
+  }
+}
+
+.editLink {
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

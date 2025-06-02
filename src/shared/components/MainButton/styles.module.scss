@@ -42,10 +42,24 @@
       color: $primaryColor;
     }
   }
+  &.editAds {
+    background-color: $whiteColor;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
 
-  &.disabled {
+    &:hover {
+      background-color: $primaryColor;
+      color: $whiteColor;
+    }
+  }
+
+  &.disabled,
+  &.notActive {
     background-color: rgba($primaryColor, 0.1);
     color: $primaryColor;
+  }
+
+  &.disabled {
     cursor: not-allowed;
   }
 }

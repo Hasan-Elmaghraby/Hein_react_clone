@@ -2,12 +2,13 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 interface Props {
-  text: string;
+  text?: string;
   type: string;
   onClick?: () => void;
   closeModal?: boolean;
   icon?: React.ReactNode;
   disabled?: boolean;
+  children?: React.ReactNode;
 }
 
 export const Button: React.FC<Props> = ({
@@ -16,6 +17,7 @@ export const Button: React.FC<Props> = ({
   onClick,
   icon,
   disabled,
+  children,
 }) => {
   return (
     <button
@@ -23,11 +25,16 @@ export const Button: React.FC<Props> = ({
         type === "primary" && styles.btn
       } ${type === "danger" && styles.danger}
       ${type === "edit" && styles.edit}
-      ${disabled && styles.disabled}`}
+      ${type === "editAds" && styles.editAds}
+      ${type === "notActive" && styles.notActive}
+      
+      ${disabled && styles.disabled}
+
+      `}
       onClick={onClick}
       disabled={disabled}
     >
-      {icon} {text}
+      {icon} {text} {children}
     </button>
   );
 };

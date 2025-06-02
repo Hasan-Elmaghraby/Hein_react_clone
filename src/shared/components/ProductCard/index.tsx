@@ -6,13 +6,18 @@ import { CardInfo } from "./components/CardInfo";
 interface Props {
   id: number | string;
   mainImage: string;
-  userImage: string;
+  userImage?: string;
   categoryName: string;
   title: string;
-  userName: string;
+  userName?: string;
   price: string;
-  time: string;
+  time?: string;
   area: string;
+  icon?: boolean;
+  user?: boolean;
+  footerOptions?: boolean;
+  active?: boolean;
+  onDelete?: () => void;
 }
 
 export const ProductCard: React.FC<Props> = ({
@@ -25,6 +30,11 @@ export const ProductCard: React.FC<Props> = ({
   price,
   time,
   area,
+  icon,
+  user,
+  footerOptions,
+  active,
+  onDelete,
 }) => {
   return (
     <div className={styles.productCard}>
@@ -41,6 +51,11 @@ export const ProductCard: React.FC<Props> = ({
         price={price}
         time={time}
         area={area}
+        icon={icon}
+        user={user}
+        footerOptions={footerOptions}
+        active={active}
+        onDelete={onDelete}
       />
     </div>
   );
