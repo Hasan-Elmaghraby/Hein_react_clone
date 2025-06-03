@@ -1,0 +1,52 @@
+@forward "@/theme/shared.scss";
+
+.cardComment {
+  padding: 2.5rem 3rem;
+  background-color: $whiteColor;
+  box-shadow: 0 3px 30px rgba($blackColor, 0.16);
+  border-radius: $mainBorderRadius;
+  overflow: hidden;
+}
+
+.userWrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $headingMainColor;
+}
+
+.comment {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: $paragraphMainColor;
+}
+
+.time {
+  font-size: 1.2rem;
+  color: $paragraphMainColor;
+}

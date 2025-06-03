@@ -1,0 +1,23 @@
+@forward "@/theme/shared.scss";
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+
+  button:nth-child(1) {
+    flex: 3;
+  }
+  button:nth-child(2) {
+    flex: 1;
+  }
+}
+
+.editLink {
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

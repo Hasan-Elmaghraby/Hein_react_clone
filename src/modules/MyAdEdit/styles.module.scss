@@ -1,0 +1,23 @@
+@forward "@/theme/shared.scss";
+
+.productDetailsInfo {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.productSwiperWrapper {
+  width: 50%;
+  border-radius: $secondaryBorderRadius;
+  overflow: hidden;
+}
+
+@include xs {
+  .productDetailsInfo {
+    flex-direction: column;
+  }
+
+  .productSwiperWrapper,
+  .productInfo {
+    width: 100%;
+  }
+}
