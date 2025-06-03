@@ -18,6 +18,7 @@ interface Props {
   footerOptions?: boolean;
   active?: boolean;
   onDelete?: () => void;
+  idParams?: string | number;
 }
 
 export const ProductCard: React.FC<Props> = ({
@@ -56,6 +57,7 @@ export const ProductCard: React.FC<Props> = ({
         footerOptions={footerOptions}
         active={active}
         onDelete={onDelete}
+        id={id}
       />
     </div>
   );

@@ -6,14 +6,14 @@ import { Button } from "@/shared/components/MainButton";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { ProductCard } from "@/shared/components/ProductCard";
+import Loader from "@/shared/components/Loader";
 
 const MyAds = () => {
   const [activeNumber, setActiveNumber] = useState(0);
   const [adsData, setAdsData] = useState([]);
   const { t } = useTranslation();
 
-  const { data } = useGetMyAds(activeNumber);
-  console.log(data);
+  const { data, isLoading } = useGetMyAds(activeNumber);
 
   useEffect(() => {
     if (data) {
@@ -28,6 +28,12 @@ const MyAds = () => {
   const handleClickWaitingAds = () => {
     setActiveNumber(0);
   };
+
+  useEffect(() => {
+    if (isLoading) {
+      <Loader />;
+    }
+  });
   return (
     <Section>
       <PageTitle title={t("myAds.title")} />
@@ -53,8 +59,8 @@ const MyAds = () => {
               time={time_ago}
               price={price}
               mainImage={mainImage}
-              categoryName={(category as { name: string }).name}
-              area={(area as { name: string }).name}
+              categoryName={(category as { name: string })?.name}
+              area={(area as { name: string })?.name}
               footerOptions
               active={activeNumber === 1}
               onDelete={() => console.log("delete")}

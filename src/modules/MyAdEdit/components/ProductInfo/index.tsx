@@ -14,6 +14,7 @@ interface Props {
   userMail: string;
   userPhone: string;
   userId: number;
+  itemId: number;
 }
 
 export const ProductInfo: React.FC<Props> = ({
@@ -22,6 +23,7 @@ export const ProductInfo: React.FC<Props> = ({
   area,
   price,
   content,
+  itemId,
 }) => {
   return (
     <div className={styles.productInfoWrapper}>
@@ -33,7 +35,7 @@ export const ProductInfo: React.FC<Props> = ({
         <p className={styles.price}>{price}</p>
         <p className={styles.description}>{content}</p>
       </div>
-      <EditBtns onDelete={() => {}} />
+      <EditBtns id={itemId} onDelete={() => {}} />
     </div>
   );
 };

@@ -47,6 +47,7 @@ const MyAdEdit: React.FC = () => {
             userMail={item?.user.email || ""}
             userPhone={item?.user.mobile || ""}
             userId={item?.user.id || 0}
+            itemId={item?.id || 0}
           />
         </div>
 

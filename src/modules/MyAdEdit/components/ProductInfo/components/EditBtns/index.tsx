@@ -7,15 +7,16 @@ import { TrashIcon } from "@/shared/icons/Trash";
 
 interface Props {
   onDelete: () => void;
+  id: string | number;
 }
 
-export const EditBtns: React.FC<Props> = ({ onDelete }) => {
+export const EditBtns: React.FC<Props> = ({ onDelete, id }) => {
   const { t } = useTranslation();
 
   return (
     <div className={styles.buttons}>
       <Button type="editAds">
-        <Link className={styles.editLink} to={"/editAd"}>
+        <Link className={styles.editLink} to={`/add-ad?action=edit/${id}`}>
           {t("myAds.edit")}
         </Link>
       </Button>

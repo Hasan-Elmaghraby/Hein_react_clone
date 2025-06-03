@@ -19,6 +19,7 @@ interface Props {
   footerOptions?: boolean;
   active?: boolean;
   onDelete?: () => void;
+  id?: string | number;
 }
 
 export const CardInfo: React.FC<Props> = ({
@@ -33,6 +34,7 @@ export const CardInfo: React.FC<Props> = ({
   footerOptions,
   active,
   onDelete,
+  id,
 }) => {
   const { t } = useTranslation();
 
@@ -78,7 +80,7 @@ export const CardInfo: React.FC<Props> = ({
           ) : (
             <div className={styles.buttons}>
               <Button type="editAds">
-                <Link className={styles.editLink} to={"/editAd"}>
+                <Link className={styles.editLink} to={`/myAds/edit/${id}`}>
                   {t("myAds.edit")}
                 </Link>
               </Button>

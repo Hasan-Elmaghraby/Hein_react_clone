@@ -4,7 +4,7 @@ import { AddIcon } from "@/shared/icons/Add";
 
 export const Add = () => {
   return (
-    <Link to="/add-ad" className={styles.addAd}>
+    <Link to="/add-ad?action=add" className={styles.addAd}>
       <div className={styles.addIcon}>
         <AddIcon />
       </div>

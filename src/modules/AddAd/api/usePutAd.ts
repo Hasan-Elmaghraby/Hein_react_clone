@@ -14,7 +14,7 @@ interface FormData {
   show_phone: number | string;
 }
 
-export const usePostAd = () => {
+export const usePutAd = () => {
   return useMutation({
     mutationFn: async (formData: FormData) => {
       const body = new FormData();
@@ -32,7 +32,7 @@ export const usePostAd = () => {
         }
       });
 
-      const { data: response } = await Axios.post(ITEMS, body, {
+      const { data: response } = await Axios.put(ITEMS, body, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${Cookies.get("access_token")}`,

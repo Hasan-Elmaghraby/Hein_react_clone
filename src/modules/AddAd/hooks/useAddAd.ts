@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import { useGetCategories } from "../api/useGetCategories";
 import { useGetAreas } from "../api/useGetAreas";
 import { usePostAd } from "../api/usePostAd";
+import { usePutAd } from "../api/usePutAd";
+import { useGetMyAds } from "../api/useGetMyAds";
 import { Areas } from "@/shared/model/Areas";
 import { toast } from "react-toastify";
+import { useLocation, useParams } from "react-router-dom";
+import { SingleProduct } from "@/shared/model/SingleProduct";
 
 export interface MediaFile {
   url: string;
@@ -37,9 +41,20 @@ interface FormState {
 }
 
 export const useAddAd = () => {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const action = params.get("action");
+  const isEditAction = action?.startsWith("edit/");
+
+  const { id } = useParams();
+  const { data: myAds } = useGetMyAds(id);
+
+  const [myAdEditData, setMyAdEditData] = useState<SingleProduct | null>(null);
+
   const { data } = useGetCategories();
   const { data: areas } = useGetAreas();
   const { mutateAsync, data: dataPosted } = usePostAd();
+  const { mutateAsync: mutateAsyncEdit } = usePutAd();
 
   const [mainCategory, setMainCategory] = useState<Category[]>([]);
   const [categories, setCategories] = useState<SelectOption[]>([]);
@@ -74,6 +89,26 @@ export const useAddAd = () => {
     subCategory_id,
     city_id,
   } = form;
+
+  useEffect(() => {
+    if (myAds) {
+      myAds.map((myAdEdit) => setMyAdEditData(myAdEdit));
+    }
+  });
+
+  useEffect(() => {
+    if (isEditAction) {
+      setForm({
+        title: myAdEditData?.title || "",
+        price: myAdEditData?.price || "",
+        category_id: myAdEditData?.category_id || "",
+        area_id: myAdEditData?.area?.area_id || "",
+        content: "",
+        subCategory_id: "",
+        city_id: "",
+      });
+    }
+  }, [isEditAction, myAdEditData]);
 
   useEffect(() => {
     if (data) {
@@ -149,7 +184,10 @@ export const useAddAd = () => {
 
   const handleChange = (
     event: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+      | HTMLInputElement
+      | HTMLSelectElement
+      | HTMLTextAreaElement
+      | HTMLFormElement
     >
   ) => {
     setForm({
@@ -167,27 +205,56 @@ export const useAddAd = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    try {
-      mutateAsync({
-        title: form.title,
-        price: form.price,
-        category_id: form.category_id,
-        area_id: form.area_id,
-        content: form.content,
-        images: mediaFiles,
-      });
-      toast.success(dataPosted?.message);
-      setForm({
-        title: "",
-        price: "",
-        category_id: "",
-        area_id: "",
-        content: "",
-        subCategory_id: "",
-        city_id: "",
-      });
-    } catch {
-      console.error("Failed to post comment:");
+    if (action === "add") {
+      try {
+        mutateAsync({
+          title: form.title,
+          price: form.price,
+          category_id: form.category_id,
+          area_id: form.area_id,
+          content: form.content,
+          images: mediaFiles,
+          show_phone: Number(checkedPhone),
+        });
+        toast.success(dataPosted?.message);
+        setForm({
+          title: "",
+          price: "",
+          category_id: "",
+          area_id: "",
+          content: "",
+          subCategory_id: "",
+          city_id: "",
+        });
+      } catch {
+        console.error("Failed to post comment:");
+      }
+    }
+
+    if (isEditAction) {
+      try {
+        mutateAsyncEdit({
+          title: form.title,
+          price: form.price,
+          category_id: form.category_id,
+          area_id: form.area_id,
+          content: form.content,
+          images: mediaFiles,
+          show_phone: Number(checkedPhone),
+        });
+        toast.success(dataPosted?.message);
+        setForm({
+          title: "",
+          price: "",
+          category_id: "",
+          area_id: "",
+          content: "",
+          subCategory_id: "",
+          city_id: "",
+        });
+      } catch {
+        console.error("Failed to post comment:");
+      }
     }
   };
 
@@ -212,5 +279,7 @@ export const useAddAd = () => {
     setCheckedPhone,
     checkedCommission,
     setCheckedCommission,
+    setForm,
+    isEditAction,
   };
 };

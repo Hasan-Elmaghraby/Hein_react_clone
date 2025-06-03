@@ -37,13 +37,17 @@ const AddAd = () => {
     checkedCommission,
     checkedPhone,
     setCheckedCommission,
-    setCheckedPhone,
     isValid,
+    setCheckedPhone,
+    isEditAction,
   } = useAddAd();
 
   return (
     <Section>
-      <SectionTitle right title={t("addAds.title")} />
+      <SectionTitle
+        right
+        title={`${isEditAction ? t("editAds.title") : t("addAds.title")}`}
+      />
       <form className={styles.form} onSubmit={handleSubmit}>
         <InputFile mediaFiles={mediaFiles} setMediaFiles={setMediaFiles} />
         <div className={styles.inputsWrapper}>
@@ -53,7 +57,7 @@ const AddAd = () => {
             name="title"
             type="text"
             placeholder={t("addAds.addressName")}
-            rest={{ maxLength: 20, minLength: 5 }}
+            rest={{ maxLength: 20, minLength: 4 }}
             required
           />
 
@@ -117,7 +121,8 @@ const AddAd = () => {
                   </p>
                 }
                 checked={checkedPhone}
-                onChange={() => setCheckedPhone((prev) => !prev)}
+                onChange={(e) => setCheckedPhone(e.target.checked)}
+                name="show_phone"
               />
               <Checkbox
                 label={
@@ -135,12 +140,13 @@ const AddAd = () => {
                   </div>
                 }
                 checked={checkedCommission}
-                onChange={() => setCheckedCommission((prev) => !prev)}
+                onChange={(e) => setCheckedCommission(e.target.checked)}
+                name="commission"
               />
             </div>
             <Button
               type="primary"
-              text={t("addAds.submit")}
+              text={`${isEditAction ? t("editAds.title") : t("addAds.submit")}`}
               disabled={!isValid}
             />
           </div>
