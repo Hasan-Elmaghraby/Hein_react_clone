@@ -74,7 +74,7 @@ const AddAd = () => {
           <Select
             options={categories}
             name="category_id"
-            value={category_id}
+            value={category_id.toString()}
             onChange={handleChange}
             placeholder={t("addAds.mainCategory")}
           />
@@ -82,7 +82,7 @@ const AddAd = () => {
           <Select
             options={subCategory}
             name="subCategory_id"
-            value={subCategory_id}
+            value={subCategory_id.toString()}
             onChange={handleChange}
             placeholder={t("addAds.subCategory")}
           />

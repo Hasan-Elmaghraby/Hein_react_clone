@@ -38,6 +38,7 @@ export interface Item {
   status: number;
   status_txt: string;
   is_liked: boolean;
+  content?: string;
   image: string;
   title: string;
   price: string;

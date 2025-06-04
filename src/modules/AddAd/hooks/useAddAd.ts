@@ -7,38 +7,8 @@ import { useGetMyAds } from "../api/useGetMyAds";
 import { Areas } from "@/shared/model/Areas";
 import { toast } from "react-toastify";
 import { useLocation, useParams } from "react-router-dom";
-import { SingleProduct } from "@/shared/model/SingleProduct";
-
-export interface MediaFile {
-  url: string;
-  type: "image" | "video";
-  file?: File;
-}
-interface Category {
-  id: number;
-  name: string;
-  sub_categories: SubCategory[];
-}
-
-interface SubCategory {
-  id: number;
-  name: string;
-}
-
-interface SelectOption {
-  value: string;
-  label: string;
-}
-
-interface FormState {
-  title: string;
-  price: string;
-  category_id: string;
-  subCategory_id: string;
-  area_id: string;
-  city_id: string;
-  content: string;
-}
+import { Item } from "@/shared/model/UserProfile";
+import { Category, SelectOption, MediaFile, FormState } from "../types/types";
 
 export const useAddAd = () => {
   const location = useLocation();
@@ -47,14 +17,14 @@ export const useAddAd = () => {
   const isEditAction = action?.startsWith("edit/");
 
   const { id } = useParams();
-  const { data: myAds } = useGetMyAds(id);
+  const { data: myAds } = useGetMyAds(Number(id));
 
-  const [myAdEditData, setMyAdEditData] = useState<SingleProduct | null>(null);
+  const [myAdEditData, setMyAdEditData] = useState<Item | null>(null);
 
   const { data } = useGetCategories();
   const { data: areas } = useGetAreas();
   const { mutateAsync, data: dataPosted } = usePostAd();
-  const { mutateAsync: mutateAsyncEdit } = usePutAd();
+  const { mutateAsync: mutateAsyncEdit, data: dataEdit } = usePutAd(Number(id));
 
   const [mainCategory, setMainCategory] = useState<Category[]>([]);
   const [categories, setCategories] = useState<SelectOption[]>([]);
@@ -92,16 +62,17 @@ export const useAddAd = () => {
 
   useEffect(() => {
     if (myAds) {
-      myAds.map((myAdEdit) => setMyAdEditData(myAdEdit));
+      myAds.map((myAdEdit: Item) => setMyAdEditData(myAdEdit));
     }
   });
 
   useEffect(() => {
     if (isEditAction) {
+      console.log(myAdEditData);
       setForm({
         title: myAdEditData?.title || "",
         price: myAdEditData?.price || "",
-        category_id: myAdEditData?.category_id || "",
+        category_id: myAdEditData?.category?.id || "",
         area_id: myAdEditData?.area?.area_id || "",
         content: "",
         subCategory_id: "",
@@ -242,7 +213,8 @@ export const useAddAd = () => {
           images: mediaFiles,
           show_phone: Number(checkedPhone),
         });
-        toast.success(dataPosted?.message);
+
+        toast.success(dataEdit?.message);
         setForm({
           title: "",
           price: "",
