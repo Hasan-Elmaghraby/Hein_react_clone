@@ -12,6 +12,7 @@ import { CommissionIcon } from "@/shared/icons/Commission";
 import { LogOutIcon } from "@/shared/icons/Logout";
 import { Modal } from "@/shared/components/Modal";
 import { Button } from "@/shared/components/MainButton";
+import { WalletIcon } from "@/shared/icons/Wallet";
 
 interface Props {
   userImage: string | undefined;
@@ -72,6 +73,12 @@ export const UserInfo: React.FC<Props> = ({
             <Link to="/packages">
               <PackagesIcon />
               {t("header.packages")}
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link to="/wallet">
+              <WalletIcon />
+              {t("header.wallet")}
             </Link>
           </li>
           <li className={styles.listItem}>

@@ -197,5 +197,14 @@
   },
   "editAds": {
     "title": "تعديل الإعلان"
+  },
+  "wallet": {
+    "title": "المحفظة",
+    "walletBalance": "رصيدك في المحفظة",
+    "noWalletBalance": "لا يوجد لديك رصيد في المحفظة",
+    "recharge": " إضافة رصيد ",
+    "rechargeWallet": "  إضافة رصيد إلي المحفظة",
+    "records": "سجل المعاملات",
+    "recordsDetails": "تفاصيل لجميع الأرصدة الخاصة بحسابك"
   }
 }
