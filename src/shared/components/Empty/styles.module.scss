@@ -1,0 +1,13 @@
+@forward "@/theme/shared.scss";
+
+.empty {
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 2rem;
+  color: $paragraphSecondaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}

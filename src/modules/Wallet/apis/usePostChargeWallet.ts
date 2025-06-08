@@ -7,10 +7,16 @@ export const usePostChargeWallet = () => {
   return useMutation({
     mutationKey: ["charge"],
     mutationFn: async (amount: string) => {
-      const { data } = await Axios.post(CHARGE, amount, {
-        headers: { Authorization: `Bearer ${Cookies.get("access_token")}` },
+      const formData = new FormData();
+      formData.append("amount", amount);
+
+      const { data } = await Axios.post(CHARGE, formData, {
+        headers: {
+          Authorization: `Bearer ${Cookies.get("access_token")}`,
+        },
       });
-      return data.data;
+
+      return data;
     },
   });
 };
