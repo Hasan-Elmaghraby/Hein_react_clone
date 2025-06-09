@@ -1,0 +1,28 @@
+@forward "@/theme/shared.scss";
+
+.caution {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: $redColor;
+  margin-bottom: 0.3rem;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: $paragraphSecondaryColor;
+  margin-bottom: 3rem;
+}
+
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @include sm {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: center;
+  }
+}

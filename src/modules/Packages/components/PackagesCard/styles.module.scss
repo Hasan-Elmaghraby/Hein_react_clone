@@ -1,0 +1,64 @@
+@forward "@/theme/shared.scss";
+
+.packagesCard {
+  flex: 0 0 calc((100% / 3) - 0.677rem);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: $mainBorderRadius;
+  box-shadow: 0 3px 30px rgba(#5c5c5c, 0.16);
+
+  figure {
+    flex-shrink: 0;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.info {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.description,
+.footerCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.description {
+  margin-bottom: 1rem;
+  .time,
+  .ads {
+    flex-shrink: 0;
+    color: $paragraphSecondaryColor;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.footerCard {
+  .price {
+    flex-shrink: 0;
+    color: $secondaryColor;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

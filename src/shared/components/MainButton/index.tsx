@@ -9,6 +9,8 @@ interface Props {
   icon?: React.ReactNode;
   disabled?: boolean;
   children?: React.ReactNode;
+  maxWidth?: string;
+  maxHeight?: string;
 }
 
 export const Button: React.FC<Props> = ({
@@ -18,6 +20,8 @@ export const Button: React.FC<Props> = ({
   icon,
   disabled,
   children,
+  maxWidth,
+  maxHeight,
 }) => {
   return (
     <button
@@ -27,10 +31,9 @@ export const Button: React.FC<Props> = ({
       ${type === "edit" && styles.edit}
       ${type === "editAds" && styles.editAds}
       ${type === "notActive" && styles.notActive}
-      
       ${disabled && styles.disabled}
-
       `}
+      style={{ maxWidth: maxWidth, maxHeight: maxHeight }}
       onClick={onClick}
       disabled={disabled}
     >
