@@ -1,0 +1,36 @@
+@forward "@/theme/shared.scss";
+
+.myPackages {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+.info {
+  .title {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: $primaryColor;
+  }
+
+  .packageName {
+    font-size: 1.4rem;
+    color: $headingMainColor;
+  }
+
+  .endedAt {
+    color: $redColor;
+  }
+}
+
+.myPackagesCards {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @include xxs {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

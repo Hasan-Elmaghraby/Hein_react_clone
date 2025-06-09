@@ -14,6 +14,7 @@ const MyAds = lazy(() => import("./modules/MyAds"));
 const MyAdEdit = lazy(() => import("./modules/MyAdEdit"));
 const Wallet = lazy(() => import("./modules/Wallet"));
 const Packages = lazy(() => import("./modules/Packages"));
+const MyPackage = lazy(() => import("./modules/MyPackage"));
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/myAds/edit/:id" element={<MyAdEdit />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/packages" element={<Packages />} />
+            <Route path="/myPackage" element={<MyPackage />} />
           </Route>
         </Routes>
         <ToastContainer />

@@ -1,0 +1,32 @@
+@forward "@/theme/shared.scss";
+
+.packagesCard {
+  flex: 0 0 calc((100% / 3) - 0.677rem);
+  padding: 1.5rem 2rem;
+  border-radius: $mainBorderRadius;
+  background-color: rgba($blackColor, 0.04);
+
+  .title {
+    margin-bottom: 0.7rem;
+    color: $paragraphSecondaryColor;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      font-size: 1.7rem;
+    }
+  }
+
+  .description {
+    color: $headingMainColor;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    &.price {
+      color: $secondaryColor;
+    }
+  }
+}
