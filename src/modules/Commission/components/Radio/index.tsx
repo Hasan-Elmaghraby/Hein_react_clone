@@ -1,33 +1,39 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
-interface CheckboxProps {
+interface RadioProps {
   label: React.ReactNode;
   checked?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClick?: () => void;
-  value?: boolean;
+  value?: string;
   name?: string;
+  id?: string;
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({
+export const Radio: React.FC<RadioProps> = ({
   label,
   checked,
   onChange,
   name,
+  value,
+  id,
 }) => {
+  const radioId = id || `${name}-${value}`;
+
   return (
     <div className={styles.customCheckboxWrapper}>
-      <label className={styles.customCheckbox}>
+      <label className={styles.customCheckbox} htmlFor={radioId}>
         <input
-          type="checkbox"
+          type="radio"
+          id={radioId}
           checked={checked}
           onChange={onChange}
           name={name}
+          value={value}
         />
         <span className={styles.customCheckmark}></span>
       </label>
-      {label}
+      <label htmlFor={radioId}>{label}</label>
     </div>
   );
 };

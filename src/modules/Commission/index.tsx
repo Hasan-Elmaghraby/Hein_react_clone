@@ -8,13 +8,14 @@ import commissionImage from "@public/images/pages/commission.png";
 import { Input } from "./components/Input";
 import { usePostCalculateCommission } from "./apis/usepostCalculateCommission";
 import Loader from "@/shared/components/Loader";
-import { Checkbox } from "./components/Checkbox";
+import { Radio } from "./components/Radio";
 
 const Commission = () => {
   const { mutateAsync, data, isPending } = usePostCalculateCommission();
   const { t } = useTranslation();
   const [price, setPrice] = useState("");
   const [total, setTotal] = useState(0);
+  const [selectedOption, setSelectedOption] = useState("");
 
   useEffect(() => {
     if (price === "") setTotal(0);
@@ -22,6 +23,10 @@ const Commission = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPrice(e.target.value);
+  };
+
+  const handleChangeRadio = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedOption(e.target.value);
   };
 
   useEffect(() => {
@@ -67,8 +72,30 @@ const Commission = () => {
             <h3 className={styles.optionTitle}>
               {t("commission.paymentOptions")}
             </h3>
-            <Checkbox label={t("commission.option1")} name="option1" />
-            <Checkbox label={t("commission.option2")} name="option2" />
+            <Radio
+              name="online"
+              label={
+                <div>
+                  <h4>{t("commission.paymentOnline")}</h4>
+                  <p>{t("commission.paymentOnlineSubtitle")}</p>
+                </div>
+              }
+              value="online"
+              checked={selectedOption === "online"}
+              onChange={handleChangeRadio}
+            />
+            <Radio
+              name="bank"
+              label={
+                <div>
+                  <h4>{t("commission.paymentBank")}</h4>
+                  <p>{t("commission.paymentBankSubtitle")}</p>
+                </div>
+              }
+              value="bank"
+              checked={selectedOption === "bank"}
+              onChange={handleChangeRadio}
+            />
           </form>
         </div>
       </div>
