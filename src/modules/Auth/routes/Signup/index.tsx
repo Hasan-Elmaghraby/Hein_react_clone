@@ -49,12 +49,12 @@ const Signup: React.FC = () => {
 
       console.log(response.data?.code);
       Cookies.set("mobile", phone, {
-        expires: 40,
+        expires: 200,
         secure: true,
         sameSite: "strict",
       });
       Cookies.set("code", response.data?.code, {
-        expires: 40,
+        expires: 200,
         secure: true,
         sameSite: "strict",
       });

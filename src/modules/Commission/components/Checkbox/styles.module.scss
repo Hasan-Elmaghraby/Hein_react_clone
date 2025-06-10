@@ -1,0 +1,53 @@
+@forward "@/theme/shared.scss";
+
+.customCheckboxWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.customCheckbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .customCheckmark {
+      background-color: $secondaryColor;
+      border-color: $secondaryColor;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .customCheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include circle(20px);
+    background-color: $whiteColor;
+    border: 1px solid $paragraphSecondaryColor;
+    transition: $mainTransition;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 4px;
+      inset-inline-end: 7px;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -28,6 +28,7 @@ export const CATEGORIES = "categories";
 export const FOLLOW = "follow";
 export const USER = "user";
 export const RATES = "rates";
+export const CalculateCommission = "calculate_commission";
 
 // Auth
 export const SIGNUP = "signup";

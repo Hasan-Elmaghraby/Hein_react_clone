@@ -52,7 +52,7 @@ export const FormProfileInfo = () => {
         } else if (data.status === true) {
           setIsEditing(true);
           Cookies.set("mobile", phone as string, {
-            expires: 40,
+            expires: 200,
             secure: true,
             sameSite: "strict",
           });

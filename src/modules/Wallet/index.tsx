@@ -12,6 +12,7 @@ import { useGetWallet } from "./apis/useGetWallet";
 import { usePostChargeWallet } from "./apis/usePostChargeWallet";
 import { Modal } from "@/shared/components/Modal";
 import { WalletIcon } from "@/shared/icons/Wallet";
+import Loader from "@/shared/components/Loader";
 
 const Wallet: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,7 @@ const Wallet: React.FC = () => {
 
   const { t } = useTranslation();
 
-  const { data } = useGetWallet();
+  const { data, isLoading } = useGetWallet();
   const { balance, wallet_actions } = data || {};
 
   const { mutateAsync } = usePostChargeWallet();
@@ -38,6 +39,8 @@ const Wallet: React.FC = () => {
       console.error("Charge failed:", error);
     }
   };
+
+  if (isLoading) return <Loader />;
 
   return (
     <Section>

@@ -43,7 +43,7 @@ const ValidationCode = () => {
           toast.success(response.message);
 
           Cookies.set("code_id", response.data.code_id, {
-            expires: 40,
+            expires: 200,
             secure: true,
             sameSite: "strict",
           });
@@ -63,7 +63,7 @@ const ValidationCode = () => {
         });
 
         Cookies.set("access_token", response.access_token, {
-          expires: 40,
+          expires: 200,
           secure: true,
           sameSite: "strict",
         });
@@ -74,7 +74,7 @@ const ValidationCode = () => {
           toast.success(response.message);
 
           Cookies.set("access_token", response.data.access_token, {
-            expires: 40,
+            expires: 200,
             secure: true,
             sameSite: "strict",
           });
