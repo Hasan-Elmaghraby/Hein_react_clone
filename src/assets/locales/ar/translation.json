@@ -221,6 +221,8 @@
     "paymentOnline": " الدفع أونلاين",
     "paymentOnlineSubtitle": "يمكنك الدفع من خلال البطاقة الإئتمانية",
     "paymentBank": "الدفع بالحساب البنكي",
-    "paymentBankSubtitle": "يمكنك الدفع من خلال التحويل عبر الحساب البنكي الخاص بنا  رقم الحساب البنكي:"
+    "paymentBankSubtitle": "يمكنك الدفع من خلال التحويل عبر الحساب البنكي الخاص بنا  رقم الحساب البنكي:",
+    "paymentCommission": "دفع العمولة",
+    "howToCalculateCommission": "كيفية حساب عمولة التطبيق"
   }
 }

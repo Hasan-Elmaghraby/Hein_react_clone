@@ -9,6 +9,11 @@ import { Input } from "./components/Input";
 import { usePostCalculateCommission } from "./apis/usepostCalculateCommission";
 import Loader from "@/shared/components/Loader";
 import { Radio } from "./components/Radio";
+import { ClipboardText } from "./components/ClipboardText";
+import { Button } from "@/shared/components/MainButton";
+import { Link } from "react-router-dom";
+import { DollarIcon } from "@/shared/icons/Dollar";
+import { ChevronLeftIcon } from "@/shared/icons/ChevronLeft";
 
 const Commission = () => {
   const { mutateAsync, data, isPending } = usePostCalculateCommission();
@@ -44,6 +49,16 @@ const Commission = () => {
       console.log(error);
     }
   };
+
+  const handleSubmitCommission = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (selectedOption === "online") {
+      console.log("wallet");
+    }
+    if (selectedOption === "bank") {
+      console.log("bank");
+    }
+  };
   return (
     <Section>
       <SectionTitle right title={t("commission.name")} />
@@ -68,7 +83,7 @@ const Commission = () => {
               </div>
             )}
           </form>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmitCommission}>
             <h3 className={styles.optionTitle}>
               {t("commission.paymentOptions")}
             </h3>
@@ -76,8 +91,12 @@ const Commission = () => {
               name="online"
               label={
                 <div>
-                  <h4>{t("commission.paymentOnline")}</h4>
-                  <p>{t("commission.paymentOnlineSubtitle")}</p>
+                  <h4 className={styles.radioTitle}>
+                    {t("commission.paymentOnline")}
+                  </h4>
+                  <p className={styles.radioSubtitle}>
+                    {t("commission.paymentOnlineSubtitle")}
+                  </p>
                 </div>
               }
               value="online"
@@ -88,16 +107,32 @@ const Commission = () => {
               name="bank"
               label={
                 <div>
-                  <h4>{t("commission.paymentBank")}</h4>
-                  <p>{t("commission.paymentBankSubtitle")}</p>
+                  <h4 className={styles.radioTitle}>
+                    {t("commission.paymentBank")}
+                  </h4>
+                  <p className={styles.radioSubtitle}>
+                    {t("commission.paymentBankSubtitle")}
+                    <ClipboardText text={"0058905118900059"} />
+                  </p>
                 </div>
               }
               value="bank"
               checked={selectedOption === "bank"}
               onChange={handleChangeRadio}
             />
+            <Button type="submit" text={t("commission.paymentCommission")} />
           </form>
         </div>
+
+        <Link className={styles.commissionLink} to="/single-page/4">
+          <div className={styles.linkStart}>
+            <DollarIcon />
+            <span>{t("commission.howToCalculateCommission")}</span>
+          </div>
+          <div className={styles.iconArrowWrap}>
+            <ChevronLeftIcon />
+          </div>
+        </Link>
       </div>
     </Section>
   );

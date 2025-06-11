@@ -29,6 +29,7 @@ export const FOLLOW = "follow";
 export const USER = "user";
 export const RATES = "rates";
 export const CalculateCommission = "calculate_commission";
+export const PAGES = "pages";
 
 // Auth
 export const SIGNUP = "signup";

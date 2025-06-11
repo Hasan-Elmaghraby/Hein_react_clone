@@ -13,7 +13,7 @@ import Cookies from "js-cookie";
 import { useUser } from "@/shared/context/UserContext";
 
 const Signin: React.FC = () => {
-  const { mutateAsync } = useSigninApi();
+  const { mutateAsync, isPending } = useSigninApi();
   const { setUser } = useUser();
   const navigate = useNavigate();
 
@@ -94,7 +94,7 @@ const Signin: React.FC = () => {
           <Link className={styles.forgetPswLink} to={"/auth/forgetPassword"}>
             هل نسيت كلمة المرور
           </Link>
-          <Button type="primary" text="الدخول" />
+          <Button type="primary" text="الدخول" disabled={isPending} />
 
           <p className={styles.text}>لا يوجد لديك حساب علي هين ؟</p>
           <Link className={styles.signin} to={"/signup"}>

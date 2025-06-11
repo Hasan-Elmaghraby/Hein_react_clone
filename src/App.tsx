@@ -16,6 +16,7 @@ const Wallet = lazy(() => import("./modules/Wallet"));
 const Packages = lazy(() => import("./modules/Packages"));
 const MyPackage = lazy(() => import("./modules/MyPackage"));
 const Commission = lazy(() => import("./modules/Commission"));
+const SinglePage = lazy(() => import("./modules/SinglePage"));
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/myPackage" element={<MyPackage />} />
             <Route path="/site-commission" element={<Commission />} />
+            <Route path="/single-page/:id" element={<SinglePage />} />
           </Route>
         </Routes>
         <ToastContainer />

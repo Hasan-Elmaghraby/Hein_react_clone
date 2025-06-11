@@ -2,7 +2,20 @@
 
 .commissionWrapper {
   display: flex;
-  gap: 2rem;
+  column-gap: 3rem;
+  row-gap: 2rem;
+
+  @include xs {
+    flex-direction: column;
+  }
+
+  figure {
+    flex: 0 0 30%;
+  }
+
+  .formWrapper {
+    flex: 0 0 40%;
+  }
 }
 
 .title {
@@ -33,4 +46,74 @@
 .optionTitle {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.radioTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.radioSubtitle {
+  font-size: 1.4rem;
+  color: $paragraphSecondaryColor;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.commissionLink {
+  text-decoration: none;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.16);
+  padding: 2.4rem 2rem;
+  border-radius: $mainBorderRadius;
+  background-color: $whiteColor;
+  transition: $mainTransition;
+
+  &:hover {
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.linkStart {
+  color: $headingMainColor;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+
+  svg {
+    font-size: 2rem;
+    color: $paragraphSecondaryColor;
+  }
+}
+
+.iconArrowWrap {
+  svg {
+    font-size: 1.6rem;
+    color: $paragraphSecondaryColor;
+  }
+}
+
+.formWrapper {
+  &:has(input[type="radio"]:not(:checked)) {
+    button {
+      background-color: rgba($primaryColor, 0.09);
+      color: $primaryColor;
+      cursor: not-allowed;
+    }
+  }
+}
+.formWrapper {
+  &:has(input[type="radio"]:is(:checked)) {
+    button {
+      background-color: $primaryColor;
+      color: $whiteColor;
+      cursor: pointer;
+    }
+  }
 }

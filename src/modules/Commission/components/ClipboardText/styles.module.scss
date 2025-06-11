@@ -1,0 +1,20 @@
+@forward "@/theme/shared.scss";
+
+.clipboardText {
+  display: inline-flex;
+  align-items: center;
+
+  .text {
+    color: $paragraphSecondaryColor;
+    font-size: 1.4rem;
+  }
+}
+
+.iconWrapper {
+  cursor: pointer;
+
+  svg {
+    font-size: 2rem;
+    color: $primaryColor;
+  }
+}
