@@ -1,0 +1,66 @@
+@forward "@/theme/shared.scss";
+
+.formWrapper {
+  flex: 0 0 40%;
+}
+
+.title {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: $paragraphSecondaryColor;
+}
+
+.form {
+  margin-top: 2rem;
+}
+
+.showCalculation {
+  margin-top: 1.5rem;
+  padding-inline: 2rem;
+  background-color: rgba($secondaryColor, 0.09);
+  height: 3.3rem;
+  border-radius: $fourthBorderRadius;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.optionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.radioTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.radioSubtitle {
+  font-size: 1.4rem;
+  color: $paragraphSecondaryColor;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.formWrapper {
+  &:has(input[type="radio"]:not(:checked)) {
+    button {
+      background-color: rgba($primaryColor, 0.09);
+      color: $primaryColor;
+      cursor: not-allowed;
+    }
+  }
+}
+.formWrapper {
+  &:has(input[type="radio"]:is(:checked)) {
+    button {
+      background-color: $primaryColor;
+      color: $whiteColor;
+      cursor: pointer;
+    }
+  }
+}

@@ -223,6 +223,12 @@
     "paymentBank": "الدفع بالحساب البنكي",
     "paymentBankSubtitle": "يمكنك الدفع من خلال التحويل عبر الحساب البنكي الخاص بنا  رقم الحساب البنكي:",
     "paymentCommission": "دفع العمولة",
-    "howToCalculateCommission": "كيفية حساب عمولة التطبيق"
+    "howToCalculateCommission": "كيفية حساب عمولة التطبيق",
+    "commissionModalTitle": "الدفع بالحساب البنكي",
+    "commissionModalSubtitle": "لتأكيد الدفع بالحساب البنكي قم بإرفاق صورة التحويل وكتابة رقم الحساب  الخاص بك",
+    "commissionModalButton": "تاكيد الدفع",
+    "commissionModalAttachment": "أرفق صورة التحويل",
+    "commissionModalMessage": "قم  بإرفاق صورة واضحة للتحويل البنكي",
+    "commissionModalAttachmentPlaceholder": "ادخل رقم الحساب البنكي"
   }
 }

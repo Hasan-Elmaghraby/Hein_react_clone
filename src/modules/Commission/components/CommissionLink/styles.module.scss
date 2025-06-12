@@ -1,19 +1,5 @@
 @forward "@/theme/shared.scss";
 
-.commissionWrapper {
-  display: flex;
-  column-gap: 3rem;
-  row-gap: 2rem;
-
-  @include xs {
-    flex-direction: column;
-  }
-
-  figure {
-    flex: 0 0 30%;
-  }
-}
-
 .commissionLink {
   text-decoration: none;
   width: 100%;
