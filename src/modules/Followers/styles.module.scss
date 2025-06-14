@@ -1,0 +1,26 @@
+@forward "@/theme/shared.scss";
+
+.btnsWrapper {
+  max-width: 40%;
+  display: flex;
+  gap: 2rem;
+
+  @include xs {
+    max-width: 60%;
+  }
+
+  @include xxs {
+    max-width: 100%;
+  }
+}
+
+.followersContainer {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.5rem), 1fr));
+  gap: 1.5rem;
+
+  @include xxs {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
+}

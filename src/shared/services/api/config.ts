@@ -32,6 +32,8 @@ export const CalculateCommission = "calculate_commission";
 export const PAGES = "pages";
 export const PAY_COMMISSION = "pay_commission";
 export const TRANSFER_COMMISSION = "transfer_commission";
+export const FOLLOWERS = "followers";
+export const WHOFOLLOW = "followings";
 
 // Auth
 export const SIGNUP = "signup";

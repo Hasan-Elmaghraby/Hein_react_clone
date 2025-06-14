@@ -40,8 +40,11 @@ const Signin: React.FC = () => {
         password,
       });
 
-      Cookies.set("access_token", response.data.access_token);
-
+      if (response?.data?.access_token) {
+        Cookies.set("access_token", response.data.access_token, {
+          expires: 40,
+        });
+      }
       if (response.status === true) {
         toast.success(response.message);
         setUser(response.data);
@@ -51,8 +54,9 @@ const Signin: React.FC = () => {
       if (response.status === false) {
         toast.error(response.message);
       }
-    } catch {
-      toast.error("حدث خطأ ما");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "An Error occurred";
+      toast.error(message);
     }
   };
 

@@ -17,6 +17,7 @@ const Packages = lazy(() => import("./modules/Packages"));
 const MyPackage = lazy(() => import("./modules/MyPackage"));
 const Commission = lazy(() => import("./modules/Commission"));
 const SinglePage = lazy(() => import("./modules/SinglePage"));
+const Followers = lazy(() => import("./modules/Followers"));
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/myPackage" element={<MyPackage />} />
             <Route path="/site-commission" element={<Commission />} />
             <Route path="/single-page/:id" element={<SinglePage />} />
+            <Route path="/followers" element={<Followers />} />
           </Route>
         </Routes>
         <ToastContainer />

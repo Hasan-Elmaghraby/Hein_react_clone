@@ -59,7 +59,7 @@ export const CommissionModal: React.FC<Props> = ({ isOpen, onClose }) => {
           placeholder={t("commission.commissionModalAttachmentPlaceholder")}
           name="ipan"
         />
-        <Button type="submit" text={t("commission.commissionModalButton")} />
+        <Button type={"submit"} text={t("commission.commissionModalButton")} />
       </form>
     </Modal>
   );
