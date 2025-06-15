@@ -1,0 +1,80 @@
+@forward "@/theme/shared.scss";
+
+.followerCard {
+  text-decoration: none;
+}
+
+.whoFollowWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: $mainBorderRadius;
+  background-color: $whiteColor;
+  box-shadow: 0 3px 30px rgba(#5c5c5c, 0.16);
+  transition: $mainTransition;
+
+  &:hover {
+    box-shadow: 0 3px 30px rgba(#5c5c5c, 0.4);
+  }
+
+  .iconWhoFollowWrapper {
+    cursor: pointer;
+    background-color: $primaryColor;
+    @include circle(4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      font-size: 2rem;
+      color: $whiteColor;
+    }
+  }
+}
+
+.followerCardWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  @include circle(9rem);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+
+  .title {
+    font-style: 1.4rem;
+  }
+
+  .rate {
+    display: flex;
+    color: $paragraphMainColor;
+    font-size: 1.4rem;
+    gap: 0.3rem;
+    align-items: center;
+
+    svg {
+      color: $secondaryColor;
+    }
+  }
+
+  .textLink {
+    text-decoration: none;
+    display: flex;
+    color: $secondaryColor;
+    font-size: 1.4rem;
+    gap: 0.3rem;
+    align-items: center;
+    svg {
+      color: $paragraphSecondaryColor;
+    }
+  }
+}

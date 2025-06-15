@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.scss";
 import { Section } from "@/shared/components/Section";
 import { SectionTitle } from "@/shared/components/SectionTitle";
@@ -6,6 +6,17 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/shared/components/MainButton";
 import { useGetMyFollowers } from "./api/useGetMyFollowers";
 import { useGetWhoFollow } from "./api/useGetWhoFollow";
+import { FollowerCard } from "./components/FollowerCard";
+import { Empty } from "@/shared/components/Empty";
+import userImage from "@public/images/userPlaceholderImage.png";
+import noDataFollowerImage from "@public/images/followers/noData.png";
+
+const testData = [
+  { id: 5, userName: "أحمد رامي", rate: 4.2, image: userImage },
+  { id: 3, userName: "أحمد رامي", rate: 3, image: userImage },
+  { id: 2, userName: "أحمد رامي", rate: 4.2, image: userImage },
+  { id: 4, userName: "أحمد رامي", rate: 4.2, image: userImage },
+];
 
 const Followers = () => {
   const { t } = useTranslation();
@@ -20,8 +31,6 @@ const Followers = () => {
   const handleChangeFollowings = () => {
     setChangeFollowers("followings");
   };
-
-  console.log(followersData, whoFollowData);
 
   return (
     <Section>
@@ -38,7 +47,36 @@ const Followers = () => {
           onClick={handleChangeFollowings}
         />
       </div>
-      <div className={styles.followersContainer}></div>
+      <div className={styles.followersContainer}>
+        {changeFollowers === "followings" && whoFollowData?.length > 0
+          ? testData.map(({ id, userName, rate, image }) => (
+              <FollowerCard
+                key={id}
+                userName={userName}
+                image={image}
+                rate={rate}
+              />
+            ))
+          : changeFollowers === "followings" && (
+              <Empty
+                src={noDataFollowerImage}
+                text={"لا يوجد احد انت تتابعه"}
+              />
+            )}
+        {changeFollowers === "followers" && followersData?.length > 0
+          ? testData.map(({ id, userName, rate, image }) => (
+              <FollowerCard
+                withIcon
+                key={id}
+                userName={userName}
+                image={image}
+                rate={rate}
+              />
+            ))
+          : changeFollowers === "followers" && (
+              <Empty src={noDataFollowerImage} text={"لا يوجد متابعين"} />
+            )}
+      </div>
     </Section>
   );
 };
