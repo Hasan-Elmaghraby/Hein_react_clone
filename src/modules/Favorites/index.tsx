@@ -1,0 +1,23 @@
+import { Section } from "@/shared/components/Section";
+import { SectionTitle } from "@/shared/components/SectionTitle";
+import { useGetFavorites } from "./apis/useGetFavorites";
+import { Empty } from "@/shared/components/Empty";
+import favoriteImage from "@public/images/favourite/noData.png";
+import Loader from "@/shared/components/Loader";
+import { useTranslation } from "react-i18next";
+const Favorites = () => {
+  const { t } = useTranslation();
+  const { data, isLoading } = useGetFavorites();
+
+  if (isLoading) <Loader />;
+  return (
+    <Section>
+      <SectionTitle right title={t("favourite.titlePage")} />
+      {data?.length === 0 && (
+        <Empty src={favoriteImage} text={t("favourite.titleNoData")} />
+      )}
+    </Section>
+  );
+};
+
+export default Favorites;

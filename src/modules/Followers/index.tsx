@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./styles.module.scss";
 import { Section } from "@/shared/components/Section";
 import { SectionTitle } from "@/shared/components/SectionTitle";
 import { useTranslation } from "react-i18next";
@@ -10,6 +9,7 @@ import { FollowerCard } from "./components/FollowerCard";
 import { Empty } from "@/shared/components/Empty";
 import userImage from "@public/images/userPlaceholderImage.png";
 import noDataFollowerImage from "@public/images/followers/noData.png";
+import styles from "./styles.module.scss";
 
 const testData = [
   { id: 5, userName: "أحمد رامي", rate: 4.2, image: userImage },
