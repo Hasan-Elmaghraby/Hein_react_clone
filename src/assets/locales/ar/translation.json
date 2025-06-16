@@ -230,5 +230,6 @@
     "commissionModalAttachment": "أرفق صورة التحويل",
     "commissionModalMessage": "قم  بإرفاق صورة واضحة للتحويل البنكي",
     "commissionModalAttachmentPlaceholder": "ادخل رقم الحساب البنكي"
-  }
+  },
+  "messages": "الرسائل"
 }

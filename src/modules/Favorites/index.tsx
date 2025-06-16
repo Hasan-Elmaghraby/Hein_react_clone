@@ -12,7 +12,7 @@ const Favorites = () => {
   if (isLoading) <Loader />;
   return (
     <Section>
-      <SectionTitle right title={t("favourite.titlePage")} />
+      <SectionTitle right title={t("favourite.pageTitle")} />
       {data?.length === 0 && (
         <Empty src={favoriteImage} text={t("favourite.titleNoData")} />
       )}

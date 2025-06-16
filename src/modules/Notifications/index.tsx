@@ -2,7 +2,7 @@ import { Section } from "@/shared/components/Section";
 import { SectionTitle } from "@/shared/components/SectionTitle";
 import { useGetNotifications } from "./apis/useGetNotifications";
 import { Empty } from "@/shared/components/Empty";
-import notificationImage from "@public/images/notifications/notificationEmptyPage.png";
+import notificationImage from "@public/images/notification/notificationEmptyPage.png";
 import Loader from "@/shared/components/Loader";
 import { useTranslation } from "react-i18next";
 const Notifications = () => {

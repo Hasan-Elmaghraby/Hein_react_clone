@@ -1,0 +1,24 @@
+@forward "@/theme/shared.scss";
+
+.chatWrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.messages {
+  width: 30%;
+}
+
+.messagesWrappper {
+  height: 50vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+
+
