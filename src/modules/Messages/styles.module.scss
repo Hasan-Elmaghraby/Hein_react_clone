@@ -3,6 +3,7 @@
 .chatWrapper {
   display: flex;
   gap: 3rem;
+  height: 50vh;
 }
 
 .messages {
@@ -10,7 +11,6 @@
 }
 
 .messagesWrappper {
-  height: 50vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -18,7 +18,16 @@
   }
 }
 
+.chatsBody {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
 
-
-
-
+.chatsBodyWrapper {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba($blackColor, 0.16);
+  height: 100%;
+  border-radius: $mainBorderRadius;
+}

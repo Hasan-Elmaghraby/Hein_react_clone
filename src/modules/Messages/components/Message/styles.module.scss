@@ -1,0 +1,53 @@
+@forward "@/theme/shared.scss";
+
+.message {
+  width: fit-content;
+
+  .time {
+    display: block;
+    margin-inline-start: auto;
+    color: $paragraphSecondaryColor;
+  }
+
+  .text {
+    padding: 1rem;
+    background-color: $primaryColor;
+    color: $whiteColor;
+    border-radius: $secondaryBorderRadius;
+    text-align: center;
+  }
+
+  &.reciever {
+    margin-inline-start: auto;
+    min-width: 11rem;
+
+    .text {
+      background-color: rgba($primaryColor, 0.3);
+      color: $primaryColor;
+    }
+
+    .withFigure {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .recieveImageWrapper {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .recieverName {
+    }
+
+    .recieverImage {
+      @include circle(2rem);
+      overflow: hidden;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

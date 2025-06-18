@@ -1,0 +1,56 @@
+@forward "@/theme/shared.scss";
+
+.inputWrapper {
+  margin-top: 1rem;
+  position: relative;
+  height: 4rem;
+  flex-shrink: 0;
+
+  .input {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    font-size: 1.4rem;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    padding-inline: 4rem;
+    border: 1px solid rgba($primaryColor, 0.2);
+    border-radius: $fourthBorderRadius;
+    caret-color: $primaryColor;
+    transition: $mainTransition;
+
+    &:focus {
+      border-color: $primaryColor;
+    }
+  }
+
+  .chatIcon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset-inline-start: 0.3rem;
+    padding: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.4rem;
+    color: $paragraphSecondaryColor;
+  }
+
+  .sendIcon {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset-inline-end: 0.6rem;
+    padding: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    @include circle(3rem);
+    background-color: $primaryColor;
+    color: $whiteColor;
+  }
+}

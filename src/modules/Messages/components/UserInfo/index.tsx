@@ -6,13 +6,13 @@ interface Props {
   user: {
     userName: string;
     userImage: string;
-    userRate: string;
+    is_readed: boolean;
     time: string;
   };
 }
 
 export const UserInfo: React.FC<Props> = ({
-  user: { userName, userImage, userRate, time },
+  user: { userName, userImage, is_readed, time },
   description,
 }) => {
   return (
@@ -27,9 +27,11 @@ export const UserInfo: React.FC<Props> = ({
             <p className={styles.time}>{time}</p>
           </div>
         </div>
-        <div className={styles.unreadedMessage}>
-          <span>{userRate}</span>
-        </div>
+        {!is_readed && (
+          <div className={styles.unreadedMessage}>
+            <span>{1}</span>
+          </div>
+        )}
       </div>
       <p className={styles.description}>
         {description ?? "لا يوجد نص من قبل المستخدم"}
