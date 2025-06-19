@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 interface Props {
+  onClick: () => void;
   description: string;
   user: {
     userName: string;
@@ -14,9 +15,10 @@ interface Props {
 export const UserInfo: React.FC<Props> = ({
   user: { userName, userImage, is_readed, time },
   description,
+  onClick,
 }) => {
   return (
-    <div className={styles.userInfoWrapper}>
+    <div className={styles.userInfoWrapper} onClick={onClick}>
       <div className={styles.userInfo}>
         <div className={styles.userWrapper}>
           <figure className={styles.userImage}>
