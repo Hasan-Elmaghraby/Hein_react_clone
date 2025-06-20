@@ -4,7 +4,7 @@ import { ChatIcon } from "@/shared/icons/Chat";
 
 export const Messages = () => {
   return (
-    <Link to="/messages" className={styles.messages}>
+    <Link to="/messages" className={styles.messages} title="messages">
       <ChatIcon />
     </Link>
   );

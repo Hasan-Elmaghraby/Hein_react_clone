@@ -1,0 +1,41 @@
+@forward "@/theme/shared.scss";
+
+.notificationCard {
+  background-color: $whiteColor;
+  padding: 2rem;
+  border-radius: $mainBorderRadius;
+  box-shadow: 0 0 30px rgba($blackColor, 0.16);
+}
+
+.headerCard {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  .iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include circle(4rem);
+    background-color: #eeeeee;
+
+    svg {
+      color: $blackColor;
+      font-size: 2rem;
+    }
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .time {
+    font-size: 1.4rem;
+    color: $paragraphSecondaryColor;
+  }
+}
+
+.text {
+  color: $paragraphSecondaryColor;
+  font-size: 1.4rem;
+}

@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 
 export const Notifications = () => {
   return (
-    <Link to="/notifications" className={styles.notifications}>
+    <Link
+      to="/notifications"
+      className={styles.notifications}
+      title="notifications"
+    >
       <NotificationIcon />
     </Link>
   );
