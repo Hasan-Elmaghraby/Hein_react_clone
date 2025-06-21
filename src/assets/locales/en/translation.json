@@ -1,4 +1,7 @@
 {
+  "app": {
+    "name": "Hein"
+  },
   "productRateModal": {
     "placeholder": "Write your opinion about the advertiser",
     "button": "Submit Rating"
@@ -6,7 +9,19 @@
   "NotFound": "Page not found",
   "noInfo": "No information available",
   "pages": {
-    "home": "Home"
+    "home": "Home",
+    "addAd": "Add Advertisement",
+    "favourite": "Favorites",
+    "followers": "Followers",
+    "commission": "Site Commission",
+    "messages": "Messages",
+    "myAdEdit": "Edit Advertisement",
+    "myAds": "My Ads",
+    "myPackages": "My Package",
+    "notifications": "Notifications",
+    "packages": "Packages",
+    "adDetiails": "Advertisement Details",
+    "wallet": "Wallet"
   },
   "home": {
     "readMore": "Read more",

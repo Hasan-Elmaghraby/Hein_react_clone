@@ -1,4 +1,7 @@
 {
+  "app": {
+    "name": "هين"
+  },
   "productRateModal": {
     "placeholder": "قم بكتابة رأيك بالمعلن",
     "button": "إرسال التقييم"
@@ -6,7 +9,20 @@
   "NotFound": "الصفحة غير موجودة",
   "noInfo": "لا يوجد معلومات",
   "pages": {
-    "home": "الرئيسية"
+    "home": "الرئيسية",
+    "addAd": "إضافة إعلان",
+    "favorite": "المفضلة",
+    "followers": "المتابعون",
+    "commission": "عمولة الموقع",
+    "messages": "الرسائل",
+    "myAdEdit": "تعديل الاعلان",
+    "myAds": "اعلاناتي",
+    "myPackages": "باقتي",
+    "notifications": "الاشعارات",
+    "packages": "الباقات",
+    "adDetiails": "تفاصيل الاعلان",
+    "profile": "الملف الشخصي",
+    "wallet": "المحفظة"
   },
 
   "hero": {

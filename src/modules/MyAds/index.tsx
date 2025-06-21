@@ -7,8 +7,11 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { ProductCard } from "@/shared/components/ProductCard";
 import Loader from "@/shared/components/Loader";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const MyAds = () => {
+  useTabTitle("myAds");
+
   const [activeNumber, setActiveNumber] = useState(0);
   const [adsData, setAdsData] = useState([]);
   const { t } = useTranslation();

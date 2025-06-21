@@ -9,8 +9,10 @@ import { ProductInfo } from "./components/ProductInfo";
 import { Comments } from "./components/comments";
 import { SimilarAds } from "./components/SimilarAds";
 import Loader from "@/shared/components/Loader";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const ProductDetails: React.FC = () => {
+  useTabTitle("adDetails");
   const { id } = useParams();
   const numericId = Number(id);
 

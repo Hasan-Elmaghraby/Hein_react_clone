@@ -8,8 +8,10 @@ import styles from "./styles.module.scss";
 import { ProductInfo } from "./components/ProductInfo";
 import { Comments } from "./components/comments";
 import Loader from "@/shared/components/Loader";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const MyAdEdit: React.FC = () => {
+  useTabTitle("addEdit");
   const { id } = useParams();
   const numericId = Number(id);
 

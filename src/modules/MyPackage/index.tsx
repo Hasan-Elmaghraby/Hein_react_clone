@@ -8,8 +8,10 @@ import { PackagesCard } from "./components/PackagesCard";
 import { ClockIcon } from "@/shared/icons/ClockIcon";
 import { HornIcon } from "@/shared/icons/Horn";
 import { DollarIcon } from "@/shared/icons/Dollar";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const MyPackage = () => {
+  useTabTitle("myPackages");
   const { t } = useTranslation();
   return (
     <Section>

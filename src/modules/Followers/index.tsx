@@ -10,6 +10,7 @@ import { Empty } from "@/shared/components/Empty";
 import userImage from "@public/images/userPlaceholderImage.png";
 import noDataFollowerImage from "@public/images/followers/noData.png";
 import styles from "./styles.module.scss";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const testData = [
   { id: 5, userName: "أحمد رامي", rate: 4.2, image: userImage },
@@ -19,6 +20,7 @@ const testData = [
 ];
 
 const Followers = () => {
+  useTabTitle("followers");
   const { t } = useTranslation();
   const { data: followersData } = useGetMyFollowers();
   const { data: whoFollowData } = useGetWhoFollow();

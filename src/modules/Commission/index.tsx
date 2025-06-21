@@ -10,9 +10,12 @@ import { usePostCalculateCommission } from "./apis/usepostCalculateCommission";
 import { useOnlinePayment } from "./apis/useOnlinePayment";
 import { FormWrapper } from "./components/FormWrapper";
 import { CommissionLink } from "./components/CommissionLink";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const Commission = () => {
   const { t } = useTranslation();
+
+  useTabTitle("commission");
 
   const [isOpenModal, setIsOpenModal] = useState(false);
 

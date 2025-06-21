@@ -7,6 +7,7 @@ import Loader from "@/shared/components/Loader";
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
 import { NotificationCard } from "./components/NotificationCard";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 interface NotificationProps {
   id: string;
@@ -16,6 +17,7 @@ interface NotificationProps {
 }
 
 const Notifications = () => {
+  useTabTitle("notifications");
   const { t } = useTranslation();
   const { data: notifications, isLoading } = useGetNotifications();
 

@@ -7,8 +7,10 @@ import { PackagesCard } from "./components/PackagesCard";
 import { useGetPlans } from "./apis/useGetPlans";
 import { useSubscribePlan } from "./apis/useSubscribePlan";
 import { toast } from "react-toastify";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const Packages = () => {
+  useTabTitle("packages");
   const { t } = useTranslation();
   const { data } = useGetPlans();
   const { plans } = data || {};

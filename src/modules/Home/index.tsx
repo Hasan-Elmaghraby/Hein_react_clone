@@ -5,8 +5,11 @@ import useGetHomeData from "./api/useGetHomeData";
 import { LatestAds } from "./components/LatestAds";
 import { ContactUs } from "./components/ContactUs";
 import Loader from "@/shared/components/Loader";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const Home: React.FC = () => {
+  useTabTitle("home");
+
   const { data, isLoading, isError } = useGetHomeData();
 
   const { about, sliders, categories, latest } = data || {};

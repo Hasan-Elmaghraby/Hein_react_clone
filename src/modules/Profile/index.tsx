@@ -7,8 +7,10 @@ import { ChangePSWLink } from "./components/ChangePSWLink";
 import styles from "./styles.module.scss";
 import { DeleteAccount } from "./components/DeleteAccount";
 import { FormProfileInfo } from "./components/FormProfileInfo";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const Profile = () => {
+  useTabTitle("profile");
   const { t } = useTranslation();
   const { user } = useUser();
 

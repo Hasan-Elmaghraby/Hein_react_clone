@@ -13,8 +13,10 @@ import { usePostChargeWallet } from "./apis/usePostChargeWallet";
 import { Modal } from "@/shared/components/Modal";
 import { WalletIcon } from "@/shared/icons/Wallet";
 import Loader from "@/shared/components/Loader";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const Wallet: React.FC = () => {
+  useTabTitle("wallet");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [amount, setAmount] = useState<string>("");
 

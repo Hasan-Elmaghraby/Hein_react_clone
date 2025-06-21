@@ -5,8 +5,11 @@ import { Empty } from "@/shared/components/Empty";
 import favoriteImage from "@public/images/favourite/noData.png";
 import Loader from "@/shared/components/Loader";
 import { useTranslation } from "react-i18next";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 const Favorites = () => {
   const { t } = useTranslation();
+  useTabTitle("favorite");
+
   const { data, isLoading } = useGetFavorites();
 
   if (isLoading) <Loader />;

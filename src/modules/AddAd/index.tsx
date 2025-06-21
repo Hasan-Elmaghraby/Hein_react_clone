@@ -10,6 +10,7 @@ import { Checkbox } from "./components/Checkbox";
 import { Link } from "react-router-dom";
 import { Button } from "@/shared/components/MainButton";
 import { useAddAd } from "./hooks/useAddAd";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 export interface MediaFile {
   url: string;
@@ -18,6 +19,8 @@ export interface MediaFile {
 }
 const AddAd = () => {
   const { t } = useTranslation();
+
+  useTabTitle("addAd");
   const {
     categories,
     subCategory,

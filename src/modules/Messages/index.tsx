@@ -13,8 +13,10 @@ import Loader from "@/shared/components/Loader";
 // import { Empty } from "@/shared/components/Empty";
 // import chatImage from "@public/images/chat/noData.png";
 import styles from "./styles.module.scss";
+import { useTabTitle } from "@/shared/hooks/useTabTitle";
 
 const Messages = () => {
+  useTabTitle("messages");
   const { t } = useTranslation();
   const {
     handleClickUser,
