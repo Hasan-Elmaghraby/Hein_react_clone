@@ -61,3 +61,11 @@
     width: 100%;
   }
 }
+
+@include sm {
+  .sidebar {
+    > figure {
+      order: 0;
+    }
+  }
+}

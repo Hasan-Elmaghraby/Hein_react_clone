@@ -10,7 +10,7 @@ export const AboutUs: React.FC<About> = ({
   content,
 }) => {
   return (
-    <Section className={styles.aboutUs}>
+    <Section id="about" className={styles.aboutUs}>
       <SectionTitle title={title} subtitle={subtitle} />
       <figure className={styles.image}>
         <img src={image || "no image"} alt={title} />

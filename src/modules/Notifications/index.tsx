@@ -9,6 +9,7 @@ import styles from "./styles.module.scss";
 import { NotificationCard } from "./components/NotificationCard";
 
 interface NotificationProps {
+  id: string;
   created_at: string;
   text: string;
   title: string;
@@ -18,20 +19,30 @@ const Notifications = () => {
   const { t } = useTranslation();
   const { data: notifications, isLoading } = useGetNotifications();
 
-  if (isLoading) <Loader />;
+  console.log(notifications);
+
   return (
     <Section>
       <SectionTitle right title={t("notifications.title")} />
-      {notifications?.length === 0 ? (
-        <Empty src={notificationImage} text={t("notifications.emptyTitle")} />
+      {!isLoading ? (
+        notifications?.length === 0 ? (
+          <Empty src={notificationImage} text={t("notifications.emptyTitle")} />
+        ) : (
+          <div className={styles.notifications}>
+            {notifications?.map(
+              ({ id, created_at, text, title }: NotificationProps) => (
+                <NotificationCard
+                  key={id}
+                  title={title}
+                  text={text}
+                  time={created_at}
+                />
+              )
+            )}
+          </div>
+        )
       ) : (
-        <div className={styles.notifications}>
-          {notifications?.map(
-            ({ created_at, text, title }: NotificationProps) => (
-              <NotificationCard title={title} text={text} time={created_at} />
-            )
-          )}
-        </div>
+        <Loader />
       )}
     </Section>
   );

@@ -12,7 +12,7 @@ interface Props {
 
 export const LatestAds: React.FC<Props> = ({ latest }) => {
   return (
-    <Section className={styles.latestAds}>
+    <Section id="latestAds" className={styles.latestAds}>
       <SectionTitle title={"احدث الاعلانات"} subtitle={"تصفح احدث الاعلانات"} />
       <div className={styles.cards}>
         {latest.map((ad) => (

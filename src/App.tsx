@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./shared/components/Layout";
 import { ToastContainer } from "react-toastify";
+import Loader from "./shared/components/Loader";
+import NotFoundPage from "./shared/components/NotFoundPage";
 
 const Auth = lazy(() => import("./modules/Auth"));
 const Home = lazy(() => import("./modules/Home"));
@@ -24,9 +26,10 @@ const Messages = lazy(() => import("./modules/Messages"));
 
 function App() {
   return (
-    <Suspense fallback={<h1 />}>
+    <Suspense fallback={<Loader />}>
       <Layout>
         <Routes>
+          <Route path="*" element={<NotFoundPage />} />
           <Route path="/auth/*" element={<Auth />} />
           <Route path="/" element={<Home />} />
           <Route path="/sections/:id" element={<SectionsDetails />} />

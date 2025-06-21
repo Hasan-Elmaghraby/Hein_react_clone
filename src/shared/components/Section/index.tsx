@@ -5,6 +5,7 @@ import { Container } from "../Container";
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
   noContainer?: boolean;
 }
 
@@ -12,9 +13,10 @@ export const Section: React.FC<SectionProps> = ({
   children,
   className,
   noContainer,
+  id,
 }) => {
   return (
-    <section className={`${styles.section} ${className ?? ""}`}>
+    <section id={id} className={`${styles.section} ${className ?? ""}`}>
       {!noContainer ? <Container>{children}</Container> : children}
     </section>
   );

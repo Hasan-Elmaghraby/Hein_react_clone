@@ -29,11 +29,6 @@ const MyAds = () => {
     setActiveNumber(0);
   };
 
-  useEffect(() => {
-    if (isLoading) {
-      <Loader />;
-    }
-  });
   return (
     <Section>
       <PageTitle title={t("myAds.title")} />
@@ -49,25 +44,29 @@ const MyAds = () => {
           onClick={handleClickWaitingAds}
         />
       </div>
-      <div className={styles.adsContainer}>
-        {adsData.map(
-          ({ id, title, time_ago, price, mainImage, category, area }) => (
-            <ProductCard
-              key={id}
-              id={id}
-              title={title}
-              time={time_ago}
-              price={price}
-              mainImage={mainImage}
-              categoryName={(category as { name: string })?.name}
-              area={(area as { name: string })?.name}
-              footerOptions
-              active={activeNumber === 1}
-              onDelete={() => console.log("delete")}
-            />
-          )
-        )}
-      </div>
+      {!isLoading ? (
+        <div className={styles.adsContainer}>
+          {adsData.map(
+            ({ id, title, time_ago, price, mainImage, category, area }) => (
+              <ProductCard
+                key={id}
+                id={id}
+                title={title}
+                time={time_ago}
+                price={price}
+                mainImage={mainImage}
+                categoryName={(category as { name: string })?.name}
+                area={(area as { name: string })?.name}
+                footerOptions
+                active={activeNumber === 1}
+                onDelete={() => console.log("delete")}
+              />
+            )
+          )}
+        </div>
+      ) : (
+        <Loader />
+      )}
     </Section>
   );
 };

@@ -1,4 +1,5 @@
-import React from "react";
+import Loader from "@/shared/components/Loader";
+import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 const Signup = React.lazy(() => import("./routes/Signup"));
@@ -9,13 +10,15 @@ const ChangePSW = React.lazy(() => import("./routes/ChangePSW"));
 
 const Auth = () => {
   return (
-    <Routes>
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/validation" element={<ValidationCode />} />
-      <Route path="/forgetPassword" element={<ForgetPSW />} />
-      <Route path="/change-password" element={<ChangePSW />} />
-    </Routes>
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/validation" element={<ValidationCode />} />
+        <Route path="/forgetPassword" element={<ForgetPSW />} />
+        <Route path="/change-password" element={<ChangePSW />} />
+      </Routes>
+    </Suspense>
   );
 };
 

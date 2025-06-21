@@ -11,6 +11,7 @@ interface Props {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  disabled: boolean;
 }
 
 export const Form: React.FC<Props> = ({
@@ -20,6 +21,7 @@ export const Form: React.FC<Props> = ({
   message,
   onChange,
   onSubmit,
+  disabled,
 }) => {
   return (
     <form className={styles.form} onSubmit={onSubmit}>
@@ -63,7 +65,7 @@ export const Form: React.FC<Props> = ({
         />
       </div>
 
-      <Button type="primary" text="ارسال" />
+      <Button type="primary" text="ارسال" disabled={disabled} />
     </form>
   );
 };

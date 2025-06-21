@@ -10,11 +10,6 @@ export const useForm = () => {
 
   const { userName, phone, email, message } = form;
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(form);
-  };
-
   const onChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -30,6 +25,6 @@ export const useForm = () => {
     email,
     message,
     onChange,
-    onSubmit,
+    setForm,
   };
 };

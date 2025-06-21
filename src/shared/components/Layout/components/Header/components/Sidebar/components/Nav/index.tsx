@@ -12,16 +12,16 @@ export const Nav = () => {
           <a href="#">{t("header.home")}</a>
         </li>
         <li className={styles.listItem}>
-          <a href="#">{t("header.about")}</a>
+          <a href="#about">{t("header.about")}</a>
         </li>
         <li className={styles.listItem}>
           <Dropdown />
         </li>
         <li className={styles.listItem}>
-          <a href="#">{t("header.lastAds")} </a>
+          <a href="#latestAds">{t("header.lastAds")} </a>
         </li>
         <li className={styles.listItem}>
-          <a href="#">{t("header.contact")} </a>
+          <a href="#contact">{t("header.contact")} </a>
         </li>
       </ul>
     </nav>

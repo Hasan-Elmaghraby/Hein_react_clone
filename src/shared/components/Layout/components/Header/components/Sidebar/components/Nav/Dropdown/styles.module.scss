@@ -82,3 +82,24 @@
     }
   }
 }
+
+@include sm {
+  .dropdown {
+    // overflow: hidden;
+  }
+
+  .dropdownList {
+    position: relative;
+    top: 0;
+    max-height: 0;
+    transition: $mainTransition;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: none;
+    border-radius: 0;
+
+    &.active {
+      max-height: 500px;
+    }
+  }
+}
